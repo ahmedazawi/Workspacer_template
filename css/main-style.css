@@ -1,0 +1,417 @@
+
+
+/* ------------- Sidebar Section "large screen" ( 3 column )-----------------*/
+
+/* The side navigation menu  & animation */
+.sidebar {
+    margin: 0;
+    padding-top:60px;
+    padding-bottom:250px;
+    width: 300px;
+    height: 1080px;
+    background-color: white;
+    position: fixed;
+    
+    overflow: auto;
+    /* box-shadow: 0 0 5px 2px; */
+    display: block;
+    /* font-size: 35px; */
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+.sidebar-menu {
+  display: block;
+      font-size: 35px;
+      font-weight: bold;
+      transition: 0.5s;
+    padding-top:65px;
+
+}
+
+/* Sidebar logo */
+.sidebar .logo{
+    margin-top:-30px;
+    margin-bottom:50px;
+}
+
+
+/* Sidebar logo SVG  */
+
+.w-logo{
+  
+  float: left;
+  margin-left: 30px;
+  margin-top:-20px;
+
+
+}
+.w-logo text{
+  font-weight:lighter;
+
+}
+
+  /* Sidebar heading h4 */
+.sidebar h4{
+  
+    top: 47px;
+    left: 114px;
+    width: 140px;
+    height: 31px;
+    text-align: center;
+    font: normal normal normal 26px/31px Rubik;
+    margin-left: 120px;
+    /* margin-top:0; */
+
+    
+    
+}
+
+
+ /* Sidebar select   */
+ .sidebar select{
+  margin-left: 30px;  
+  /* display:block; */
+  top: 130px;
+  left: 30px;
+  width: 240px;
+  height: 60px;
+  border-radius: 15px;
+  border-color: #F3F6FF;
+  padding: 20px;
+  /* Remove default arrow */
+  appearance: none;       
+  /* Add custom arrow */
+  background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+  background-origin: content-box;
+  
+}
+
+ 
+
+
+  /* -------- Sidebar items --------*/
+
+.sidebar-menu a{
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  color: rgb(172, 181, 211);
+  word-spacing: 15px;
+}
+.menu-text {
+    transition:  0.3s;
+    transition-delay: 0.1s;
+    font-size:large;
+    width: 250px;
+    height: 28px;
+    top: 241px;
+    left: 94px;
+    width: 120px;
+    height: 28px;
+    font: normal normal medium 23px/28px Rubik;
+  }
+ 
+  
+  /* Links on mouse-over */
+  .menu-text:hover {
+    color:#5082cc;
+    transition-duration:0.3s;
+    transition-delay: 0.1s;
+  }
+
+
+
+
+  
+/* dont move type anything below */
+
+
+
+
+
+
+/* dont move type anything above */
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+ div.content {             /*   dont move this block of code    */
+  margin-left: 360px;
+  padding: 1px 16px;
+  height: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Sidebar Section "medium screen" ( 2 column )-----------------*/
+  
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+
+    /* Sidebar logo in 700px */
+
+    .logo {
+      margin-left: 180px;
+    }
+
+     /* Sidebar links in 700px */
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar-menu a {
+      float: none;       /* float:left; to make the element horizontal */
+      text-align: center;
+      transition:  0.3s;
+      transition-delay: 0.1s;
+    
+    
+    }    
+    div.content {margin-left: 0;
+        transition:  0.3s;
+        transition-delay: 0.1s;
+    }
+    .sidebar select{
+      width: 240px;
+      margin-left: 210px; 
+      appearance: none;       /* Remove default arrow */
+      /* Add custom arrow */
+      background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+      background-origin: content-box;
+  
+      
+    }
+
+   
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
+
+  /* On screens that are less than 600px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 600px) {
+    /* Sidebar logo in 600px */
+  .logo {
+    margin-left: 120px;
+  }
+
+   
+     /* Sidebar links in 600 */
+     .sidebar-menu a {
+      text-align: center;
+      float: none;
+      transition:  0.3s;
+      transition-delay: 0.1s;
+    
+      
+
+    }
+    /* sidebar small screen select  */
+    .sidebar select{
+      width: 240px;; 
+      margin-left: 150px; 
+      appearance: none;       /* Remove default arrow */
+      background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+      background-origin: content-box;
+  
+    }
+
+    /* sidebar small screen animation  */
+  .sidebar{
+    padding-top:60px;
+    padding-bottom:250px;
+    
+
+  }
+  .sidebar-menu{
+    padding-top:65px;
+
+  }
+  
+  }
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- the Grid system (Content Section) ---------------- */
+
+
+  html { font-size: 22px; }
+  body { 
+      /* padding: 1rem;  */
+    margin:0;
+    background-color:rgb(243, 246, 255);
+    font-family:'Rubik','Regular';
+
+}
+
+/* paragraph under the main heading */
+  .content p{
+    color:rgb(171, 181, 211);
+    font-size:smaller;
+    font-weight:normal;
+    margin-bottom: 5%;
+    margin-top: 10px;
+  }
+
+
+  /* Card */
+  .card {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    height: 12rem;
+    padding: 2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+  }
+
+
+
+  /* Card container */
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.5rem;
+    
+  
+  }
+
+
+  /* Card mouse-over */
+  .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------ Screen larger than 600px? 2 column  -------------*/
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); 
+       
+    
+    }
+    
+  }
+  
+
+
+
+
+  /* --------------- Screen larger than 900px? 3 columns  --------------*/
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); 
+        margin-right: 60px;
+    
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ---------------- cards content --------------- */
+  .card button{
+    border: none;
+    background:none;
+    cursor: pointer;
+  }
+
+
+
+
+  /* --------- Card 1  --------*/
+#card-1-img{
+    margin-top: 35px;
+    margin-left: 75px;
+    cursor: pointer;
+   
+  }
+#card-1-btn{
+  margin-top: 10px;
+  margin-left: 45px;
+  font: normal normal normal 18px/22px Rubik;
+
+}
+#card-1-p{
+  top: 551px;
+left: 460px;
+width: 274px;
+height: 44px;
+text-align: center;
+font: normal normal 300 12px/14px Rubik;
+letter-spacing: 0px;
+color: #848484;
+opacity: 1;
+}
