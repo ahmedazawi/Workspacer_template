@@ -1,39 +1,84 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 body{
     font-family:Rubik-Regular, Rubik;
-
+    display:flex;
+    flex-direction: column;
     margin:0;
 }
 
 
-/* ------------ sidebar ----------- */
+
+
+
+
+
+
+/* ------------ Sidebar ----------- */
 .sidebar {
-    /* margin-top: 200ox;
+    margin-top: 200ox;
     padding-top:60px;
     padding-bottom:250px;
-    width: 400px;
-    height: 1080px; */
+    width: 27.7vw;
+    height: 216vw; 
     background-color: rgb(62,128,255);
-    /* position:fixed; */
+    position:fixed;
     overflow: auto;
-    /* display: block; */
-    /* font-weight: bold; */
-    /* transition: 0.5s; */
+    font-weight: bold;
+    transition: 0.5s;
     
 }
+
+/* -------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- Main form ----------------- */
+.main{
+   
+    max-width: calc( 200px + 30vw);
+    height: 430px;
+    margin-top: 150px ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+    background-color:rgb(243, 246, 255);
+    border-radius: 1.5em;
+    box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.15);
+    /* display: flex;
+    flex-direction: column; */
+    color:rgb(44, 44, 44);
+    transition:  0.3s;
+    transition-delay: 0.1s; 
+    
+    
+}
+
+/* --- main form mouse over ----- */
+.main:hover{
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.54);
+    transition-duration:0.3s;
+    transition-delay: 0.1s;
+
+}
+
+/* -------------------------------------- */
+
+
+
+
 
 
 
@@ -48,21 +93,42 @@ body{
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.main {             /*   dont move this block of code    */
-    margin-left: 480px;
+    margin-left: 41vw;
     padding: 1px 16px;
     /* height: 900px; */
   }
 
 
+/* On screens that are less than 900px wide, make the sidebar into a topbar */
+@media screen and (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+        /* height: auto; */
+        position: relative;
+      }
+    div.main {margin:6vw 22vw ;
+        transition:  0.3s;
+        transition-delay: 0.1s;
+    }
+}
+
+
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 800px) {
+  
+      div.main {margin:6vw 22vw;
+        transition:  0.3s;
+        transition-delay: 0.1s;
+    }
+}
+
+
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
-.sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    div.main {margin-left: 0;
+
+    div.main {margin:6vw 12vw;
         transition:  0.3s;
         transition-delay: 0.1s;
     }
@@ -81,39 +147,13 @@ div.main {             /*   dont move this block of code    */
       }
 }
 
+/* ------------------------------- */
 
 
 
 
 
 
-/* -------------- Main form ----------------- */
-.main{
-   
-    width: 700px;
-    height: 430px;
-    margin-top: 150px ;
-    /* margin-right:150px ; */
-    
-    background-color:rgb(243, 246, 255);
-    border-radius: 1.5em;
-    box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.15);
-    /* display: flex;
-    flex-direction: column; */
-    color:rgb(44, 44, 44);
-    transition:  0.3s;
-    transition-delay: 0.1s; 
-    
-}
-
-/* --------- main form mouse over ----------- */
-.main:hover{
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.54);
-    
-    transition-duration:0.3s;
-    transition-delay: 0.1s;
-
-}
 
 
 
@@ -131,9 +171,9 @@ div.main {             /*   dont move this block of code    */
 /* ---------- login & Sign up Switch buttons  ------------- */
 .switch{
     margin-top: 25px;
-    margin-left:158px;
+    margin-left:9vw;
    text-align: center;
-    width: 200px;
+    min-width: 28vw;
     height: 65px;
    border: none;
    border-radius:10px;
@@ -151,8 +191,10 @@ div.main {             /*   dont move this block of code    */
    /* font-weight:bold;    */
    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
     font-family:'Rubik-medium';
-    display:inline;
+    display:flex;
+    flex-wrap:wrap;
     font-family:Rubik-Bold, Rubik;
+    
 
 
 }
@@ -198,13 +240,13 @@ div.main {             /*   dont move this block of code    */
 .form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: 380px;
+    width: calc(30px + 24vw) ;
     height: 40px;
     margin-bottom:10px;
 }
 #myForget{
-    float: right;
-    margin-right:165px;
+    float: right; 
+    margin-right:9vw;
     font-size: small;
     color: #5082cc;
     /* margin-bottom: 1px; */
@@ -216,7 +258,7 @@ div.main {             /*   dont move this block of code    */
 
 }
 #btn{
-    width: 380px;
+    width: calc(30px + 24vw);
     height: 50px;
     border-radius: 7px;
     border:1px solid rgb(0, 82, 204) ;
@@ -255,10 +297,14 @@ div.main {             /*   dont move this block of code    */
     
 }
 /* ----- first name field ----- */
+#full-name{
+    display:flex;
+    flex-wrap:wrap;
+}
 #f-name{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: 185px;
+    width: 12.84vw;
     height: 40px;
     /* margin-bottom:0; */
 
@@ -267,7 +313,7 @@ div.main {             /*   dont move this block of code    */
 #l-name{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: 185px;
+    width: 12.84vw;
     height: 40px;
     /* margin-bottom:0; */
 
@@ -275,14 +321,14 @@ div.main {             /*   dont move this block of code    */
 .new-form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: 380px;
+    width: calc(30px + 24vw) ;
     height: 40px;
     margin-bottom:10px;
    
     
 }
 #new-btn{
-    width: 380px;
+    width: calc(30px + 24vw) ;
     height: 50px;
     border-radius: 7px;
     border:1px solid rgb(0, 82, 204) ;
@@ -296,7 +342,7 @@ div.main {             /*   dont move this block of code    */
 
 #checkbox-div{
     text-align: center;
-    margin: 0 0 10px 15px;
+    margin: 0 0 2vw 3vw;
 }
 
 #form-checkbox{
