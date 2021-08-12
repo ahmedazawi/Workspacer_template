@@ -11,7 +11,6 @@
     height: 1080px;
     background-color: white;
     position: fixed;
-    
     overflow: auto;
     /* box-shadow: 0 0 5px 2px; */
     display: block;
@@ -33,6 +32,7 @@
 .sidebar .logo{
     margin-top:-30px;
     margin-bottom:50px;
+    
 }
 
 
@@ -43,6 +43,7 @@
   float: left;
   margin-left: 30px;
   margin-top:-20px;
+  
 
 
 }
@@ -125,14 +126,14 @@
 
 
   
-/* dont move type anything below */
+/* dont type anything below */
 
 
 
 
 
 
-/* dont move type anything above */
+/* dont type anything above */
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
  div.content {             /*   dont move this block of code    */

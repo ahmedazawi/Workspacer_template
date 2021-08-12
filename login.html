@@ -6,37 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login-style.css">
+
     <title>Login | Signup</title>
 </head>
 
-<body style="background-color:rgb(236 , 241 , 254)">
+<body style="background-color:rgb(236 , 241 , 254);">
 
 
-    <div class="wrapper">
-        <div class="title-text">
-            <div class="title login">Login Form</div>
-            <div class="title signup">Signup Form</div>
-        </div>
-        <div class="form-container">
-            <div class="slide-controls">
-                <input type="radio" name="slide" id="login" checked>
-                <input type="radio" name="slide" id="signup">
-                <label for="login" class="slide login">Login</label>
-                <label for="signup" class="slide signup">Signup</label>
-                <div class="slider-tab"></div>
+
+
+    <!--------------- login & Sign Up main form -------------->
+
+
+
+    <div class="card">
+        <!-- <div class="sidebar">
+            <div class="side-svg">
+
             </div>
-            <div class="form-inner">
-                <form action="#" class="login">
-                    <div class="field">
-                        <input type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="pass-link"><a href="#">Forgot password?</a>
-                    </div>
+        </div> -->
+
+        <!-- ------------------- -->
 
 
+
+        <div class="main">
+            <!--------------- login & Sign Up Switch Buttons -------------->
+            <div class="switch">
+                <button id="login" class="active">
+                    Login
+                </button>
+
+                <button id="signup">
+                    Sign Up
+                </button>
+            </div>
+            <!-- ---------------------------------------------- -->
+
+
+
+
+            <!-- --------------------- login form --------------------- -->
+            <div class="main-form">
+                <form class="form">
+                    <input type="text" name="email" placeholder="  Email Address" required> <br>
+                    <a id="myForget" href="#">Forgot password</a> <br>
+                    <input type="password" name="password" placeholder="  Password" autocomplete="off" required> <br>
+                    <button id="btn" type="submit">Login</button>
+                </form>
+            </div>
+
+
+
+            <!-- --------------------- Sign Up form --------------------- -->
+
+            <div class="main-form">
+                <form id="newForm" class="new-form">
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script text="text/javascript" src="js/login-style.js"></script>
+
+
+    <!-- <div class="wrapper">
+        <div class="title">
+
+            <a href="https://www.google.com" class="login">Login Form</a>
+            <a href="https://www.google.com" class="signup">Signup Form</a>
+        </div>
+
+        <div class="form-inner">
+            <form action="#" class="login">
+                <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a>
+                </div>
+
+        </div>
+    </div> -->
 </body>
 
 </html>

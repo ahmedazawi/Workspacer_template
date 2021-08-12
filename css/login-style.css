@@ -1,11 +1,326 @@
-.wrapper{
-    width: 600px;
-    height: 300px;
-    margin-top: 9em ;
-    margin-right:14em ;
-    float: right;
-    background-color:rgb(243, 246, 255);
-    /* max-width: 1200px; */
-    border-radius: 1.5em;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    font-family:Rubik-Regular, Rubik;
+
+    margin:0;
 }
+
+
+/* ------------ sidebar ----------- */
+.sidebar {
+    /* margin-top: 200ox;
+    padding-top:60px;
+    padding-bottom:250px;
+    width: 400px;
+    height: 1080px; */
+    background-color: rgb(62,128,255);
+    /* position:fixed; */
+    overflow: auto;
+    /* display: block; */
+    /* font-weight: bold; */
+    /* transition: 0.5s; */
+    
+}
+
+
+
+
+
+
+
+
+
+/* --------- grid system -------------- */
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.main {             /*   dont move this block of code    */
+    margin-left: 480px;
+    padding: 1px 16px;
+    /* height: 900px; */
+  }
+
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+.sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    div.main {margin-left: 0;
+        transition:  0.3s;
+        transition-delay: 0.1s;
+    }
+}
+
+
+
+/* On screens that are less than 600px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 600px) {
+
+    .sidebar{
+        padding-top:60px;
+        padding-bottom:250px;
+        
+    
+      }
+}
+
+
+
+
+
+
+
+/* -------------- Main form ----------------- */
+.main{
+   
+    width: 700px;
+    height: 430px;
+    margin-top: 150px ;
+    /* margin-right:150px ; */
+    
+    background-color:rgb(243, 246, 255);
+    border-radius: 1.5em;
+    box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.15);
+    /* display: flex;
+    flex-direction: column; */
+    color:rgb(44, 44, 44);
+    transition:  0.3s;
+    transition-delay: 0.1s; 
+    
+}
+
+/* --------- main form mouse over ----------- */
+.main:hover{
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.54);
+    
+    transition-duration:0.3s;
+    transition-delay: 0.1s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- login & Sign up Switch buttons  ------------- */
+.switch{
+    margin-top: 25px;
+    margin-left:158px;
+   text-align: center;
+    width: 200px;
+    height: 65px;
+   border: none;
+   border-radius:10px;
+   display:flex;
+   /* background: white; */
+
+}
+
+.switch button{
+    border: none;
+    background:none;
+    color:#5082cc;
+    cursor: pointer;
+   font-size:20px;
+   /* font-weight:bold;    */
+   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
+    font-family:'Rubik-medium';
+    display:inline;
+    font-family:Rubik-Bold, Rubik;
+
+
+}
+/* login & sing up buttons mouse over */
+.switch button:hover{
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
+    /* color:black; */
+}
+.switch .active{
+    font-size:30px;
+    color:#0052cc;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); 
+    /* background-color:#5082cc; */
+    border-bottom: 3px solid #0052cc;
+    /* border: ; */
+    /* border-radius: 10px; */
+    
+    
+}
+/* -------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ login ---------------- */
+.form{
+    margin-top: 20px ;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+   
+}
+.form input{
+    border-radius: 7px;
+    border:1px solid rgb(243, 246, 255) ;
+    width: 380px;
+    height: 40px;
+    margin-bottom:10px;
+}
+#myForget{
+    float: right;
+    margin-right:165px;
+    font-size: small;
+    color: #5082cc;
+    /* margin-bottom: 1px; */
+    /* margin-top:-3px; */
+    text-decoration: none;
+}
+#myForget:hover{
+    text-decoration:underline;
+
+}
+#btn{
+    width: 380px;
+    height: 50px;
+    border-radius: 7px;
+    border:1px solid rgb(0, 82, 204) ;
+    background-color: rgb(0, 82, 204);
+    font-size:20px;
+    font-family:Rubik-Bold, Rubik;
+    /* font-weight: bold; */
+    color:white;
+    cursor:pointer;
+
+}
+
+/* ----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ signup form ----------------- */
+
+.new-form{
+    margin-top: 20px ;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    
+}
+/* ----- first name field ----- */
+#f-name{
+    border-radius: 7px;
+    border:1px solid rgb(243, 246, 255) ;
+    width: 185px;
+    height: 40px;
+    /* margin-bottom:0; */
+
+}
+/* ----- last name field ----- */
+#l-name{
+    border-radius: 7px;
+    border:1px solid rgb(243, 246, 255) ;
+    width: 185px;
+    height: 40px;
+    /* margin-bottom:0; */
+
+}
+.new-form input{
+    border-radius: 7px;
+    border:1px solid rgb(243, 246, 255) ;
+    width: 380px;
+    height: 40px;
+    margin-bottom:10px;
+   
+    
+}
+#new-btn{
+    width: 380px;
+    height: 50px;
+    border-radius: 7px;
+    border:1px solid rgb(0, 82, 204) ;
+    background-color: rgb(0, 82, 204);
+    font-size:20px;
+    font-family:Rubik-Bold, Rubik;
+    /* font-weight: bold; */
+    color:white;
+    cursor:pointer;
+}
+
+#checkbox-div{
+    text-align: center;
+    margin: 0 0 10px 15px;
+}
+
+#form-checkbox{
+    width:15px;
+    height: 15px;
+    cursor:pointer;
+
+   
+}
+#checkbox-div label{
+    font-family:Rubik-Light, Rubik;
+    font-size:15px;
+}
+#checkbox-div label a{
+    text-decoration: none;
+    color: #0052cc;
+}
+#checkbox-div label a:hover{
+    text-decoration:underline;
+}
+
+/* ---------------------------------------- */
+
+
+
+
+
