@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -10,94 +10,152 @@
     <title>Login | Signup</title>
 </head>
 
-<body style="background-color:rgb(236 , 241 , 254);">
+<body>
 
+    <!------------------------------ language switch ------------- -->
 
 
 
     <!--------------- login & Sign Up main form -------------->
 
+    <div class="container">
+
+        <div class="card">
+            <div class="sidebar">
+                <div class="side-svg">
+                    <!-- <select id="lan-switch">
+                        <option>English</option>
+                        <option>Arabic</option>
+                    </select> -->
+
+                    <div id="logo">
+                        <img src="/Workspacer_template/svg/logo.svg">
+                        <h1>WORKSPACER</h1>
+                    </div>
+                    <p>Create your free virtual
+                        coworking spaces. </p>
+
+                    <img id="picture" src="svg/login_sidebar/sidebar_picture.svg">
+                </div>
+            </div>
+
+            <!-- ------------------- -->
 
 
-    <div class="card">
-        <div class="sidebar">
-            <div class="side-svg">
+
+
+
+            <div class="main">
+                <!--------------- login & Sign Up Switch Buttons -------------->
+                <div class="switch">
+                    <button id="login" class="active">
+                        Login
+                    </button>
+
+                    <button id="signup">
+                        Sign Up
+                    </button>
+                </div>
+                <!-- ---------------------------------------------- -->
+
+
+
+
+                <!-- --------------------- login form --------------------- -->
+                <div class="main-form">
+                    <form class="form">
+                        <input id="email" type="text" name="email" placeholder="  Email Address" autocomplete="off"
+                            required> <br>
+                        <a id="myForget" href="#">Forgot password</a> <br>
+                        <input id="log-pass" style="margin-bottom:20px;" type="password" name="password"
+                            placeholder="  Password" autocomplete="off" required> <br>
+                        <div class="show-password">
+                            <input id="box" type="checkbox" onclick="showPassword()">
+                            <label for="box">Show Password</label>
+                        </div>
+                        <br>
+
+                        <button id="btn" type="submit">Login</button>
+                    </form>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- --------------------- Sign Up form ----------------------->
+                <div class="main-form">
+                    <form id="newForm" class="new-form">
+
+                        <!-------------------- input fields---------------- -->
+                        <div id="full-name">
+
+                            <input id="f-name" type="text" placeholder="  First name" required>
+                            <input id="l-name" type="text" placeholder="  Last name" required>
+
+                        </div>
+
+                        <input type="text" placeholder="  Email Address" required>
+
+                        <div id="pass-div">
+
+                            <input id="pass" type="password" placeholder="  Password" name="pswd1"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
+                                title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+
+                            <input id="pass-confirm" type="password" placeholder="  Confirm Password" name="pswd2"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
+                                title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+
+                        </div>
+                        <!-- ---------------------------------------------- -->
+
+
+                        <!-- -------------- Checkboxes -------------- -->
+                        <div class="checkbox-div">
+                            <input id="new-box" type="checkbox" onclick="showPassword()">
+                            <label for="new-box">Show Password</label>
+                        </div>
+
+                        <div class="checkbox-div">
+
+                            <input id="form-checkbox" type="checkbox" name="checkbox" required>
+
+                            <label for="form-checkbox">By signing up, you agree to our <a href="#">Terms</a> and <a
+                                    href="#">
+                                    Privacy Policy</a>,
+                                <br>
+                                and our default
+                                <a href="#">Notification Settings</a>.
+
+                            </label>
+
+                        </div>
+                        <!-- ---------------------------------- -->
+
+                        <button id="new-btn" type="submit" onclick="matchPassword()">Sign Up</button>
+
+                    </form>
+
+                </div>
 
             </div>
+
+
         </div>
-
-        <!-- ------------------- -->
-
-
-
-        <div class="main">
-            <!--------------- login & Sign Up Switch Buttons -------------->
-            <div class="switch">
-                <button id="login" class="active">
-                    Login
-                </button>
-
-                <button id="signup">
-                    Sign Up
-                </button>
-            </div>
-            <!-- ---------------------------------------------- -->
-
-
-
-
-            <!-- --------------------- login form --------------------- -->
-            <div class="main-form">
-                <form class="form">
-                    <input type="text" name="email" placeholder="  Email Address" required> <br>
-                    <a id="myForget" href="#">Forgot password</a> <br>
-                    <input type="password" name="password" placeholder="  Password" autocomplete="off" required> <br>
-                    <button id="btn" type="submit">Login</button>
-                </form>
-            </div>
-
-
-
-            <!-- --------------------- Sign Up form --------------------- -->
-
-            <div class="main-form">
-                <form id="newForm" class="new-form">
-
-                </form>
-            </div>
-
-        </div>
-
 
     </div>
 
 
 
-
-
     <script text="text/javascript" src="js/login-script.js"></script>
 
-
-    <!-- <div class="wrapper">
-        <div class="title">
-
-            <a href="https://www.google.com" class="login">Login Form</a>
-            <a href="https://www.google.com" class="signup">Signup Form</a>
-        </div>
-
-        <div class="form-inner">
-            <form action="#" class="login">
-                <div class="field">
-                    <input type="text" placeholder="Email Address" required>
-                </div>
-                <div class="field">
-                    <input type="password" placeholder="Password" required>
-                </div>
-                <div class="pass-link"><a href="#">Forgot password?</a>
-                </div>
-
-        </div>
-    </div> -->
 </body>
 
 </html>

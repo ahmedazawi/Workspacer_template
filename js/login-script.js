@@ -1,7 +1,9 @@
+document.querySelector('#email').focus()
+
+
 let myLoginActive = document.querySelector("#login");
 let mySignupActive = document.querySelector("#signup");
 let myForm = document.querySelector(".form");
-// let mySwitch = document.querySelector(".form-switch");
 let myFirstName = document.createElement("input");
 
 // ------- new form 'Sign up form'--------
@@ -18,9 +20,10 @@ let myNewForm = document.querySelector('#newForm')
 
 // ------------ login -----------
 
-myLoginActive.addEventListener('click', function () {
+myLoginActive.addEventListener('click', () => {
     myLoginActive.classList.add("active");
     mySignupActive.classList.remove("active");
+    document.querySelector('#email').focus()
 
 
     // ---- login switch animation ----
@@ -35,7 +38,7 @@ myLoginActive.addEventListener('click', function () {
 
             setTimeout(function () {
                 myForm.style.opacity = "1";
-            }, 100)
+            }, 1)
 
 
         }, 1)
@@ -49,12 +52,9 @@ myLoginActive.addEventListener('click', function () {
 
 
 // ------------ Signup -----------
-mySignupActive.addEventListener('click', function () {
+mySignupActive.addEventListener('click', () => {
     mySignupActive.classList.add("active");
     myLoginActive.classList.remove("active");
-
-
-
 
 
 
@@ -69,63 +69,53 @@ mySignupActive.addEventListener('click', function () {
 
 
 
-    }, 100)
-
-
-
-
-
-    // ------- adding Sign Up form to HTML -------
-
-    myNewForm.innerHTML = `
-
-        <div class="full-name">
-
-            <input id="f-name" type="text" placeholder="  First name" required> <input id="l-name" type="text" placeholder="  Last name" required> 
-        
-        </div>
-
-        
-        <input type="text" placeholder="  Email Address" required> 
-        <input type="password" placeholder="  Password" autocomplete="off" required> 
-
-
-
-        <div id="checkbox-div">
-
-            <input id="form-checkbox" type="checkbox" name="checkbox" required>
-
-            <label for="checkbox">By signing up, you agree to our 
-
-                <a href="#">
-                Terms
-                </a>
-                
-                and
-
-                <a href="#">
-                Privacy Policy
-                </a>
-                ,
-                <br>
-                and our default
-
-                <a href="#">
-                Notification Settings
-                </a>
-                .
-
-            </label> 
-            
-        </div>
-
-
-        <button id="new-btn" type="submit">Sign Up</button>
-        
-        `;
-
+    }, 1)
 
 
 
 })
 
+
+
+
+
+
+
+
+
+// -------------- Password validation ----------------
+
+function matchPassword() {
+    let pw1 = document.getElementById("pswd1");
+    let pw2 = document.getElementById("pswd2");
+    if (pw1 != pw2) {
+        // alert("Passwords did not match");
+        return false
+    } else {
+        // alert("Password created successfully");
+        return true
+    }
+}
+
+// ------------------
+
+
+
+// ------------ Password visiablity ------------
+function showPassword() {
+    let show1 = document.querySelector('#log-pass');
+    let show2 = document.querySelector('#pass');
+    let show3 = document.querySelector('#pass-confirm');
+
+    if (show1.type | show2.type | show3.type === "password") {
+        show1.type = "text";
+        show2.type = "text";
+        show3.type = "text";
+
+    } else {
+        show1.type = "password";
+        show2.type = "password";
+        show3.type = "password";
+
+    }
+}

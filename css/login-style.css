@@ -1,10 +1,22 @@
 
 body{
     font-family:Rubik-Regular, Rubik;
-    display:flex;
-    flex-direction: column;
+    background-color:rgb(236 , 241 , 254);
     margin:0;
 }
+
+
+/* ---------- container 'Page Content' --------- */
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
+
 
 
 
@@ -15,20 +27,97 @@ body{
 
 /* ------------ Sidebar ----------- */
 .sidebar {
-    margin-top: 200ox;
+    display:flex;
+    justify-content: center;
     padding-top:60px;
     padding-bottom:250px;
-    width: 27.7vw;
-    height: 216vw; 
+    width: calc(200px + 18.7vw) ;
+    height: calc(300px + 20vw) ; 
     background-color: rgb(62,128,255);
     position:fixed;
     overflow: auto;
-    font-weight: bold;
     transition: 0.5s;
     
 }
+/* ----------- logo ----------- */
+
+.sidebar #logo{
+    display:flex;
+    align-items:center;
+    justify-content: center; 
+    
+}
+
+/* logo svg img */
+#logo img{
+margin-right: 10px;
+}
+
+/* logo text - WORKSPACER */
+#logo h1{
+    color: rgb(243,246,255);
+}
+
+.sidebar p{
+    transform:translate(0 37);
+    color:#f3f6ff ;
+    font-size:30px ;
+    font-family:Rubik-Light, Rubik;
+    font-weight:300;
+    /* width:421px;
+    height:94px; */
+    margin-left: calc(20px + 1vw);
+}
+#picture{
+    margin-top: 50px;
+    width: 100%;
+}
+
 
 /* -------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- Language switch ----------------- */
+
+#lan-switch{ 
+    margin:-45px 0 0 10px;  
+    display:block;
+    width:100px;
+    height: 30px;
+    border-radius: 7px;
+    color:#0052cc;
+    border-color: rgb(243, 246, 255);
+    padding:0 10px 0 5px;
+    /* Remove default arrow */
+    appearance: none;       
+    /* Add custom arrow */
+    background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+    background-origin: content-box;
+  }
+      
+/* ------------------------------------------------- */
+
+
+
+
+
+
+
 
 
 
@@ -50,15 +139,16 @@ body{
     max-width: calc( 200px + 30vw);
     height: 430px;
     margin-top: 150px ;
-    display: flex;
+    
+    display:flex;
+    align-items:center;
+    /* justify-content: center;  */
     flex-direction: column;
     flex-wrap: wrap;
   
     background-color:rgb(243, 246, 255);
     border-radius: 1.5em;
     box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.15);
-    /* display: flex;
-    flex-direction: column; */
     color:rgb(44, 44, 44);
     transition:  0.3s;
     transition-delay: 0.1s; 
@@ -93,7 +183,7 @@ body{
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.main {             /*   dont move this block of code    */
-    margin-left: 41vw;
+    margin-left: 44vw;
     padding: 1px 16px;
     /* height: 900px; */
   }
@@ -128,24 +218,13 @@ div.main {             /*   dont move this block of code    */
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
 
-    div.main {margin:6vw 12vw;
+    div.main {margin:6vw 13vw;
         transition:  0.3s;
         transition-delay: 0.1s;
     }
 }
 
 
-
-/* On screens that are less than 600px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 600px) {
-
-    .sidebar{
-        padding-top:60px;
-        padding-bottom:250px;
-        
-    
-      }
-}
 
 /* ------------------------------- */
 
@@ -170,15 +249,15 @@ div.main {             /*   dont move this block of code    */
 
 /* ---------- login & Sign up Switch buttons  ------------- */
 .switch{
-    margin-top: 25px;
-    margin-left:9vw;
-   text-align: center;
+    margin-top: 15px;
+    /* margin-left:9vw; */
+    display:flex;
+    align-items:center;
+    justify-content: center; 
     min-width: 28vw;
     height: 65px;
-   border: none;
-   border-radius:10px;
-   display:flex;
-   /* background: white; */
+    border: none;
+    border-radius:10px;
 
 }
 
@@ -187,12 +266,9 @@ div.main {             /*   dont move this block of code    */
     background:none;
     color:#5082cc;
     cursor: pointer;
-   font-size:20px;
-   /* font-weight:bold;    */
-   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
+    font-size:20px;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
     font-family:'Rubik-medium';
-    display:flex;
-    flex-wrap:wrap;
     font-family:Rubik-Bold, Rubik;
     
 
@@ -201,10 +277,10 @@ div.main {             /*   dont move this block of code    */
 /* login & sing up buttons mouse over */
 .switch button:hover{
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
-    /* color:black; */
+    color:#0052cc;
 }
 .switch .active{
-    font-size:30px;
+    font-size:25px;
     color:#0052cc;
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); 
     /* background-color:#5082cc; */
@@ -227,7 +303,15 @@ div.main {             /*   dont move this block of code    */
 
 
 
+
+
+
+
+
+
 /* ------------------ login ---------------- */
+
+/* ------- Form -------- */
 .form{
     margin-top: 20px ;
     text-align: center;
@@ -237,26 +321,53 @@ div.main {             /*   dont move this block of code    */
     -webkit-transition: opacity 2s ease-in-out;
    
 }
+
+/* --------- Form input -------- */
 .form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: calc(30px + 24vw) ;
+    width: calc(300px + 5.5vw) ;
     height: 40px;
-    margin-bottom:10px;
+    margin-bottom:2px;
+    padding-left:5px
 }
+/* ------- Forget link */
 #myForget{
     float: right; 
-    margin-right:9vw;
     font-size: small;
     color: #5082cc;
-    /* margin-bottom: 1px; */
-    /* margin-top:-3px; */
     text-decoration: none;
 }
 #myForget:hover{
     text-decoration:underline;
 
 }
+
+
+/* ----------- show password checkbox -------- */
+
+
+.show-password{
+    
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+    /* margin:-20px 0; */
+    
+}
+.show-password input , .new-box{
+    width:15px;
+    border-radius: 7px;
+}
+.show-password label{
+    font-family:Rubik-Regular, Rubik;
+    font-size:small;
+}
+
+
+
+
+/* ----------- Login Button -------------- */
 #btn{
     width: calc(30px + 24vw);
     height: 50px;
@@ -268,7 +379,11 @@ div.main {             /*   dont move this block of code    */
     /* font-weight: bold; */
     color:white;
     cursor:pointer;
-
+    transition: 0.5s;
+}
+#btn:hover{
+    background-color: rgba(0, 82, 204, 0.849);
+    transition: 0.5s;
 }
 
 /* ----------------------------------------- */
@@ -285,10 +400,18 @@ div.main {             /*   dont move this block of code    */
 
 
 
+
+
+
+
+
+
+
 /* ------------ signup form ----------------- */
 
 .new-form{
-    margin-top: 20px ;
+    /* margin-top: 20px ; */
+    display:none;
     text-align: center;
     opacity: 0;
     transition: opacity 2s ease-in-out;
@@ -296,37 +419,47 @@ div.main {             /*   dont move this block of code    */
     -webkit-transition: opacity 2s ease-in-out;
     
 }
-/* ----- first name field ----- */
-#full-name{
-    display:flex;
-    flex-wrap:wrap;
-}
-#f-name{
-    border-radius: 7px;
-    border:1px solid rgb(243, 246, 255) ;
-    width: 12.84vw;
-    height: 40px;
-    /* margin-bottom:0; */
-
-}
-/* ----- last name field ----- */
-#l-name{
-    border-radius: 7px;
-    border:1px solid rgb(243, 246, 255) ;
-    width: 12.84vw;
-    height: 40px;
-    /* margin-bottom:0; */
-
-}
+/* -------- Form input -email- ----------- */
 .new-form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: calc(30px + 24vw) ;
+    width: calc(300px + 5.5vw) ;
     height: 40px;
     margin-bottom:10px;
+    padding-left:5px
    
     
 }
+
+/* ----- Full name field ----- */
+
+#full-name{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: row;
+}
+#full-name input{
+    width: calc(150px + 2.5vw) ;
+    padding-left:5px
+    
+}
+
+/* ---------- password ---------- */
+#pass-div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: row;
+    
+}
+#pass-div input{
+    width: calc(150px + 2.5vw) ;
+    padding-left:5px
+
+}
+
+/* ---------- Sign Up button ------------ */
 #new-btn{
     width: calc(30px + 24vw) ;
     height: 50px;
@@ -338,33 +471,53 @@ div.main {             /*   dont move this block of code    */
     /* font-weight: bold; */
     color:white;
     cursor:pointer;
+    transition: 0.5s;
+    margin-top:2vw;
+}
+#new-btn:hover{
+    background-color: rgba(0, 82, 204, 0.849);
+    transition: 0.5s;
 }
 
-#checkbox-div{
-    text-align: center;
-    margin: 0 0 2vw 3vw;
+/* ----------- terms CHECKBOX ------------ */
+.checkbox-div{
+    display:flex;
+    flex-direction: row;
+  
 }
 
-#form-checkbox{
+.checkbox-div input{
     width:15px;
     height: 15px;
     cursor:pointer;
 
    
 }
-#checkbox-div label{
+.checkbox-div label{
     font-family:Rubik-Light, Rubik;
     font-size:15px;
 }
-#checkbox-div label a{
+.checkbox-div label a{
     text-decoration: none;
     color: #0052cc;
 }
-#checkbox-div label a:hover{
+.checkbox-div label a:hover{
     text-decoration:underline;
 }
 
 /* ---------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
