@@ -26,22 +26,33 @@ myLoginActive.addEventListener('click', () => {
     document.querySelector('#email').focus()
 
 
-    // ---- login switch animation ----
     if (mySignupActive.className != 'active') {
 
-        myNewForm.style.opacity = "0";
+        myNewForm.style.display = "none";
         myForm.style.display = "block";
 
-        setTimeout(function () {
-            myNewForm.style.display = "none";
 
 
-            setTimeout(function () {
-                myForm.style.opacity = "1";
-            }, 1)
 
 
-        }, 1)
+
+
+
+        // ---- login switch animation ----
+
+        // myNewForm.style.opacity = "0";
+        // myForm.style.display = "block";
+
+        // setTimeout(function () {
+        //     myNewForm.style.display = "none";
+
+
+        //     setTimeout(function () {
+        //         myForm.style.opacity = "5";
+        //     }, 1)
+
+
+        // }, 1)
     }
 
 
@@ -58,18 +69,24 @@ mySignupActive.addEventListener('click', () => {
 
 
 
-    // ------- Sign Up switch animation -------
-    myForm.style.opacity = '0';
     myNewForm.style.display = "block";
-
-    setTimeout(function () {
-        myNewForm.style.opacity = "1";
-        myForm.style.display = "none";
+    myForm.style.display = "none";
+    // ------- Sign Up switch animation -------
 
 
 
 
-    }, 1)
+    // myForm.style.opacity = '0';
+    // myNewForm.style.display = "block";
+
+    // setTimeout(function () {
+    //     myNewForm.style.opacity = "5";
+    //     myForm.style.display = "none";
+
+
+
+
+    // }, 1)
 
 
 
@@ -119,3 +136,7 @@ function showPassword() {
 
     }
 }
+
+
+
+

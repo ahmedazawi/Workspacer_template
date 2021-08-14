@@ -29,13 +29,13 @@
                     </select> -->
 
                     <div id="logo">
-                        <img src="/Workspacer_template/svg/logo.svg">
+                        <img src="./svg/logo.svg">
                         <h1>WORKSPACER</h1>
                     </div>
                     <p>Create your free virtual
                         coworking spaces. </p>
 
-                    <img id="picture" src="svg/login_sidebar/sidebar_picture.svg">
+                    <img id="picture" src="./svg/login_sidebar/sidebar_picture.svg">
                 </div>
             </div>
 
@@ -64,18 +64,18 @@
                 <!-- --------------------- login form --------------------- -->
                 <div class="main-form">
                     <form class="form">
-                        <input id="email" type="text" name="email" placeholder="  Email Address" autocomplete="off"
+                        <input id="email" type="text" name="email" placeholder="Email Address" autocomplete="off"
                             required> <br>
                         <a id="myForget" href="#">Forgot password</a> <br>
-                        <input id="log-pass" style="margin-bottom:20px;" type="password" name="password"
-                            placeholder="  Password" autocomplete="off" required> <br>
+                        <input id="log-pass" type="password" name="password" placeholder="Password" autocomplete="off"
+                            required> <br>
                         <div class="show-password">
                             <input id="box" type="checkbox" onclick="showPassword()">
                             <label for="box">Show Password</label>
                         </div>
                         <br>
 
-                        <button id="btn" type="submit">Login</button>
+                        <button id="btn" type="submit">LOGIN</button>
                     </form>
                 </div>
 
@@ -94,21 +94,21 @@
                         <!-------------------- input fields---------------- -->
                         <div id="full-name">
 
-                            <input id="f-name" type="text" placeholder="  First name" required>
-                            <input id="l-name" type="text" placeholder="  Last name" required>
+                            <input id="f-name" type="text" placeholder="First name" required>
+                            <input id="l-name" type="text" placeholder="Last name" required>
 
                         </div>
 
-                        <input type="text" placeholder="  Email Address" required>
+                        <input id="em" type="text" placeholder="Email Address" required>
 
                         <div id="pass-div">
 
-                            <input id="pass" type="password" placeholder="  Password" name="pswd1"
+                            <input id="pass" type="password" placeholder="Password" name="pswd1"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
                                 title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                 required>
 
-                            <input id="pass-confirm" type="password" placeholder="  Confirm Password" name="pswd2"
+                            <input id="pass-confirm" type="password" placeholder="Confirm Password" name="pswd2"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
                                 title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                 required>
@@ -118,28 +118,30 @@
 
 
                         <!-- -------------- Checkboxes -------------- -->
-                        <div class="checkbox-div">
-                            <input id="new-box" type="checkbox" onclick="showPassword()">
-                            <label for="new-box">Show Password</label>
-                        </div>
+                        <div class="checkboxes">
+                            <div class="checkbox-div">
+                                <input id="new-box" type="checkbox" onclick="showPassword()">
+                                <label for="new-box">Show Password</label>
+                            </div>
 
-                        <div class="checkbox-div">
+                            <div class="checkbox-div">
 
-                            <input id="form-checkbox" type="checkbox" name="checkbox" required>
+                                <input id="form-checkbox" type="checkbox" name="checkbox" required>
 
-                            <label for="form-checkbox">By signing up, you agree to our <a href="#">Terms</a> and <a
-                                    href="#">
-                                    Privacy Policy</a>,
-                                <br>
-                                and our default
-                                <a href="#">Notification Settings</a>.
+                                <label for="form-checkbox">By signing up, you agree to our <a href="#">Terms</a> and <a
+                                        href="#">
+                                        Privacy Policy</a>,
+                                    <br>
+                                    and our default
+                                    <a href="#">Notification Settings</a>.
 
-                            </label>
+                                </label>
 
+                            </div>
                         </div>
                         <!-- ---------------------------------- -->
 
-                        <button id="new-btn" type="submit" onclick="matchPassword()">Sign Up</button>
+                        <button id="new-btn" type="submit" onclick="matchPassword()">SIGN UP</button>
 
                     </form>
 

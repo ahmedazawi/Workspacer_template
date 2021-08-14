@@ -11,12 +11,8 @@ body{
 .container{
     display:flex;
     flex-direction: column;
+    
 }
-
-
-
-
-
 
 
 
@@ -50,12 +46,14 @@ body{
 
 /* logo svg img */
 #logo img{
-margin-right: 10px;
+margin-right: 0.69vw;
 }
 
 /* logo text - WORKSPACER */
 #logo h1{
     color: rgb(243,246,255);
+    font-family:Rubik-Regular, Rubik;
+    
 }
 
 .sidebar p{
@@ -139,13 +137,11 @@ margin-right: 10px;
     max-width: calc( 200px + 30vw);
     height: 430px;
     margin-top: 150px ;
-    
     display:flex;
     align-items:center;
     /* justify-content: center;  */
     flex-direction: column;
     flex-wrap: wrap;
-  
     background-color:rgb(243, 246, 255);
     border-radius: 1.5em;
     box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.15);
@@ -178,54 +174,100 @@ margin-right: 10px;
 
 
 
-/* --------- grid system -------------- */
+/* --------- Media query grid system -------------- */
 
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.main {             /*   dont move this block of code    */
-    margin-left: 44vw;
+    margin-left: 43vw;
+    align-items: center;
     padding: 1px 16px;
     /* height: 900px; */
+   
   }
 
-
-/* On screens that are less than 900px wide, make the sidebar into a topbar */
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 1200px) {
+    
+    div.main {
+        margin-left: 43vw;
+        transition:  0.3s;
+        transition-delay: 0.1s;
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 1200px) {
+    
     .sidebar {
         width: 100%;
-        /* height: auto; */
+        height: auto;
         position: relative;
       }
-    div.main {margin:6vw 22vw ;
+    div.main {
+        
+        margin: 150px 24vw; 
         transition:  0.3s;
         transition-delay: 0.1s;
+        margin-bottom:150px;
+
     }
+    
 }
-
-
-/* On screens that are less than 800px wide, make the sidebar into a topbar */
-@media screen and (max-width: 800px) {
-  
-      div.main {margin:6vw 22vw;
+@media screen and (min-width: 540px) and (max-width:769px ) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        
+      }
+    div.main {
+        margin: 150px 24vw; 
         transition:  0.3s;
         transition-delay: 0.1s;
+        margin-bottom:150px;
+
     }
+   
+    .container{
+        justify-content: center;
+    }
+    /* div.main-form .form input{
+        width: 100px;
+    } */
 }
-
-
-
-
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-
-    div.main {margin:6vw 13vw;
+@media screen and (min-width: 415px) and (max-width: 539px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      div.main {
+        margin: 150px 12vw; 
         transition:  0.3s;
         transition-delay: 0.1s;
+        margin-bottom:150px;
     }
 }
+@media screen and (max-width: 414px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    div.main {
+        margin:150px 6vw; 
+        transition:  0.3s;
+        transition-delay: 0.1s;
+        margin-bottom:150px;
 
-
-
+    }
+   
+    .container{
+        justify-content: center;
+    }
+    /* div.main-form .form input{
+        width: 100px;
+    } */
+   
+}
 /* ------------------------------- */
 
 
@@ -253,7 +295,7 @@ div.main {             /*   dont move this block of code    */
     /* margin-left:9vw; */
     display:flex;
     align-items:center;
-    justify-content: center; 
+    justify-content:flex-start; 
     min-width: 28vw;
     height: 65px;
     border: none;
@@ -268,8 +310,8 @@ div.main {             /*   dont move this block of code    */
     cursor: pointer;
     font-size:20px;
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
-    font-family:'Rubik-medium';
-    font-family:Rubik-Bold, Rubik;
+    font-family:Rubik-Medium,Rubik;
+   
     
 
 
@@ -326,7 +368,7 @@ div.main {             /*   dont move this block of code    */
 .form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: calc(300px + 5.5vw) ;
+    width:26vmax ;
     height: 40px;
     margin-bottom:2px;
     padding-left:5px
@@ -352,7 +394,7 @@ div.main {             /*   dont move this block of code    */
     display:flex;
     align-items:center;
     flex-direction: row;
-    /* margin:-20px 0; */
+   
     
 }
 .show-password input , .new-box{
@@ -410,20 +452,19 @@ div.main {             /*   dont move this block of code    */
 /* ------------ signup form ----------------- */
 
 .new-form{
-    /* margin-top: 20px ; */
     display:none;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
     transition: opacity 2s ease-in-out;
     -moz-transition: opacity 2s ease-in-out;
     -webkit-transition: opacity 2s ease-in-out;
-    
+    transition: all 0.6s
 }
 /* -------- Form input -email- ----------- */
 .new-form input{
     border-radius: 7px;
     border:1px solid rgb(243, 246, 255) ;
-    width: calc(300px + 5.5vw) ;
+    width: 26.5vmax;
     height: 40px;
     margin-bottom:10px;
     padding-left:5px
@@ -438,9 +479,10 @@ div.main {             /*   dont move this block of code    */
     align-items:center;
     justify-content:center;
     flex-direction: row;
+    flex-wrap:wrap;
 }
 #full-name input{
-    width: calc(150px + 2.5vw) ;
+    width:13vmax ; 
     padding-left:5px
     
 }
@@ -454,7 +496,7 @@ div.main {             /*   dont move this block of code    */
     
 }
 #pass-div input{
-    width: calc(150px + 2.5vw) ;
+    width:13vmax ; 
     padding-left:5px
 
 }
@@ -480,9 +522,17 @@ div.main {             /*   dont move this block of code    */
 }
 
 /* ----------- terms CHECKBOX ------------ */
+.checkboxes{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-left:5px;
+
+}
 .checkbox-div{
     display:flex;
     flex-direction: row;
+    justify-content:stretch;
   
 }
 
@@ -490,12 +540,16 @@ div.main {             /*   dont move this block of code    */
     width:15px;
     height: 15px;
     cursor:pointer;
-
-   
 }
+#form-checkbox{
+    min-width:15px;
+    min-height: 15px;
+}
+
 .checkbox-div label{
     font-family:Rubik-Light, Rubik;
     font-size:15px;
+    text-align:justify;
 }
 .checkbox-div label a{
     text-decoration: none;

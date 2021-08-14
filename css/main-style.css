@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   width: calc(150px + 8vw);
-  height: 1080px;
+  height: 97vw;
   background-color: white;
   position: fixed;
   font-family:Rubik-Regular, Rubik;
@@ -150,11 +150,38 @@
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
  div.content {             /*   dont move this block of code    */
-  margin-left: 300px;
+  margin:0 20vw;
   padding: 1px 16px;
   height: 900px;
  
 }
+
+
+
+
+
+@media screen and (min-width: 1101px) and (max-width: 1399px){
+
+
+ div.content {
+   margin: 0 27vw;
+   transition:  0.3s;
+     
+ }
+ .sidebar-select select{
+   width: calc(120px + 8vw);
+   appearance: none;       /* Remove default arrow */
+   /* Add custom arrow */
+   background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+   background-origin: content-box;
+
+   
+ }
+
+
+
+}
+
 
 
 
@@ -188,7 +215,7 @@
     
     }    
     div.content {
-      margin-left: calc(-50px + 150px);
+      margin: 0 15vw;
       transition:  0.3s;
         
     }
@@ -208,8 +235,7 @@
   
 
 
-  /* On screens that are less than 850px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 850px) {
+@media screen and (max-width: 946px) {
 
     /* Sidebar links in 900px */
    .sidebar {
@@ -234,7 +260,7 @@
    
    }    
    div.content {
-     margin-left: 50px;
+     margin:0 12vw;
      transition:  0.3s;
        
    }
@@ -251,7 +277,44 @@
   
  }
  
+ @media screen and (min-width: 769px) and (max-width: 900px) {
+ /* Sidebar links in 900px */
+ .sidebar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top:60px;
 
+}
+.sidebar-items{
+  padding-top:60px;
+  padding-bottom:60px;
+  margin-left: -10px;
+  align-items: center;
+}
+.sidebar-items a {
+  float: none;       /* float:left; to make the element horizontal */
+  text-align: center;
+  transition:  0.3s;
+  padding:30px;
+
+
+}    
+div.content {
+  margin:0 7vw;
+  transition:  0.3s;
+    
+}
+.sidebar-select select{
+  width: calc(120px + 8vw);
+  appearance: none;       /* Remove default arrow */
+  /* Add custom arrow */
+  background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+  background-origin: content-box;
+
+  
+}
+ }
 
 
 
@@ -259,8 +322,8 @@
 
   /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
 
-  /* On screens that are less than 800px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 800px) {
+  
+  @media screen and (max-width: 768px) {
     /* Sidebar logo in 600px */
     .sidebar {
       width: 100%;
@@ -286,7 +349,7 @@
   
     }
     div.content {
-      margin-left:0;
+      margin:0 3.4vw;
     }
     .cards{
       justify-content: center;
@@ -299,11 +362,13 @@
 
 
   /* ------------ Screen larger than 600px? 2 column  -------------*/
-  @media (min-width: 800px) {
+  @media (min-width: 720px) {
     .cards { grid-template-columns: repeat(2, 1fr); 
     
     
     }
+  
+    
     
   }
   
@@ -382,10 +447,10 @@
   .card {
     background-color: white;
     color: black;
-    padding: 50vw;
-    width: calc(100px+20vw);
-    height: 300px;
-    padding: 2px 16px;
+    /* padding: 50vw; */
+    width: 350px;
+    height: 250px;
+    /* padding: 2px 16px; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 15px;
@@ -398,7 +463,9 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-gap:2vw;
+    grid-gap:2vw 2vw;
+   
+
    
     
   
