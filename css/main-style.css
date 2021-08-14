@@ -2,80 +2,64 @@
 
 /* ------------- Sidebar Section "large screen" ( 3 column )-----------------*/
 
-/* The side navigation menu  & animation */
+
+
+
+/* -------------- Sidebar ----------------------- */
 .sidebar {
-    margin: 0;
-    padding-top:60px;
-    padding-bottom:250px;
-    width: 300px;
-    height: 1080px;
-    background-color: white;
-    position: fixed;
-    overflow: auto;
-    /* box-shadow: 0 0 5px 2px; */
-    display: block;
-    /* font-size: 35px; */
-    font-weight: bold;
-    transition: 0.5s;
+  font-display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(150px + 8vw);
+  height: 1080px;
+  background-color: white;
+  position: fixed;
+  font-family:Rubik-Regular, Rubik;
+  transition: 0.5s;
   }
 
-.sidebar-menu {
-  display: block;
-      font-size: 35px;
-      font-weight: bold;
-      transition: 0.5s;
-    padding-top:65px;
 
-}
 
-/* Sidebar logo */
+/* ---------- Sidebar logo ---------- */
 .sidebar .logo{
-    margin-top:-30px;
-    margin-bottom:50px;
+    
+    margin-bottom:20px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    padding-top:20px;
+    margin-left: -1vw;
     
 }
 
 
-/* Sidebar logo SVG  */
 
-.w-logo{
+  /* ---------- logo heading h4 ------------ */
+.logo h4{
   
-  float: left;
-  margin-left: 30px;
-  margin-top:-20px;
+   
+    /* text-align: center; */
+    font-family:Rubik-Regular, Rubik;
+    font-weight: 25;
+    margin-left: 1.3vw;
   
-
-
-}
-.w-logo text{
-  font-weight:lighter;
-
-}
-
-  /* Sidebar heading h4 */
-.sidebar h4{
-  
-    top: 47px;
-    left: 114px;
-    width: 140px;
-    height: 31px;
-    text-align: center;
-    font: normal normal normal 26px/31px Rubik;
-    margin-left: 120px;
-    /* margin-top:0; */
+    
 
     
     
 }
 
 
- /* Sidebar select   */
- .sidebar select{
-  margin-left: 30px;  
-  /* display:block; */
-  top: 130px;
-  left: 30px;
-  width: 240px;
+ /* ----------- Sidebar select ------------   */
+ .sidebar-select{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+ }
+ .sidebar-select select{  
+  width: calc(120px + 7vw);
   height: 60px;
   border-radius: 15px;
   border-color: #F3F6FF;
@@ -91,63 +75,86 @@
  
 
 
-  /* -------- Sidebar items --------*/
-
-.sidebar-menu a{
+  /* -------------- Sidebar items -------------*/
+  .sidebar-items {
+    display: flex;
+    flex-direction: column;
+    transform:translate(0 22);
+    color:#5082cc;
+    font-size:23;
+    font-family:Rubik-Medium, Rubik;
+    font-weight:500;
+    transition: 0.5s;
+  }
+.sidebar-items a{
   text-decoration: none;
-  display: block;
-  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 45px;
   text-align: center;
+  padding: 16px;
   color: rgb(172, 181, 211);
-  word-spacing: 15px;
+  padding-top:60px;
 }
-.menu-text {
-    transition:  0.3s;
-    transition-delay: 0.1s;
-    font-size:large;
-    width: 250px;
-    height: 28px;
-    top: 241px;
-    left: 94px;
-    width: 120px;
-    height: 28px;
-    font: normal normal medium 23px/28px Rubik;
+.sidebar-items span {
+  transition:  0.3s;
+  display: flex;
+  flex-direction: row;
+
+  font-size:20px;
+  width: 120px;
+  height:20px;
+  font-weight:500;
+  font-family:Rubik-Medium, Rubik;
+  margin-left: 2vw;
   }
  
-  
-  /* Links on mouse-over */
-  .menu-text:hover {
-    color:#5082cc;
-    transition-duration:0.3s;
-    transition-delay: 0.1s;
+
+  .sidebar-items a .active {
+        color:#5082cc;
+
   }
+  /* Links on mouse-over */
+  .sidebar-items a:hover {
+    color:#5082cc;
+    transition:0.3s;
+   
+  }
+/* ------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
   
-/* dont type anything below */
-
-
-
-
-
-
-/* dont type anything above */
+/* ----------------- ----------grid system --------- ---------------- */
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
  div.content {             /*   dont move this block of code    */
-  margin-left: 360px;
+  margin-left: 300px;
   padding: 1px 16px;
   height: 900px;
+ 
 }
-
-
-
-
-
-
-
 
 
 
@@ -155,36 +162,38 @@
 /* ------------- Sidebar Section "medium screen" ( 2 column )-----------------*/
   
   
-  /* On screens that are less than 700px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 700px) {
+  /* On screens that are less than 1100px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 1100px) {
 
-    /* Sidebar logo in 700px */
-
-    .logo {
-      margin-left: 180px;
-    }
-
-     /* Sidebar links in 700px */
+     /* Sidebar links in 1100px */
     .sidebar {
       width: 100%;
       height: auto;
       position: relative;
+      padding-top:60px;
+    
     }
-    .sidebar-menu a {
+    .sidebar-items{
+      padding-top:60px;
+      padding-bottom:60px;
+      margin-left: -10px;
+      align-items: center;
+    }
+    .sidebar-items a {
       float: none;       /* float:left; to make the element horizontal */
       text-align: center;
       transition:  0.3s;
-      transition-delay: 0.1s;
+      padding:30px;
     
     
     }    
-    div.content {margin-left: 0;
-        transition:  0.3s;
-        transition-delay: 0.1s;
+    div.content {
+      margin-left: calc(-50px + 150px);
+      transition:  0.3s;
+        
     }
-    .sidebar select{
-      width: 240px;
-      margin-left: 210px; 
+    .sidebar-select select{
+      width: calc(120px + 8vw);
       appearance: none;       /* Remove default arrow */
       /* Add custom arrow */
       background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
@@ -193,16 +202,55 @@
       
     }
 
+
    
   }
   
 
 
+  /* On screens that are less than 850px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 850px) {
 
+    /* Sidebar links in 900px */
+   .sidebar {
+     width: 100%;
+     height: auto;
+     position: relative;
+     padding-top:60px;
+   
+   }
+   .sidebar-items{
+     padding-top:60px;
+     padding-bottom:60px;
+     margin-left: -10px;
+     align-items: center;
+   }
+   .sidebar-items a {
+     float: none;       /* float:left; to make the element horizontal */
+     text-align: center;
+     transition:  0.3s;
+     padding:30px;
+   
+   
+   }    
+   div.content {
+     margin-left: 50px;
+     transition:  0.3s;
+       
+   }
+   .sidebar-select select{
+     width: calc(120px + 8vw);
+     appearance: none;       /* Remove default arrow */
+     /* Add custom arrow */
+     background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+     background-origin: content-box;
+ 
+     
+   }
 
-
-
-
+  
+ }
+ 
 
 
 
@@ -211,54 +259,84 @@
 
   /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
 
-  /* On screens that are less than 600px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 600px) {
+  /* On screens that are less than 800px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 800px) {
     /* Sidebar logo in 600px */
-  .logo {
-    margin-left: 120px;
-  }
-
-   
-     /* Sidebar links in 600 */
-     .sidebar-menu a {
-      text-align: center;
-      float: none;
-      transition:  0.3s;
-      transition-delay: 0.1s;
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-top:60px;
     
+    }
+    .sidebar-items{
+      padding-top:60px;
+      padding-bottom:60px;
+      margin-left: -10px;
+      align-items: center
       
 
     }
     /* sidebar small screen select  */
-    .sidebar select{
-      width: 240px;; 
-      margin-left: 150px; 
+    .sidebar-select select{
+      width: calc(120px + 8vw);
       appearance: none;       /* Remove default arrow */
       background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
       background-origin: content-box;
   
     }
+    div.content {
+      margin-left:0;
+    }
+    .cards{
+      justify-content: center;
+    }
+  
+  }
 
-    /* sidebar small screen animation  */
-  .sidebar{
-    padding-top:60px;
-    padding-bottom:250px;
+
+
+
+
+  /* ------------ Screen larger than 600px? 2 column  -------------*/
+  @media (min-width: 800px) {
+    .cards { grid-template-columns: repeat(2, 1fr); 
     
-
-  }
-  .sidebar-menu{
-    padding-top:65px;
-
+    
+    }
+    
   }
   
-  }
 
 
 
 
-
-
+  /* --------------- Screen larger than 900px? 3 columns  --------------*/
+  @media (min-width: 1400px) {
+    .cards { grid-template-columns: repeat(3, 1fr); 
+       
+    
+    }
   
+    
+  }
+  
+
+
+
+
+
+/* ------------------------------------ */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -283,8 +361,11 @@
       /* padding: 1rem;  */
     margin:0;
     background-color:rgb(243, 246, 255);
-    font-family:'Rubik','Regular';
 
+}
+.content{
+  font-family:Rubik-Regular, Rubik;
+  font-weight: 40;
 }
 
 /* paragraph under the main heading */
@@ -301,8 +382,9 @@
   .card {
     background-color: white;
     color: black;
-    padding: 1rem;
-    height: 12rem;
+    padding: 50vw;
+    width: calc(100px+20vw);
+    height: 300px;
     padding: 2px 16px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -316,7 +398,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-gap: 1.5rem;
+    grid-gap:2vw;
+   
     
   
   }
@@ -327,39 +410,6 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
   }
     
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ------------ Screen larger than 600px? 2 column  -------------*/
-  @media (min-width: 600px) {
-    .cards { grid-template-columns: repeat(2, 1fr); 
-       
-    
-    }
-    
-  }
-  
-
-
-
-
-  /* --------------- Screen larger than 900px? 3 columns  --------------*/
-  @media (min-width: 900px) {
-    .cards { grid-template-columns: repeat(3, 1fr); 
-        margin-right: 60px;
-    
-    }
-    
-  }
 
 
 
