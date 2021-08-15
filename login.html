@@ -6,27 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login-style.css">
+    <!-- ------------ google fonts ------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <title>Login | Signup</title>
 </head>
 
 <body>
 
-    <!------------------------------ language switch ------------- -->
-
+    <!------------------------------  failure messages ------------- -->
+    <!-- default : hiddin -->
+    <div class="log-fail-msg">
+        <span>Please check your email and password and try again.</span>
+    </div>
+    <!-- default : hiddin -->
+    <div class="sign-fail-msg">
+        <span>Your email is already registered please use a different email or you can just login.</span>
+    </div>
 
 
     <!--------------- login & Sign Up main form -------------->
 
     <div class="container">
-
+        <!-- <div class="lan">
+            <select id="lan-switch">
+                <option>English</option>
+                <option>Arabic</option>
+            </select>
+        </div> -->
         <div class="card">
             <div class="sidebar">
                 <div class="side-svg">
-                    <!-- <select id="lan-switch">
-                        <option>English</option>
-                        <option>Arabic</option>
-                    </select> -->
+
 
                     <div id="logo">
                         <img src="./svg/logo.svg">
@@ -67,7 +80,7 @@
                         <input id="email" type="text" name="email" placeholder="Email Address" autocomplete="off"
                             required> <br>
                         <a id="myForget" href="#">Forgot password</a> <br>
-                        <input id="log-pass" type="password" name="password" placeholder="Password" autocomplete="off"
+                        <input id="log-pass" type="password" name="log-pass" placeholder="Password" autocomplete="off"
                             required> <br>
                         <div class="show-password">
                             <input id="box" type="checkbox" onclick="showPassword()">
@@ -94,8 +107,8 @@
                         <!-------------------- input fields---------------- -->
                         <div id="full-name">
 
-                            <input id="f-name" type="text" placeholder="First name" required>
-                            <input id="l-name" type="text" placeholder="Last name" required>
+                            <input id="f-name" name="f-name" type="text" placeholder="First name" required>
+                            <input id="l-name" name="l-name" type="text" placeholder="Last name" required>
 
                         </div>
 
@@ -103,13 +116,15 @@
 
                         <div id="pass-div">
 
-                            <input id="pass" type="password" placeholder="Password" name="pswd1"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
+                            <input id="pass" type="password" placeholder="Password" name="pass"
+                                onChange="matchPassword()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                autocomplete="off"
                                 title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                 required>
 
-                            <input id="pass-confirm" type="password" placeholder="Confirm Password" name="pswd2"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"
+                            <input id="pass-confirm" type="password" placeholder="Confirm Password" name="pass-confirm"
+                                onChange="matchPassword()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                autocomplete="off"
                                 title="Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                 required>
 
@@ -141,7 +156,7 @@
                         </div>
                         <!-- ---------------------------------- -->
 
-                        <button id="new-btn" type="submit" onclick="matchPassword()">SIGN UP</button>
+                        <button id="new-btn" type="submit">SIGN UP</button>
 
                     </form>
 

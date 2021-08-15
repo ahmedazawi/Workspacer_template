@@ -1,18 +1,67 @@
 document.querySelector('#email').focus()
 
-
+// switch button variables
 let myLoginActive = document.querySelector("#login");
 let mySignupActive = document.querySelector("#signup");
+// form variables
 let myForm = document.querySelector(".form");
-let myFirstName = document.createElement("input");
-
-// ------- new form 'Sign up form'--------
-
-let myDiv = document.querySelector(".main-form")
 let myNewForm = document.querySelector('#newForm')
 
 
-// ------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------  failure messages  --------------------
+
+const logFailureMSG = document.querySelector('.log-fail-msg');
+const loginBtn = document.querySelector('#btn');
+loginBtn.addEventListener("click", function () {
+    logFailureMSG.style.opacity = "1";
+    logFailureMSG.style.height = "auto";
+    logFailureMSG.style.padding = "15px";
+
+    signFailureMSG.style.opacity = "0";
+    signFailureMSG.style.height = "0";
+    signFailureMSG.style.padding = "0";
+})
+
+
+const signFailureMSG = document.querySelector('.sign-fail-msg');
+const signBtn = document.querySelector('#new-btn');
+signBtn.addEventListener("click", function () {
+    signFailureMSG.style.opacity = "1";
+    signFailureMSG.style.height = "auto";
+    signFailureMSG.style.padding = "15px";
+
+    logFailureMSG.style.opacity = "0";
+    logFailureMSG.style.height = "0";
+    logFailureMSG.style.padding = "0";
+})
+
+// -------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,6 +111,15 @@ myLoginActive.addEventListener('click', () => {
 
 
 
+
+
+
+
+
+
+
+
+
 // ------------ Signup -----------
 mySignupActive.addEventListener('click', () => {
     mySignupActive.classList.add("active");
@@ -100,21 +158,8 @@ mySignupActive.addEventListener('click', () => {
 
 
 
-// -------------- Password validation ----------------
 
-function matchPassword() {
-    let pw1 = document.getElementById("pswd1");
-    let pw2 = document.getElementById("pswd2");
-    if (pw1 != pw2) {
-        // alert("Passwords did not match");
-        return false
-    } else {
-        // alert("Password created successfully");
-        return true
-    }
-}
 
-// ------------------
 
 
 
@@ -138,5 +183,30 @@ function showPassword() {
 }
 
 
+
+
+
+
+
+
+
+
+// -------------- Password validation ----------------
+
+function matchPassword() {
+    let pw1 = document.getElementById("pass");
+    let pw2 = document.getElementById("pass-confirm");
+    if (pw1.value === pw2.value) {
+        // alert("Password created successfully");
+        pw2.setCustomValidity('');
+
+    } else {
+        // alert("Passwords did not match");
+        pw2.setCustomValidity('Passwords do not match');
+
+    }
+}
+
+// ------------------
 
 

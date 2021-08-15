@@ -1,5 +1,18 @@
 
 
+// sidebar items active 
+let elem = document.querySelectorAll(".sidebar-items span");
+for (let i = 0; i < elem.length; i++) {
+    elem[i].onclick = function () {
+        let current = document.querySelector(".sidebar-items a.active");
+        if (current) current.classList.remove("active");
+        this.parentNode.classList.add('active');
+        console.log(this.parentNode);
+    };
+}
+
+
+
 // Sidebar animation
 
 if (window.innerWidth <= 1100) {
@@ -24,4 +37,3 @@ if (window.innerWidth <= 1100) {
 
 
 }
-console.log(window.innerWidth)

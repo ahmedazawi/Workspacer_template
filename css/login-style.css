@@ -1,8 +1,13 @@
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family:Rubik-Regular, Rubik;
     background-color:rgb(236 , 241 , 254);
     margin:0;
+
 }
 
 
@@ -13,6 +18,41 @@ body{
     flex-direction: column;
     
 }
+
+
+/* -----------  failure messages ------------- */
+
+.log-fail-msg , .sign-fail-msg{
+    text-align: center;
+    align-items: center;
+    background-color:#FD5555;
+    color:white;
+    font-family: Rubik-SemiBold;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    
+}
+
+
+/* .sign-fail-msg{
+    text-align: center;
+    align-items: center;
+    background-color:#FD5555;
+    color:white;
+    font-family: Rubik-SemiBold;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+} */
+
+
+
+
+
+
 
 
 
@@ -28,7 +68,7 @@ body{
     padding-top:60px;
     padding-bottom:250px;
     width: calc(200px + 18.7vw) ;
-    height: calc(300px + 20vw) ; 
+    height: calc(400px + 20vw) ; 
     background-color: rgb(62,128,255);
     position:fixed;
     overflow: auto;
@@ -91,10 +131,12 @@ margin-right: 0.69vw;
 
 
 /* --------------- Language switch ----------------- */
-
+.lan{
+    align-items:flex-end;
+}
 #lan-switch{ 
-    margin:-45px 0 0 10px;  
-    display:block;
+    /* margin:-45px 0 0 10px;   */
+    /* display:block; */
     width:100px;
     height: 30px;
     border-radius: 7px;
@@ -104,7 +146,7 @@ margin-right: 0.69vw;
     /* Remove default arrow */
     appearance: none;       
     /* Add custom arrow */
-    background: url(/Workspacer_template/svg/select_arrows.svg) no-repeat right #F3F6FF; 
+    background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
     background-origin: content-box;
   }
       
