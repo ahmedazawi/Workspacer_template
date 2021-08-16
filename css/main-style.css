@@ -31,10 +31,16 @@
     justify-content:center;
     padding-top:20px;
     margin-left: -1vw;
+   
     
 }
 
 
+/* --------- w-logo ---------- */
+.w-logo{
+  width: 60px;
+  height: 60px;
+}
 
   /* ---------- logo heading h4 ------------ */
 .logo h4{
@@ -43,11 +49,7 @@
     /* text-align: center; */
     font-family:Rubik-Regular, Rubik;
     font-weight: 25;
-    margin-left: 1.3vw;
-  
-    
-
-    
+    margin-left: 1.3vw;  
     
 }
 
@@ -565,9 +567,7 @@ div.content {
     display: inline-block; 
   }
 
-@import "../svg/cards/star-header.svg"; svg g path{
-  fill:yellow;
-}
+
   /* ------------------------------------- */
 
 
