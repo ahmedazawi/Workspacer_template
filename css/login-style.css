@@ -57,7 +57,7 @@ body{
     padding-top:60px;
     padding-bottom:250px;
     width: calc(200px + 18.7vw) ;
-    height: calc(400px + 20vw) ; 
+    height: calc(400px + 22vw) ; 
     background-color: rgb(62,128,255);
     position:fixed;
     overflow: auto;
