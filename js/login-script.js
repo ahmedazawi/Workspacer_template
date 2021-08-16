@@ -26,30 +26,30 @@ let myNewForm = document.querySelector('#newForm')
 
 // ----------------  failure messages  --------------------
 
-const logFailureMSG = document.querySelector('.log-fail-msg');
-const loginBtn = document.querySelector('#btn');
-loginBtn.addEventListener("click", function () {
-    logFailureMSG.style.opacity = "1";
-    logFailureMSG.style.height = "auto";
-    logFailureMSG.style.padding = "15px";
+// const logFailureMSG = document.querySelector('.log-fail-msg');
+// const loginBtn = document.querySelector('#btn');
+// loginBtn.addEventListener("click", function () {
+//     logFailureMSG.style.opacity = "1";
+//     logFailureMSG.style.height = "auto";
+//     logFailureMSG.style.padding = "15px";
 
-    signFailureMSG.style.opacity = "0";
-    signFailureMSG.style.height = "0";
-    signFailureMSG.style.padding = "0";
-})
+//     signFailureMSG.style.opacity = "0";
+//     signFailureMSG.style.height = "0";
+//     signFailureMSG.style.padding = "0";
+// })
 
 
-const signFailureMSG = document.querySelector('.sign-fail-msg');
-const signBtn = document.querySelector('#new-btn');
-signBtn.addEventListener("click", function () {
-    signFailureMSG.style.opacity = "1";
-    signFailureMSG.style.height = "auto";
-    signFailureMSG.style.padding = "15px";
+// const signFailureMSG = document.querySelector('.sign-fail-msg');
+// const signBtn = document.querySelector('#new-btn');
+// signBtn.addEventListener("click", function () {
+//     signFailureMSG.style.opacity = "1";
+//     signFailureMSG.style.height = "auto";
+//     signFailureMSG.style.padding = "15px";
 
-    logFailureMSG.style.opacity = "0";
-    logFailureMSG.style.height = "0";
-    logFailureMSG.style.padding = "0";
-})
+//     logFailureMSG.style.opacity = "0";
+//     logFailureMSG.style.height = "0";
+//     logFailureMSG.style.padding = "0";
+// })
 
 // -------------------------------------
 

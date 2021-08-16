@@ -413,12 +413,6 @@ div.content {
 
 
 
-
-
-
-
-
-
 /* --------------- the Grid system (Content Section) ---------------- */
 
 
@@ -500,6 +494,13 @@ div.content {
 
 
 
+
+
+
+
+
+
+
   /* ---------------- cards content --------------- */
   .card button{
     border: none;
@@ -507,7 +508,12 @@ div.content {
     cursor: pointer;
   }
 
-
+.cards-btn {
+  text-decoration: none !important;
+}
+.cards-btn .card-title h5{
+  color:rgb(42,42,42);
+}
 
 
 
@@ -542,6 +548,8 @@ div.content {
     cursor: pointer;
     justify-content:right;
     margin-left: 160px;
+    margin-top: 30px;
+    height:20px;
   
   }
   .dots{
@@ -555,9 +563,11 @@ div.content {
     background-color: rgb(132, 132, 132);
     border-radius: 50%;
     display: inline-block; 
-   
-    
   }
+
+@import "../svg/cards/star-header.svg"; svg g path{
+  fill:yellow;
+}
   /* ------------------------------------- */
 
 
@@ -619,6 +629,43 @@ margin:5px 20px;
   padding-left: 10px;
   padding-top:3px;
 }
+/* ---------------------------- */
+
+
+
+
+/* --------------- card bubbles ------------ */
+.card-bubbles{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: -35px;
+}
+.bubbles{
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: -25px;
+    border: 1px solid white;
+    
+    
+}
+
+.bubbles img{
+  height: 40px;
+  width: 40px;
+  top:0;
+  left:0;
+  border-radius: 50%;
+  border:none;
+  
+}
+
+/* --------------------------- */
+
+
 
 
 
@@ -668,24 +715,6 @@ margin:5px 20px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* --------- Card 2  --------*/
 
 
 
