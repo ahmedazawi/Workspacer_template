@@ -218,7 +218,7 @@
     
     }    
     div.content {
-      margin: 0 15vw;
+      /* margin: 0 15vw; */
       transition:  0.3s;
         
     }
@@ -231,7 +231,9 @@
   
       
     }
-
+    .cards{
+      justify-content: center;
+    }
 
    
   }
@@ -263,7 +265,7 @@
    
    }    
    div.content {
-     margin:0 12vw;
+     /* margin:0 12vw; */
      transition:  0.3s;
        
    }
@@ -276,6 +278,9 @@
  
      
    }
+   .cards{
+    justify-content: center;
+  }
 
   
  }
@@ -304,7 +309,7 @@
 
 }    
 div.content {
-  margin:0 7vw;
+  /* margin:0 7vw; */
   transition:  0.3s;
     
 }
@@ -317,7 +322,10 @@ div.content {
 
   
 }
- }
+.cards{
+  justify-content: center;
+}
+}
 
 
 
@@ -352,7 +360,7 @@ div.content {
   
     }
     div.content {
-      margin:0 3.4vw;
+      /* margin:0 3.4vw; */
     }
     .cards{
       justify-content: center;
@@ -451,6 +459,7 @@ div.content {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 15px;
+  
   }
 
 
@@ -458,9 +467,11 @@ div.content {
   /* Card container */
   .cards {
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: grid;
     grid-gap:2vw 2vw;
+    padding-bottom: 20px;
+   
    
 
    
