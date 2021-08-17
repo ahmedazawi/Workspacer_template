@@ -79,7 +79,7 @@
   /* -------------- Sidebar items -------------*/
   .sidebar-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     transform:translate(0 22);
     color:#5082cc;
     font-size:23;
@@ -220,8 +220,7 @@
     .sidebar-items{
       padding-top:60px;
       padding-bottom:60px;
-      margin-left: -10px;
-      align-items: center;
+      justify-content: center;
     }
     .sidebar-items a {
       float: none;       /* float:left; to make the element horizontal */
@@ -283,14 +282,16 @@
    .sidebar-items{
      padding-top:60px;
      padding-bottom:60px;
-     margin-left: -10px;
-     align-items: center;
+     justify-content: center;
+  
+
    }
    .sidebar-items a {
      float: none;       /* float:left; to make the element horizontal */
      text-align: center;
      transition:  0.3s;
      padding:30px;
+  
    
    
    }    
@@ -339,8 +340,9 @@
 .sidebar-items{
   padding-top:60px;
   padding-bottom:60px;
-  margin-left: -10px;
-  align-items: center;
+  justify-content: center;
+
+
 }
 .sidebar-items a {
   float: none;       /* float:left; to make the element horizontal */
@@ -394,16 +396,15 @@ div.content {
       width: 100%;
       height: auto;
       position: relative;
-      padding-top:60px;
+      /* padding-top:60px; */
     
     }
     .sidebar-items{
       padding-top:60px;
       padding-bottom:60px;
-      margin-left: -10px;
-      align-items: center
+      justify-content:center;
+      flex-wrap: wrap;
       
-
     }
     /* sidebar small screen select  */
     .sidebar-select select{
@@ -446,14 +447,14 @@ div.content {
       width: 100%;
       height: auto;
       position: relative;
-      padding-top:60px;
+      /* padding-top:60px; */
     
     }
     .sidebar-items{
       padding-top:60px;
       padding-bottom:60px;
-      margin-left: -10px;
-      align-items: center
+      justify-content:center;
+      flex-wrap: wrap;
       
 
     }
@@ -471,7 +472,7 @@ div.content {
     .cards{
       justify-content: center;
     }
-  
+
   }
 
 
