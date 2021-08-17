@@ -542,12 +542,12 @@ div.content {
 }
 .content{
   font-family:Rubik-Regular, Rubik;
-  font-weight: 40;
 }
 .sub-name h3{
-  font-weight: lighter;
+   font-weight: lighter;
    margin-bottom:0;
    margin-top: 140px;
+   font-family:Rubik-Regular, Rubik;
 }
 /* paragraph under the main heading */
 .sub-name p{
