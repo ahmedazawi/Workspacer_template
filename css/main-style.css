@@ -79,7 +79,7 @@
   /* -------------- Sidebar items -------------*/
   .sidebar-items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     transform:translate(0 22);
     color:#5082cc;
     font-size:23;
@@ -221,6 +221,7 @@
       padding-top:60px;
       padding-bottom:60px;
       justify-content: center;
+      flex-direction: row;
     }
     .sidebar-items a {
       float: none;       /* float:left; to make the element horizontal */
@@ -283,6 +284,8 @@
      padding-top:60px;
      padding-bottom:60px;
      justify-content: center;
+     flex-direction: row;
+
   
 
    }
@@ -341,7 +344,7 @@
   padding-top:60px;
   padding-bottom:60px;
   justify-content: center;
-
+  flex-direction: row;
 
 }
 .sidebar-items a {
@@ -403,6 +406,7 @@ div.content {
       padding-top:60px;
       padding-bottom:60px;
       justify-content:center;
+      flex-direction: row;
       flex-wrap: wrap;
       
     }
@@ -455,7 +459,7 @@ div.content {
       padding-bottom:60px;
       justify-content:center;
       flex-wrap: wrap;
-      
+      flex-direction: row;
 
     }
     /* sidebar small screen select  */
