@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: calc(150px + 8vw);
+  width: 250px;
   height: 97vw;
   background-color: white;
   position: fixed;
@@ -30,7 +30,7 @@
     align-items: center;
     justify-content:center;
     padding-top:20px;
-    margin-left: -1vw;
+  
    
     
 }
@@ -61,7 +61,7 @@
   align-items:center;
  }
  .sidebar-select select{  
-  width: calc(120px + 7vw);
+  width: 200px;
   height: 60px;
   border-radius: 15px;
   border-color: #F3F6FF;
@@ -74,7 +74,6 @@
   
 }
 
- 
 
 
   /* -------------- Sidebar items -------------*/
@@ -112,18 +111,21 @@
   margin-left: 2vw;
   }
  
-
-.active span{
+  
+.active span , .active .sidebar-icons{
   color:#5082cc;
+  stroke:#5082cc;
   }
 
 
   /* Links on mouse-over */
-  .sidebar-items a:hover {
+  .sidebar-items a:hover{
     color:#5082cc;
     transition:0.3s;
    
   }
+
+
 /* ------------------------------------------ */
 
 
@@ -172,7 +174,7 @@
      
  }
  .sidebar-select select{
-   width: calc(120px + 8vw);
+   width: 200px;
    appearance: none;       /* Remove default arrow */
    /* Add custom arrow */
    background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
@@ -194,6 +196,18 @@
   
   /* On screens that are less than 1100px wide, make the sidebar into a topbar */
   @media screen and (max-width: 1100px) {
+
+    .logo{
+     
+      font-size:50px;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .logo img{
+      width:100px;
+      height:100px
+    }
 
      /* Sidebar links in 1100px */
     .sidebar {
@@ -223,7 +237,7 @@
         
     }
     .sidebar-select select{
-      width: calc(120px + 8vw);
+      width: 300px;
       appearance: none;       /* Remove default arrow */
       /* Add custom arrow */
       background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
@@ -234,13 +248,29 @@
     .cards{
       justify-content: center;
     }
-
+    .content .sub-name{
+      text-align: center;
+      }
    
   }
   
 
 
 @media screen and (max-width: 946px) {
+
+
+  .logo{
+     
+    font-size:50px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .logo img{
+    width:100px;
+    height:100px
+  }
+
 
     /* Sidebar links in 900px */
    .sidebar {
@@ -270,7 +300,7 @@
        
    }
    .sidebar-select select{
-     width: calc(120px + 8vw);
+     width: 300px;
      appearance: none;       /* Remove default arrow */
      /* Add custom arrow */
      background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
@@ -285,7 +315,19 @@
   
  }
  
- @media screen and (min-width: 769px) and (max-width: 900px) {
+ @media screen and (min-width: 768px) and (max-width: 900px) {
+
+  .logo{
+     
+    font-size:50px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .logo img{
+    width:100px;
+    height:100px
+  }
  /* Sidebar links in 900px */
  .sidebar {
   width: 100%;
@@ -314,7 +356,7 @@ div.content {
     
 }
 .sidebar-select select{
-  width: calc(120px + 8vw);
+  width:300px;
   appearance: none;       /* Remove default arrow */
   /* Add custom arrow */
   background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
@@ -334,7 +376,19 @@ div.content {
   /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
 
   
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 428px) and (max-width: 767px) {
+
+    .logo{
+     
+      font-size:50px;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .logo img{
+      width:100px;
+      height:100px
+    }
     /* Sidebar logo in 600px */
     .sidebar {
       width: 100%;
@@ -353,20 +407,73 @@ div.content {
     }
     /* sidebar small screen select  */
     .sidebar-select select{
-      width: calc(120px + 8vw);
+      width: 300px;
       appearance: none;       /* Remove default arrow */
       background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
       background-origin: content-box;
   
     }
     div.content {
-      /* margin:0 3.4vw; */
+      transition:  0.3s;
     }
     .cards{
       justify-content: center;
     }
   
   }
+
+
+
+
+
+
+
+  @media screen and (max-width: 427px) {
+
+    .logo{
+     
+      font-size:20px;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .logo img{
+      width:60px;
+      height:60px
+    }
+    /* Sidebar logo in 600px */
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-top:60px;
+    
+    }
+    .sidebar-items{
+      padding-top:60px;
+      padding-bottom:60px;
+      margin-left: -10px;
+      align-items: center
+      
+
+    }
+    /* sidebar small screen select  */
+    .sidebar-select select{
+      width: 200px;
+      appearance: none;       /* Remove default arrow */
+      background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
+      background-origin: content-box;
+  
+    }
+    div.content {
+      transition:  0.3s;
+    }
+    .cards{
+      justify-content: center;
+    }
+  
+  }
+
 
 
 
@@ -437,9 +544,13 @@ div.content {
   font-family:Rubik-Regular, Rubik;
   font-weight: 40;
 }
-
+.sub-name h3{
+  font-weight: lighter;
+   margin-bottom:0;
+   margin-top: 140px;
+}
 /* paragraph under the main heading */
-  .content p{
+.sub-name p{
     color:rgb(171, 181, 211);
     font-size:smaller;
     font-weight:normal;
@@ -565,6 +676,11 @@ div.content {
     height:20px;
   
   }
+.star-active{
+  fill:#5082cc;
+  stroke:none;
+}
+
   .dots{
     margin:22px 28px;
     height:25px;
@@ -666,12 +782,9 @@ margin:5px 20px;
 
 .bubbles img{
   height: 40px;
-  width: 40px;
   top:0;
   left:0;
-  border-radius: 50%;
-  border:none;
-  
+  clip-path: circle();
 }
 
 /* --------------------------- */

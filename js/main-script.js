@@ -43,5 +43,7 @@ if (window.innerWidth <= 1100) {
 
 
 
-// ----------------------
-
+// ---------------- favorite star active ------------
+function favorite() {
+    document.querySelector('.fav-star').classList.toggle('star-active');
+}

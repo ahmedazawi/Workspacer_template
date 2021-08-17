@@ -76,6 +76,8 @@ body{
 /* logo svg img */
 #logo img{
 margin-right: 0.69vw;
+width: 80px;
+height:80px;
 }
 
 /* logo text - WORKSPACER */
@@ -233,7 +235,6 @@ div.main {             /*   dont move this block of code    */
         position: relative;
       }
     div.main {
-        
         margin: 150px 24vw; 
         transition:  0.3s;
         transition-delay: 0.1s;
@@ -323,7 +324,6 @@ div.main {             /*   dont move this block of code    */
 /* ---------- login & Sign up Switch buttons  ------------- */
 .switch{
     margin-top: 15px;
-    /* margin-left:9vw; */
     display:flex;
     align-items:center;
     justify-content:flex-start; 
