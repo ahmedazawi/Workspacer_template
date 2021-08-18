@@ -1,8 +1,78 @@
+/*---------- small screens under 720px nav --------*/
+
+.mobile-container{
+  display: none;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  /* background-color: #555; */
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+  height:10px;
+  font-family:Rubik-Regular,Rubik;
+  transition: 0.5s;
+  z-index:99;
+}
+.top-nav {
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  
+}
+.top-nav #sm-logo{
+  display: flex;
+  flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+}
+
+
+.top-nav #myLinks {
+  max-height:0;
+}
+.top-nav a {
+  color: #5082cc;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  transition: all 0.5s;
+  background:white;
+  transition: .1s linear; 
+}
+.top-nav a.icon {
+  background:white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+  
+}
+
+.top-nav .icon #myLinks a:hover{
+ 
+  transition: all 0.5s;
+  background:#848484;
+} 
+
+.logo-active {
+  background-color: white;
+  color: white;
+  
+
+}
+
+
+
+
+
+
+
 
 
 /* ------------- Sidebar Section "large screen" ( 3 column )-----------------*/
-
-
 
 
 /* -------------- Sidebar ----------------------- */
@@ -215,6 +285,7 @@
       height: auto;
       position: relative;
       padding-top:60px;
+     
     
     }
     .sidebar-items{
@@ -256,70 +327,9 @@
   
 
 
-@media screen and (max-width: 946px) {
 
-
-  .logo{
-     
-    font-size:50px;
-    align-items: center;
-    justify-content: center;
-
-  }
-  .logo img{
-    width:100px;
-    height:100px
-  }
-
-
-    /* Sidebar links in 900px */
-   .sidebar {
-     width: 100%;
-     height: auto;
-     position: relative;
-     padding-top:60px;
-   
-   }
-   .sidebar-items{
-     padding-top:60px;
-     padding-bottom:60px;
-     justify-content: center;
-     flex-direction: row;
-
-  
-
-   }
-   .sidebar-items a {
-     float: none;       /* float:left; to make the element horizontal */
-     text-align: center;
-     transition:  0.3s;
-     padding:30px;
-  
-   
-   
-   }    
-   div.content {
-     /* margin:0 12vw; */
-     transition:  0.3s;
-       
-   }
-   .sidebar-select select{
-     width: 300px;
-     appearance: none;       /* Remove default arrow */
-     /* Add custom arrow */
-     background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
-     background-origin: content-box;
  
-     
-   }
-   .cards{
-    justify-content: center;
-  }
-
-  
- }
- 
- @media screen and (min-width: 768px) and (max-width: 900px) {
+ @media screen and (min-width: 721px) and (max-width: 900px) {
 
   .logo{
      
@@ -381,7 +391,7 @@ div.content {
   /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
 
   
-  @media screen and (min-width: 428px) and (max-width: 767px) {
+  @media screen and (min-width: 428px) and (max-width: 720px) {
 
     .logo{
      
@@ -394,30 +404,19 @@ div.content {
       width:100px;
       height:100px
     }
-    /* Sidebar logo in 600px */
+   
+.mobile-container{
+  display:block;
+  transition:  0.3s;
+
+}
+
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      /* padding-top:60px; */
+      display: none;
     
     }
-    .sidebar-items{
-      padding-top:60px;
-      padding-bottom:60px;
-      justify-content:center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-    }
-    /* sidebar small screen select  */
-    .sidebar-select select{
-      width: 300px;
-      appearance: none;       /* Remove default arrow */
-      background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
-      background-origin: content-box;
-  
-    }
+   
+
     div.content {
       transition:  0.3s;
     }
@@ -446,30 +445,19 @@ div.content {
       width:60px;
       height:60px
     }
-    /* Sidebar logo in 600px */
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      /* padding-top:60px; */
+    .mobile-container{
+      display:block;
+      transition:  0.3s;
     
     }
-    .sidebar-items{
-      padding-top:60px;
-      padding-bottom:60px;
-      justify-content:center;
-      flex-wrap: wrap;
-      flex-direction: row;
-
-    }
+    
+        .sidebar {
+          display: none;
+        
+        }
+       
     /* sidebar small screen select  */
-    .sidebar-select select{
-      width: 200px;
-      appearance: none;       /* Remove default arrow */
-      background: url(../svg/select_arrows.svg) no-repeat right #F3F6FF; 
-      background-origin: content-box;
-  
-    }
+    
     div.content {
       transition:  0.3s;
     }

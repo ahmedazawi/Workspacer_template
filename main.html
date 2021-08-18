@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <!-- ------------ google fonts ------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
     <title>Home</title>
 </head>
 
@@ -100,12 +100,30 @@
 
         </div>
 
+        <div class="mobile-container">
+            <div class="top-nav">
+                <a href="#home" class="active" id="sm-logo">
+                    <img height="30" width="30" src="./svg/logo.png">
+                    <span style="padding-left: 10px;">
+                        Workspacer
+                    </span>
+                </a>
+                <div id="myLinks">
+                    <a href="#Dashboard">Dashboard</a>
+                    <a href="#Favorites">Favorites</a>
+                    <a href="#Settings">Settings</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="showBurgerIcon()">
+                    <i class="fa fa-bars"><img src="./svg/bars.svg" width="30" height="30"></i>
+                </a>
+            </div>
 
+        </div>
 
 
         <!-------------------- Page content -------------------->
 
-        <div class=" content">
+        <div class="content">
             <div class="sub-name">
                 <h3>Hello, Mouamle!</h3>
                 <p> <small>How is goning today, are you ready to do somthing amazing?</small></p>
