@@ -172,7 +172,6 @@ height:80px;
     margin-top: 150px ;
     display:flex;
     align-items:center;
-    /* justify-content: center;  */
     flex-direction: column;
     flex-wrap: wrap;
     background-color:rgb(243, 246, 255);

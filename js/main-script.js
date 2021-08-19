@@ -42,6 +42,34 @@ for (let i = 0; i < elem.length; i++) {
 
 
 
+// ---------- card 3 dots -----------
+document.querySelector(".dots").addEventListener('click', () => {
+    let dropDownList = document.querySelector(".dot-dropdown");
+    if (dropDownList.style.display === "block") {
+        dropDownList.style.display = "none";
+    }
+    else {
+        dropDownList.style.display = "block";
+
+    }
+
+})
+
+// close when click out 
+window.onclick = function (event) {
+    let dropdowns = document.querySelectorAll(".dot-dropdown");
+    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+}
+
+
+
 
 
 // ---------------- favorite star active ------------
@@ -56,20 +84,16 @@ function favorite() {
 // ------------ burger nav bar " for small screens under 720px " ----------------
 
 function showBurgerIcon() {
-    let myBurgerItems = document.getElementById("myLinks");
+    let myBurgerItems = document.querySelector("#myLinks");
     let myBurgerIcon = document.querySelector(".icon");
-    if (myBurgerItems.style.maxHeight === "150px") {
+    if (myBurgerItems.style.maxHeight === "200px") {
 
         myBurgerItems.style.maxHeight = "0";
         myBurgerIcon.style.transform = "rotate(0deg)";
         myBurgerItems.style.transition = "max-height 0.5s ease-in";
 
-
-
-
-
     } else {
-        myBurgerItems.style.maxHeight = "150px";
+        myBurgerItems.style.maxHeight = "200px";
         myBurgerItems.style.transition = "max-height 0.5s ease-out";
         myBurgerIcon.style.transform = "rotate(-90deg)";
 

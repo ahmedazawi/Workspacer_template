@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
     <link rel="stylesheet" href="css/main-style.css">
     <!-- ------------ google fonts ------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 
@@ -17,7 +18,7 @@
 
 
     <div class="container">
-        <!-------------------------- The Sidebar ---------------------->
+        <!-------------------------- Sidebar ---------------------->
 
         <div class="sidebar">
             <!------- logo -------->
@@ -48,7 +49,7 @@
             <div class="sidebar-items">
                 <a href="#">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="27.828" height="27" viewBox="0 0 27.828 27">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.828" height="32" viewBox="0 0 27.828 27">
                         <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(1.414 1)">
                             <path class="sidebar-icons" id="Path_1" data-name="Path 1"
                                 d="M3,15.5l2.778-2.778m0,0L15.5,3l9.722,9.722m-19.444,0V26.611A1.389,1.389,0,0,0,7.167,28h4.167M25.222,12.722,28,15.5m-2.778-2.778V26.611A1.389,1.389,0,0,1,23.833,28H19.667m-8.333,0a1.389,1.389,0,0,0,1.389-1.389V21.056a1.389,1.389,0,0,1,1.389-1.389h2.778a1.389,1.389,0,0,1,1.389,1.389v5.556A1.389,1.389,0,0,0,19.667,28m-8.333,0h8.333"
@@ -60,6 +61,7 @@
                     <span>Dashboard</span>
 
                 </a>
+
 
                 <a href="#">
 
@@ -78,6 +80,9 @@
                     <span>Favorites</span>
 
                 </a>
+
+
+
                 <a href="#">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
@@ -95,26 +100,30 @@
                     <span>Settings</span>
 
                 </a>
+
             </div>
-
-
         </div>
 
+
+        <!----------- small screens nav bar - under 720px ----------->
         <div class="mobile-container">
             <div class="top-nav">
-                <a href="#home" class="active" id="sm-logo">
+
+                <a href="#home" id="sm-logo">
                     <img height="30" width="30" src="./svg/logo.png">
-                    <span style="padding-left: 10px;">
+                    <span>
                         Workspacer
                     </span>
                 </a>
+
                 <div id="myLinks">
                     <a href="#Dashboard">Dashboard</a>
                     <a href="#Favorites">Favorites</a>
                     <a href="#Settings">Settings</a>
+                    <a href="#">Sign Out</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="showBurgerIcon()">
-                    <i class="fa fa-bars"><img src="./svg/bars.svg" width="30" height="30"></i>
+                    <i><img src="./svg//cards/bars.svg" width="30" height="30"></i>
                 </a>
             </div>
 
@@ -126,17 +135,17 @@
         <div class="content">
             <div class="sub-name">
                 <h3>Hello, Mouamle!</h3>
-                <p> <small>How is goning today, are you ready to do somthing amazing?</small></p>
+                <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
             </div>
             <br>
 
 
 
 
-            <!-- ----------- Cards --------------->
+            <!-- -------------------------- Cards ------------------------->
 
 
-            <!-- card 1 -->
+            <!-------------------------- card 1---------------- -->
 
             <div class="cards">
                 <a href="" style="text-decoration: none;">
@@ -148,14 +157,16 @@
                     </div>
                 </a>
 
-                <!-- card 2 -->
+                <!-------------------------- card 2 --------------------->
 
                 <div class="card" id="card-2">
+                    <!------------- card header --------------->
+                    <!-- circle photo -->
                     <div class="cards-nav">
                         <header>
                             <text>C</text>
                         </header>
-
+                        <!-- favorite star -->
                         <a class="star" onclick="favorite()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="20.158"
                                 viewBox="0 0 21.037 20.158">
@@ -168,14 +179,23 @@
                             </svg>
                         </a>
 
-
-
-                        <div class=dots>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
+                        <!-- 3 dots options -->
+                        <div class="dots-dropdown-container">
+                            <div class="dots">
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                            </div>
+                            <div class="dot-dropdown">
+                                <div class="dropdown-content">
+                                    <a>Leave</a>
+                                    <a>add</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!------------- card title --------------->
                     <a href="#" class="cards-btn">
                         <div class="card-title">
                             <h5>Workspace title</h5>
@@ -183,6 +203,8 @@
                                 here</p>
                         </div>
                     </a>
+
+                    <!------------- card bottom --------------->
                     <div class="card-bottom">
                         <div class="card-ui">
                             <img src="./svg/cards/bulding-ui.svg">
@@ -195,7 +217,7 @@
 
                             </div>
                         </div>
-
+                        <!-- circle bubbles -->
                         <div class="card-bubbles">
 
                             <div class="bubbles" style="z-index:1; background-color: rgb(244, 245, 247);">
@@ -222,10 +244,6 @@
 
                 </div>
 
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
 
             </div>
 
@@ -237,8 +255,7 @@
 
 
 
-
-
+    <!-- js file -->
     <script type="text/javascript" src="js/main-script.js"></script>
 
 
