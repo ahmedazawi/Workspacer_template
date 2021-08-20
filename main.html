@@ -22,7 +22,7 @@
 
         <div class="sidebar">
             <!------- logo -------->
-            <div class="logo">
+            <div class="logo font-regular">
 
                 <img class="w-logo" src="./svg/logo.png">
 
@@ -46,8 +46,8 @@
 
 
             <!-- Sidebar items -->
-            <div class="sidebar-items">
-                <a href="#">
+            <div class="sidebar-items font-regular">
+                <a href="#" class="active">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.828" height="32" viewBox="0 0 27.828 27">
                         <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(1.414 1)">
@@ -109,15 +109,15 @@
         <div class="mobile-container">
             <div class="top-nav">
 
-                <a href="#home" id="sm-logo">
+                <a class="font-regular" href="#home" id="sm-logo">
                     <img height="30" width="30" src="./svg/logo.png">
                     <span>
                         Workspacer
                     </span>
                 </a>
 
-                <div id="myLinks">
-                    <a href="#Dashboard">Dashboard</a>
+                <div class="font-regular" id="myLinks">
+                    <a href="#Dashboard" class="active">Dashboard</a>
                     <a href="#Favorites">Favorites</a>
                     <a href="#Settings">Settings</a>
                     <a href="#">Sign Out</a>
@@ -133,7 +133,7 @@
         <!-------------------- Page content -------------------->
 
         <div class="content">
-            <div class="sub-name">
+            <div class="sub-name font-regular">
                 <h3>Hello, Mouamle!</h3>
                 <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
             </div>
@@ -147,12 +147,12 @@
 
             <!-------------------------- card 1---------------- -->
 
-            <div class="cards">
+            <div class="cards font-regular">
                 <a href="" style="text-decoration: none;">
                     <div class="card" id="card-1">
                         <img id="card-1-img" src="./svg/cards/card-1.svg">
-                        <button id="card-1-btn">Add new workspace</button>
-                        <p id="card-1-p">Still not enough? Click on a title to
+                        <button id="card-1-btn" class="font-regular">Add new workspace</button>
+                        <p class="font-light" id="card-1-p">Still not enough? Click on a title to
                             add a new workspace</p>
                     </div>
                 </a>
@@ -188,25 +188,52 @@
                             </div>
                             <div class="dot-dropdown">
                                 <div class="dropdown-content">
-                                    <a>Leave</a>
-                                    <a>add</a>
+
+                                    <div class="dropdown-item">
+                                        <img src="./svg/cards/trash-alt.svg" width="20" height="20">
+                                        <button>Delete</button>
+                                    </div>
+
+                                    <div class="dropdown-item" onclick="editPopUp()">
+                                        <img src="./svg/cards/edit.svg" width="20" height="20">
+                                        <button>Edit</button>
+                                    </div>
+
+                                    <div class="dropdown-item">
+                                        <img src="./svg/cards/plus-circle.svg" width="20" height="20">
+                                        <button>Add Member</button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!--------------  3 dots popup ---------------- -->
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+
+                    </div>
+
+
+
                     <!------------- card title --------------->
                     <a href="#" class="cards-btn">
                         <div class="card-title">
-                            <h5>Workspace title</h5>
-                            <p>Description goes here, Description goes
+                            <h5 class="font-bold">Workspace title</h5>
+                            <p class="font-regular">Description goes here, Description goes
                                 here</p>
                         </div>
                     </a>
 
                     <!------------- card bottom --------------->
                     <div class="card-bottom">
-                        <div class="card-ui">
+                        <div class="card-ui font-regular">
                             <img src="./svg/cards/bulding-ui.svg">
                             <span>Building UI</span>
                         </div>
