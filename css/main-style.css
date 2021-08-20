@@ -943,6 +943,7 @@ margin:5px 20px;
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
   justify-content: center;
+  align-items: center;
   z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
