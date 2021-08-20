@@ -758,7 +758,7 @@
 display: flex;
 flex-direction: row;
 justify-content: left;
-  padding: 12px 16px;
+  padding: 10px 16px;
 
 }
 .dropdown-item button{
@@ -955,21 +955,70 @@ margin:5px 20px;
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding:10px 10px;
+  padding-top:30px;
   border: 1px solid white;
   border-radius:10px;
-  width: 50%; /* Could be more or less, depending on screen size */
-  height:30%;
+  width: 450px; /* Could be more or less, depending on screen size */
+  height:500px;
 }
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+
+.modal-content-inputs{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content-inputs label{
+  position:absolute;
+  margin-left:-210px;
+  margin-top: -10px;
+  padding:0 5px;
+  font-size:large;
+  background-color:white;
+  color:#3E80FF;
+}
+.modal-content-inputs input{
+ border:2px solid #3E80FF;
+ border-radius: 10px;
+ width:400px;
+ height:60px;
+ margin-bottom:40px;
+ padding-left: 15px;
+}
+.modal-content-inputs input::placeholder{
+  font-family:Rubik-Bold,Rubik;
+  font-size:large;
+  padding-left: 15px;
+}
+
+.pop-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 55%;
+}
+.pop-btn button {
+  color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  width:210px;
+  height:60px;
+  font-size: 22px;
   font-weight: bold;
+  margin:0 2px;
 }
-.close:hover,
+.pop-btn .close{
+  background-color:#FF5555;
+}
+.pop-btn .save{
+  background-color:#2ECC71;
+}
+
+
+/* .close:hover,
 .close:focus {
   color:#5082cc;
   text-decoration: none;
   cursor: pointer;
-}
+} */

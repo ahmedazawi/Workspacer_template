@@ -54,7 +54,21 @@ document.querySelector(".dots").addEventListener('click', () => {
     }
 
 })
+window.onclick = function (event) {
 
+
+    // close dropdown list when click out
+    let dropdowns = document.querySelectorAll(".dot-dropdown");
+    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+
+}
 
 
 
@@ -99,16 +113,17 @@ function showBurgerIcon() {
 
 let modal = document.getElementById('myModal');
 let modalContent = document.querySelector('.modal-content p');
-let close = document.getElementsByClassName('close')[0];
+let close = document.querySelector('.close');
 
 // edit popup
 function editPopUp() {
     modal.style.display = "block";
-    modalContent.innerHTML = "Edit pop up";
 
 }
 
-
+close.onclick = () => {
+    modal.style.display = "none";
+}
 
 
 
@@ -121,20 +136,3 @@ function editPopUp() {
 
 
 //  -------- close popup -----
-window.onclick = function (event) {
-    close.onclick = () => {
-        modal.style.display = "none";
-    }
-
-    // close dropdown list when click out
-    let dropdowns = document.querySelectorAll(".dot-dropdown");
-    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-                openDropdown.style.display = "none";
-            }
-        }
-    }
-
-}
