@@ -212,21 +212,24 @@
                     <!--------------  3 dots popup ---------------- -->
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <div class="modal-content-inputs">
-                                <label class="font-bold">Workspace Name</label>
-                                <input type="text" placeholder="Enter">
-                                <input type="text" placeholder="Workspacer Description">
-                            </div>
+                        <div class="modal-box">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-content-inputs">
+                                    <label id="wc-name" class="font-bold">Workspace Name</label>
+                                    <input id="wc-name-input" type="text" placeholder="Enter" required minlength="4"
+                                        maxlength="30" size="20">
+                                    <label id="wc-desc" class="font-bold">Workspace Description</label>
+                                    <input id="wc-desc-input" type="text" placeholder="Workspacer Description">
+                                </div>
 
-                            <div class="pop-btn">
-                                <button class="close">Close</button>
-                                <button type="submit" class="save">Save</button>
+                                <div class="pop-btn">
+                                    <button class="close">Close</button>
+                                    <button type="submit" class="save">Save</button>
 
+                                </div>
                             </div>
                         </div>
-
                     </div>
 
 

@@ -117,7 +117,8 @@ let close = document.querySelector('.close');
 
 // edit popup
 function editPopUp() {
-    modal.style.display = "block";
+    modal.style.display = "flex";
+
 
 }
 
@@ -128,11 +129,19 @@ close.onclick = () => {
 
 
 
+// inputs edit popup 
+document.querySelector('.modal-content-inputs #wc-name-input').onfocus = () => {
+    document.querySelector('.modal-content-inputs #wc-name').style.marginTop = "-25px";
+}
+document.querySelector('.modal-content-inputs #wc-name-input').onblur = () => {
+    document.querySelector('.modal-content-inputs #wc-name').style.marginTop = "-10px";
+}
 
 
 
-
-
-
-
-//  -------- close popup -----
+document.querySelector('.modal-content-inputs #wc-desc-input').onfocus = () => {
+    document.querySelector('.modal-content-inputs #wc-desc').style.marginTop = "75px";
+}
+document.querySelector('.modal-content-inputs #wc-desc-input').onblur = () => {
+    document.querySelector('.modal-content-inputs #wc-desc').style.marginTop = "95px";
+}
