@@ -206,6 +206,7 @@
   }
   .active #bell-regular{
     fill:#5082cc;
+    stroke:white;
   }
 
   /* Links on mouse-over */
