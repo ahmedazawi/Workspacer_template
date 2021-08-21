@@ -1,17 +1,34 @@
 
 
 // sidebar items active 
-let elem = document.querySelectorAll(".sidebar-items span");
+let elem = document.querySelectorAll(".sidebar-items span , .sidebar-items svg");
 for (let i = 0; i < elem.length; i++) {
-    elem[i].parentNode.onclick = function () {
+    elem[i].onclick = function () {
         let current = document.querySelector(".sidebar-items a.active");
         if (current) current.classList.remove("active");
-        this.classList.add('active');
+        this.parentNode.classList.add('active');
         console.log(this.parentNode);
     };
 }
 
+let myNotifications = document.getElementById('notifications');
+let myDash = document.getElementById('dashboard');
+myNotifications.addEventListener('click', () => {
+    if (notify.style.top === "30px") {
+        myNotifications.classList.add('active');
 
+    }
+    else {
+        myDash.classList.add('active');
+        myNotifications.classList.remove('active');
+    }
+})
+
+
+
+function notificationsBlur() {
+    myNotifications.classList.remove('active');
+}
 
 // Sidebar animation
 
@@ -118,8 +135,6 @@ let close = document.querySelector('.close');
 // edit popup
 function editPopUp() {
     modal.style.display = "flex";
-
-
 }
 
 close.onclick = () => {
@@ -128,4 +143,15 @@ close.onclick = () => {
 
 
 
+
+// ------------- Notifications popup ---------
+let notify = document.getElementById("notification-pop");
+function showNotification() {
+    if (notify.style.top === "30px") {
+        notify.style.top = "-700px";
+    }
+    else {
+        notify.style.top = "30px";
+    }
+}
 
