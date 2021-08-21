@@ -1,3 +1,7 @@
+// window reload on rotate
+if (window.DeviceOrientationEvent) {
+    window.addEventListener('orientationchange', function () { location.reload(); }, false);
+}
 
 
 // sidebar items active 
@@ -14,7 +18,7 @@ for (let i = 0; i < elem.length; i++) {
 let myNotifications = document.getElementById('notifications');
 let myDash = document.getElementById('dashboard');
 myNotifications.addEventListener('click', () => {
-    if (notify.style.top === "30px") {
+    if (notify.style.top === "30px" || notify.style.left === "600px") {
         myNotifications.classList.add('active');
 
     }
@@ -24,37 +28,11 @@ myNotifications.addEventListener('click', () => {
     }
 })
 
-
-
+// notification blur
 function notificationsBlur() {
     myNotifications.classList.remove('active');
 }
 
-// Sidebar animation
-
-// if (window.innerWidth <= 1100) {
-
-//     window.onscroll = function () { scrollFunction() };
-
-//     function scrollFunction() {
-//         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-//             document.querySelector(".sidebar").style.padding = "30px 0";
-//             document.querySelector(".sidebar .sidebar-items ").style.fontSize = "25px";
-//             // document.querySelector(".sidebar").style.padding = "30px 0";
-
-
-//         } else {
-//             // document.querySelector(".sidebar-items").style.padding = "80px 0";
-//             document.querySelector(".sidebar").style.padding = "80px 0";
-
-//             document.querySelector(".sidebar .sidebar-items ").style.fontSize = "15px";
-//         }
-//     }
-
-
-
-
-// }
 
 
 
@@ -145,13 +123,35 @@ close.onclick = () => {
 
 
 // ------------- Notifications popup ---------
-let notify = document.getElementById("notification-pop");
+let notify = document.querySelector(".notify-modal");
 function showNotification() {
-    if (notify.style.top === "30px") {
-        notify.style.top = "-700px";
+    if (window.innerWidth > 1100) {
+        if (notify.style.top === "30px") {
+            notify.style.top = "-700px";
+        }
+        else {
+            notify.style.top = "30px";
+        }
     }
-    else {
-        notify.style.top = "30px";
-    }
-}
 
+    else if (window.innerWidth >= 901 & window.innerWidth <= 1100) {
+        if (notify.style.left === "600px") {
+            notify.style.left = "1200px"
+
+        }
+        else {
+            notify.style.left = "600px"
+        }
+    }
+
+    else if (window.innerWidth >= 721 & window.innerWidth <= 900) {
+        if (notify.style.left === "350px") {
+            notify.style.left = "800px"
+
+        }
+        else {
+            notify.style.left = "350px"
+        }
+    }
+
+}

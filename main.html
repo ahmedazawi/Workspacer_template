@@ -15,7 +15,11 @@
 </head>
 
 <body>
+    <!-- Warning! 
+    classes that include font name like " font-regular or font-light "
+    used to give the elements a font family 
 
+-->
 
     <div class="container">
         <!-------------------------- Sidebar ---------------------->
@@ -119,14 +123,219 @@
 
 
 
-        <!-- ----------- Notification PopUp ---------------- -->
+
+        <!-- ---------------------------- -->
 
 
-        <div id="notification-pop" class="notify-modal">
+
+        <!----------- small screens nav bar - under 720px ----------->
+        <div class=" mobile-container">
+            <div class="top-nav">
+                <div class="nav-grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.408" height="34.324" viewBox="0 0 34.408 39.324">
+                        <path class="sidebar-icons" id="bell-regular"
+                            d="M33.746,27.825c-1.484-1.594-4.26-3.993-4.26-11.85A12.129,12.129,0,0,0,19.66,4.058v-1.6a2.456,2.456,0,1,0-4.912,0v1.6A12.129,12.129,0,0,0,4.921,15.975c0,7.857-2.776,10.256-4.26,11.85A2.4,2.4,0,0,0,0,29.493a2.46,2.46,0,0,0,2.465,2.458H31.942a2.459,2.459,0,0,0,2.465-2.458,2.4,2.4,0,0,0-.661-1.667Zm-28.56.439c1.63-2.148,3.412-5.709,3.42-12.244,0-.015,0-.029,0-.045a8.6,8.6,0,0,1,17.2,0c0,.015,0,.029,0,.045.008,6.536,1.79,10.1,3.42,12.244ZM17.2,39.324a4.915,4.915,0,0,0,4.913-4.915H12.29A4.915,4.915,0,0,0,17.2,39.324Z"
+                            transform="translate(0.001)" fill="#abb4d4" />
+                    </svg>
+
+                    <a class="font-regular" href="#home" id="sm-logo">
+                        <img height="30" width="30" src="./svg/logo.png">
+                        <span>
+                            Workspacer
+                        </span>
+                    </a>
+
+                    <a class="icon" onclick="showBurgerIcon()">
+                        <i><img src="./svg//cards/bars.svg" width="30" height="30"></i>
+                    </a>
+                </div>
+                <div class="font-regular" id="myLinks">
+                    <a href="#Dashboard" class="active">Dashboard</a>
+                    <a href="#Favorites">Favorites</a>
+                    <a href="#Settings">Settings</a>
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-------------------- Page content -------------------->
+
+        <div class="content">
+            <div class="sub-name font-regular">
+                <h3>Hello, Mouamle!</h3>
+                <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
+            </div>
+            <br>
+
+
+
+
+            <!-- -------------------------- Cards ------------------------->
+
+
+            <!-------------------------- card 1---------------- -->
+
+            <div class="cards font-regular">
+                <a href="" style="text-decoration: none;">
+                    <div class="card" id="card-1">
+                        <img id="card-1-img" src="./svg/cards/card-1.svg">
+                        <button id="card-1-btn" class="font-regular">Add new workspace</button>
+                        <p class="font-light" id="card-1-p">Still not enough? Click on a title to
+                            add a new workspace</p>
+                    </div>
+                </a>
+
+                <!-------------------------- card 2 --------------------->
+
+                <div class="card" id="card-2">
+                    <!------------- card header --------------->
+                    <!-- circle photo -->
+                    <div class="cards-nav">
+                        <header>
+                            <text>C</text>
+                        </header>
+                        <!-- favorite star -->
+                        <a class="star" onclick="favorite()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="20.158"
+                                viewBox="0 0 21.037 20.158">
+                                <g id="Component_5_2" data-name="Component 5 – 2" transform="translate(0.519 0.5)">
+                                    <path class="fav-star" id="Path_6" data-name="Path 6"
+                                        d="M11.645,2.976a1.071,1.071,0,0,1,2.037,0l1.627,5.006a1.071,1.071,0,0,0,1.017.739H21.59a1.072,1.072,0,0,1,.63,1.939l-4.258,3.093a1.071,1.071,0,0,0-.389,1.2L19.2,19.956a1.07,1.07,0,0,1-1.647,1.2L13.293,18.06a1.071,1.071,0,0,0-1.26,0L7.775,21.153a1.07,1.07,0,0,1-1.647-1.2L7.754,14.95a1.071,1.071,0,0,0-.389-1.2L3.106,10.66a1.072,1.072,0,0,1,.63-1.939H9a1.071,1.071,0,0,0,1.019-.739l1.627-5.006Z"
+                                        transform="translate(-2.663 -2.236)" fill="none" stroke="#abb4d4"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                                </g>
+                            </svg>
+                        </a>
+
+                        <!-- 3 dots options -->
+                        <div class="dots-dropdown-container">
+                            <div class="dots">
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                            </div>
+                            <div class="dot-dropdown">
+                                <div class="dropdown-content">
+
+                                    <div class="dropdown-item">
+                                        <img src="./svg/cards/trash-alt.svg" width="20" height="20">
+                                        <button>Delete</button>
+                                    </div>
+
+                                    <div class="dropdown-item" onclick="editPopUp()">
+                                        <img src="./svg/cards/edit.svg" width="20" height="20">
+                                        <button>Edit</button>
+                                    </div>
+
+                                    <div class="dropdown-item">
+                                        <img src="./svg/cards/plus-circle.svg" width="20" height="20">
+                                        <button>Add Member</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------------  3 dots popup ---------------- -->
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-content-inputs">
+                                <label id="wc-name" class="font-bold">Workspace Name</label>
+                                <input id="wc-name-input" type="text" placeholder="Enter" required minlength="4"
+                                    maxlength="30" size="20">
+                                <label id="wc-desc" class="font-bold">Workspace Description</label>
+                                <input id="wc-desc-input" type="text" placeholder="Workspacer Description">
+                            </div>
+
+                            <div class="pop-btn">
+                                <button class="close">Close</button>
+                                <button type="submit" class="save">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <!------------- card title --------------->
+                    <a href="#" class="cards-btn">
+                        <div class="card-title">
+                            <h5 class="font-bold">Workspace title</h5>
+                            <p class="font-regular">Description goes here, Description goes
+                                here</p>
+                        </div>
+                    </a>
+
+                    <!------------- card bottom --------------->
+                    <div class="card-bottom">
+                        <div class="card-ui font-regular">
+                            <img src="./svg/cards/bulding-ui.svg">
+                            <span>Building UI</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-date">
+                                <img src="./svg/cards/date.svg">
+                                <span>2021/02/22</span>
+
+                            </div>
+                        </div>
+                        <!-- circle bubbles -->
+                        <div class="card-bubbles">
+
+                            <div class="bubbles" style="z-index:1; background-color: rgb(244, 245, 247);">
+
+                                <img src="./img/thotho.jpeg">
+                            </div>
+
+                            <div class="bubbles" style="z-index:2; background-color: rgb(135, 248,176);">
+                                <img src="./img/twm.jpeg">
+                            </div>
+
+                            <div class="bubbles" style="z-index:3;  background-color: rgb(135,169,248);">
+                                <img src="./img/tony.jpeg">
+                            </div>
+
+                            <div class="bubbles" style="z-index:4; background-color: rgb(248, 135, 135);">
+                                <img src="./img/ahmed.jpg">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- --  ----------- Notification PopUp - 3 & 2 column ---------------- -->
+
+
+        <div class="notify-modal">
             <div class="notify-modal-content">
-
                 <ul style="list-style: none; padding:0;">
-                    <h4 class="font-regular" style="padding-left:15px; margin-top: -10px; font-weight:bolder;">
+                    <h4 class="font-regular" style="padding-left:15px; margin-top: -10px; font-weight:bold;">
                         Notifications</h4>
                     <li>
                         <div class="task-option">
@@ -137,7 +346,7 @@
                             </div>
                             <div class="task-form">
                                 <p class="font-light">
-                                    <strong>Thotho thotho</strong> invited you to join
+                                    <strong>Ahmed Al-azzawi</strong> invited you to join
                                     <strong>MSMAR - مسمار</strong><br>
                                     <small>about a minute ago</small>
                                 </p>
@@ -149,211 +358,47 @@
                         </div>
                     </li>
 
-
+                    <li>
+                        <div class="task-description">
+                            <div class="task-image">
+                                <div>
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+                            <div class="task-form">
+                                <p class="font-light">
+                                    <strong>Ahmed Al-azzawi</strong> assigned you new task
+                                    <strong>Create Notification UI Adobe XD</strong><br>
+                                    <small>about a minute ago</small>
+                                </p>
+                            </div>
+                    </li>
                 </ul>
             </div>
 
 
         </div>
 
-    </div>
 
-    <!----------- small screens nav bar - under 720px ----------->
-    <div class=" mobile-container">
-        <div class="top-nav">
-            <div class="nav-grid">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34.408" height="34.324" viewBox="0 0 34.408 39.324">
-                    <path class="sidebar-icons" id="bell-regular"
-                        d="M33.746,27.825c-1.484-1.594-4.26-3.993-4.26-11.85A12.129,12.129,0,0,0,19.66,4.058v-1.6a2.456,2.456,0,1,0-4.912,0v1.6A12.129,12.129,0,0,0,4.921,15.975c0,7.857-2.776,10.256-4.26,11.85A2.4,2.4,0,0,0,0,29.493a2.46,2.46,0,0,0,2.465,2.458H31.942a2.459,2.459,0,0,0,2.465-2.458,2.4,2.4,0,0,0-.661-1.667Zm-28.56.439c1.63-2.148,3.412-5.709,3.42-12.244,0-.015,0-.029,0-.045a8.6,8.6,0,0,1,17.2,0c0,.015,0,.029,0,.045.008,6.536,1.79,10.1,3.42,12.244ZM17.2,39.324a4.915,4.915,0,0,0,4.913-4.915H12.29A4.915,4.915,0,0,0,17.2,39.324Z"
-                        transform="translate(0.001)" fill="#abb4d4" />
-                </svg>
 
-                <a class="font-regular" href="#home" id="sm-logo">
-                    <img height="30" width="30" src="./svg/logo.png">
-                    <span>
-                        Workspacer
-                    </span>
-                </a>
 
-                <a class="icon" onclick="showBurgerIcon()">
-                    <i><img src="./svg//cards/bars.svg" width="30" height="30"></i>
-                </a>
-            </div>
-            <div class="font-regular" id="myLinks">
-                <a href="#Dashboard" class="active">Dashboard</a>
-                <a href="#Favorites">Favorites</a>
-                <a href="#Settings">Settings</a>
-                <a href="#">Sign Out</a>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 
-
-    <!-------------------- Page content -------------------->
-
-    <div class="content">
-        <div class="sub-name font-regular">
-            <h3>Hello, Mouamle!</h3>
-            <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
-        </div>
-        <br>
-
-
-
-
-        <!-- -------------------------- Cards ------------------------->
-
-
-        <!-------------------------- card 1---------------- -->
-
-        <div class="cards font-regular">
-            <a href="" style="text-decoration: none;">
-                <div class="card" id="card-1">
-                    <img id="card-1-img" src="./svg/cards/card-1.svg">
-                    <button id="card-1-btn" class="font-regular">Add new workspace</button>
-                    <p class="font-light" id="card-1-p">Still not enough? Click on a title to
-                        add a new workspace</p>
-                </div>
-            </a>
-
-            <!-------------------------- card 2 --------------------->
-
-            <div class="card" id="card-2">
-                <!------------- card header --------------->
-                <!-- circle photo -->
-                <div class="cards-nav">
-                    <header>
-                        <text>C</text>
-                    </header>
-                    <!-- favorite star -->
-                    <a class="star" onclick="favorite()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="20.158"
-                            viewBox="0 0 21.037 20.158">
-                            <g id="Component_5_2" data-name="Component 5 – 2" transform="translate(0.519 0.5)">
-                                <path class="fav-star" id="Path_6" data-name="Path 6"
-                                    d="M11.645,2.976a1.071,1.071,0,0,1,2.037,0l1.627,5.006a1.071,1.071,0,0,0,1.017.739H21.59a1.072,1.072,0,0,1,.63,1.939l-4.258,3.093a1.071,1.071,0,0,0-.389,1.2L19.2,19.956a1.07,1.07,0,0,1-1.647,1.2L13.293,18.06a1.071,1.071,0,0,0-1.26,0L7.775,21.153a1.07,1.07,0,0,1-1.647-1.2L7.754,14.95a1.071,1.071,0,0,0-.389-1.2L3.106,10.66a1.072,1.072,0,0,1,.63-1.939H9a1.071,1.071,0,0,0,1.019-.739l1.627-5.006Z"
-                                    transform="translate(-2.663 -2.236)" fill="none" stroke="#abb4d4"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-                            </g>
-                        </svg>
-                    </a>
-
-                    <!-- 3 dots options -->
-                    <div class="dots-dropdown-container">
-                        <div class="dots">
-                            <a class="dot"></a>
-                            <a class="dot"></a>
-                            <a class="dot"></a>
-                        </div>
-                        <div class="dot-dropdown">
-                            <div class="dropdown-content">
-
-                                <div class="dropdown-item">
-                                    <img src="./svg/cards/trash-alt.svg" width="20" height="20">
-                                    <button>Delete</button>
-                                </div>
-
-                                <div class="dropdown-item" onclick="editPopUp()">
-                                    <img src="./svg/cards/edit.svg" width="20" height="20">
-                                    <button>Edit</button>
-                                </div>
-
-                                <div class="dropdown-item">
-                                    <img src="./svg/cards/plus-circle.svg" width="20" height="20">
-                                    <button>Add Member</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--------------  3 dots popup ---------------- -->
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-content-inputs">
-                            <label id="wc-name" class="font-bold">Workspace Name</label>
-                            <input id="wc-name-input" type="text" placeholder="Enter" required minlength="4"
-                                maxlength="30" size="20">
-                            <label id="wc-desc" class="font-bold">Workspace Description</label>
-                            <input id="wc-desc-input" type="text" placeholder="Workspacer Description">
-                        </div>
-
-                        <div class="pop-btn">
-                            <button class="close">Close</button>
-                            <button type="submit" class="save">Save</button>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-                <!------------- card title --------------->
-                <a href="#" class="cards-btn">
-                    <div class="card-title">
-                        <h5 class="font-bold">Workspace title</h5>
-                        <p class="font-regular">Description goes here, Description goes
-                            here</p>
-                    </div>
-                </a>
-
-                <!------------- card bottom --------------->
-                <div class="card-bottom">
-                    <div class="card-ui font-regular">
-                        <img src="./svg/cards/bulding-ui.svg">
-                        <span>Building UI</span>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">
-                            <img src="./svg/cards/date.svg">
-                            <span>2021/02/22</span>
-
-                        </div>
-                    </div>
-                    <!-- circle bubbles -->
-                    <div class="card-bubbles">
-
-                        <div class="bubbles" style="z-index:1; background-color: rgb(244, 245, 247);">
-
-                            <img src="./img/thotho.jpeg">
-                        </div>
-
-                        <div class="bubbles" style="z-index:2; background-color: rgb(135, 248,176);">
-                            <img src="./img/twm.jpeg">
-                        </div>
-
-                        <div class="bubbles" style="z-index:3;  background-color: rgb(135,169,248);">
-                            <img src="./img/tony.jpeg">
-                        </div>
-
-                        <div class="bubbles" style="z-index:4; background-color: rgb(248, 135, 135);">
-                            <img src="./img/ahmed.jpg">
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    </div>
 
 
 
