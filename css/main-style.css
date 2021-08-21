@@ -212,10 +212,16 @@
   .sidebar-items a:hover{
     color:#5082cc;
     transition:0.3s;
-   
   }
 
-
+  .sidebar-items a:hover path{
+    stroke:#5082cc;
+    transition:0.3s;
+  }
+  .sidebar-items a:last-child:hover path{
+    fill:#5082cc;
+    transition:0.3s;
+  }
 /* ------------------------------------------ */
 
 
