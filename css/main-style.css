@@ -1226,10 +1226,9 @@ margin:5px 20px;
   margin-top:10px;
 }
 .task-option , .task-description{
-  display:grid;
-  align-items: start;
-  grid-template-columns:1fr 4fr;
-  justify-items:flex-start;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
   word-wrap:break-word;
   padding:0px 15px;
 }
@@ -1237,6 +1236,7 @@ margin:5px 20px;
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  margin-right: 10px;
 
 }
 .task-image img{
@@ -1244,7 +1244,6 @@ margin:5px 20px;
   top:0;
   left:0;
   clip-path: circle();
-  
 
 }
 .task-form{
