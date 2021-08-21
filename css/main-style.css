@@ -313,8 +313,6 @@
   z-index: 100;
   left: 280px;
   top: -700px;
-  width: 100%;
-  height: 100%; 
   transition: all 0.5s;
   
   
@@ -426,7 +424,7 @@
       position:fixed;
       align-items:center;
       z-index: 100; /* Sit on top */
-      left: 1200px;
+      right: -400px;
       top: 400px;
       transition: all 0.5s;
       
@@ -525,7 +523,7 @@
   position:fixed;
   align-items:center;
   z-index: 100; /* Sit on top */
-  left: 800px;
+  right: -400px;
   top: 480px;
   transition: all 0.5s;
   
@@ -606,6 +604,31 @@
   
 
 
+
+
+    /* -------Notificatio popup------- */
+.notify-modal{
+  position:fixed;
+  align-items:center;
+  z-index: 100; /* Sit on top */
+  left:-450px;
+  top: 70px;
+  transition: all 0.5s;
+  
+
+}
+.notify-modal-content{
+  background-color: rgba(243, 246, 255, 0.3);
+  border: 1px solid white;
+  border-radius:10px;
+  width: 400px; /* Could be more or less, depending on screen size */
+  height:450px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  overflow:scroll;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
     
   }
 
@@ -647,6 +670,36 @@
 .cards{
   justify-content: center;
 }
+
+
+
+    /* -------Notificatio popup------- */
+    .notify-modal{
+      position:fixed;
+      align-items:center;
+      z-index: 100; /* Sit on top */
+      left:-450px;
+      top: 70px;
+      transition: all 0.5s;
+      
+    
+    }
+    .notify-modal-content{
+      background-color: rgba(243, 246, 255, 0.3);
+      border: 1px solid white;
+      border-radius:10px;
+      width: 350px; /* Could be more or less, depending on screen size */
+      height:650px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      overflow:scroll;
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+    
+
+
+
+
 
 }
 

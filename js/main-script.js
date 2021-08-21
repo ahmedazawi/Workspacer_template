@@ -18,7 +18,7 @@ for (let i = 0; i < elem.length; i++) {
 let myNotifications = document.getElementById('notifications');
 let myDash = document.getElementById('dashboard');
 myNotifications.addEventListener('click', () => {
-    if (notify.style.top === "30px" || notify.style.left === "600px") {
+    if (notify.style.top === "30px" || notify.style.right === "20px") {
         myNotifications.classList.add('active');
 
     }
@@ -134,30 +134,32 @@ function showNotification() {
         }
     }
 
-    else if (window.innerWidth >= 901 & window.innerWidth <= 1100) {
-        if (notify.style.left === "600px") {
-            notify.style.left = "1200px"
+    else if (window.innerWidth >= 721 & window.innerWidth <= 1100) {
+        if (notify.style.right === "20px") {
+            notify.style.right = "-400px"
 
         }
         else {
-            notify.style.left = "600px"
+            notify.style.right = "20px"
 
 
         }
     }
-
-    else if (window.innerWidth >= 721 & window.innerWidth <= 900) {
-        if (notify.style.left === "350px") {
-            notify.style.left = "800px"
-
+    else if (window.innerWidth <= 720) {
+        if (notify.style.left === "10px") {
+            notify.style.left = "-450px"
         }
         else {
-            notify.style.left = "350px"
-
+            notify.style.left = "10px"
         }
     }
+
 
 }
+// notify.addEventListener('focusout', function (e) {
+//     e.target.style.top = '-700px';
+// });
+
 
 // window.addEventListener("orientationchange", function (event) {
 //     if (window.innerWidth >= 721 & window.innerWidth <= 900) {
