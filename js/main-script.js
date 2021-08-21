@@ -141,6 +141,8 @@ function showNotification() {
         }
         else {
             notify.style.left = "600px"
+
+
         }
     }
 
@@ -151,7 +153,19 @@ function showNotification() {
         }
         else {
             notify.style.left = "350px"
+
         }
     }
 
 }
+
+// window.addEventListener("orientationchange", function (event) {
+//     if (window.innerWidth >= 721 & window.innerWidth <= 900) {
+//         if (notify.style.top === "480px") {
+//             notify.style.left = "800px"
+
+//         }
+//         else {
+//             notify.style.left = "350px"
+//         }
+//     });

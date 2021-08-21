@@ -529,7 +529,6 @@
   top: 480px;
   transition: all 0.5s;
   
-  
 
 }
 .notify-modal-content{
@@ -1241,7 +1240,7 @@ margin:5px 20px;
 
 }
 .task-image img{
-  height: 65px;
+  height: 60px;
   top:0;
   left:0;
   clip-path: circle();
