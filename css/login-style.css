@@ -78,6 +78,8 @@ body{
 margin-right: 0.69vw;
 width: 80px;
 height:80px;
+background-color: white;
+border-radius:15px;
 }
 
 /* logo text - WORKSPACER */
@@ -401,7 +403,8 @@ div.main {             /*   dont move this block of code    */
     width:26vmax ;
     height: 40px;
     margin-bottom:2px;
-    padding-left:5px
+    padding-left:5px;
+    outline:none;
 }
 /* ------- Forget link */
 #myForget{
@@ -497,9 +500,8 @@ div.main {             /*   dont move this block of code    */
     width: 26.5vmax;
     height: 40px;
     margin-bottom:10px;
-    padding-left:5px
-   
-    
+    padding-left:5px;
+    outline:none;
 }
 
 /* ----- Full name field ----- */
