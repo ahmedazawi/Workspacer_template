@@ -218,8 +218,14 @@
     stroke:#5082cc;
     transition:0.3s;
   }
+
+  .sidebar-items a svg path{
+    transition:0.3s;
+    
+  }
   .sidebar-items a:last-child:hover path{
     fill:#5082cc;
+    stroke:white;
     transition:0.3s;
   }
 /* ------------------------------------------ */
