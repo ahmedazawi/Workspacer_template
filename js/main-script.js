@@ -155,7 +155,7 @@ function showNotification() {
     }
     else if (window.innerWidth <= 720) {
         if (notify.style.left === "10px") {
-            notify.style.left = "-450px"
+            notify.style.left = "-550px"
         }
         else {
             notify.style.left = "10px"
