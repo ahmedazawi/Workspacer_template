@@ -39,12 +39,44 @@
 
 
             <!-- Sidebar select -->
-            <div class="sidebar-select">
-                <select>
-                    <option>Select option:</option>
-                </select>
+            <div class="sidebar-account">
+
+                <div class="bubbles">
+                    <img src="./img/ahmed.jpg">
+                </div>
+
+                <div class="description">
+                    <span class="font-regular" style="font-size: 14px; color:rgb(42, 42, 42);">Web Developer <br>
+                    </span>
+                    <small class="font-light" style="color:rgb(171, 180, 212);">Workspace</small>
+                </div>
+                <div class="arrow-down" onclick="signOut()">
+                    <img src="./svg/sign-out-alt.svg" width="20" height="20">
+                </div>
                 <br>
             </div>
+
+            <!-- ----------- sign out pop ---------- -->
+
+
+            <div id="signout-modal">
+                <div class="warn-modal-content">
+                    <div class="modal-warning font-regular">
+                        <p>
+                            Are you sure you still want to sign out ?
+                        </p>
+                    </div>
+                    <div class="warn-pop-btn">
+                        <button class="sign-out">Sign Out</button>
+                        <button class="close">Cancel</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
 
 
 
@@ -105,7 +137,7 @@
 
                 </a>
 
-                <div id="notifications" onclick="showNotification()" onblur="notificationsBlur()">
+                <div id="notifications" onclick="showNotification()">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.408" height="34.324" viewBox="0 0 34.408 39.324">
                         <path class="sidebar-icons" id="bell-regular"
@@ -120,6 +152,70 @@
 
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- --  ----------- Notification PopUp  ---------------- -->
+
+
+        <div id="notification-container" class="notify-modal">
+            <div class="notify-modal-content">
+                <ul style="list-style: none; padding:0;">
+                    <h4 class="font-regular" style="padding-left:15px; margin-top: -10px; font-weight:bold;">
+                        Notifications</h4>
+                    <li>
+                        <div class="task-option">
+                            <div class="task-image">
+                                <div>
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+                            <div class="task-form">
+                                <p class="font-light">
+                                    <strong>Ahmed Al-azzawi</strong> invited you to join
+                                    <strong>MSMAR - مسمار</strong><br>
+                                    <small>about a minute ago</small>
+                                </p>
+                                <div class="task-form-btn">
+                                    <button>Accept</button>
+                                    <button>Ignore</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="task-description">
+                            <div class="task-image">
+                                <div>
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+                            <div class="task-form">
+                                <p class="font-light">
+                                    <strong>Ahmed Al-azzawi</strong> assigned you new task
+                                    <strong>Create Notification UI Adobe XD</strong><br>
+                                    <small>about a minute ago</small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
 
 
 
@@ -348,60 +444,6 @@
         </div>
 
 
-
-
-
-
-
-        <!-- --  ----------- Notification PopUp  ---------------- -->
-
-
-        <div id="notification-container" class="notify-modal">
-            <div class="notify-modal-content">
-                <ul style="list-style: none; padding:0;">
-                    <h4 class="font-regular" style="padding-left:15px; margin-top: -10px; font-weight:bold;">
-                        Notifications</h4>
-                    <li>
-                        <div class="task-option">
-                            <div class="task-image">
-                                <div>
-                                    <img src="./img/ahmed.jpg">
-                                </div>
-                            </div>
-                            <div class="task-form">
-                                <p class="font-light">
-                                    <strong>Ahmed Al-azzawi</strong> invited you to join
-                                    <strong>MSMAR - مسمار</strong><br>
-                                    <small>about a minute ago</small>
-                                </p>
-                                <div class="task-form-btn">
-                                    <button>Accept</button>
-                                    <button>Ignore</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="task-description">
-                            <div class="task-image">
-                                <div>
-                                    <img src="./img/ahmed.jpg">
-                                </div>
-                            </div>
-                            <div class="task-form">
-                                <p class="font-light">
-                                    <strong>Ahmed Al-azzawi</strong> assigned you new task
-                                    <strong>Create Notification UI Adobe XD</strong><br>
-                                    <small>about a minute ago</small>
-                                </p>
-                            </div>
-                    </li>
-                </ul>
-            </div>
-
-
-        </div>
 
 
 

@@ -12,34 +12,35 @@ setTimeout(() => {
     }
 }, 1000)
 
-// sidebar items active 
+
+// ------------  sidebar account sign out popup ----------
+let signOutPopUp = document.getElementById('signout-modal');
+let signOutClose = document.querySelector('#signout-modal .close');
+
+function signOut() {
+    signOutPopUp.style.display = "flex";
+}
+// close 
+signOutClose.onclick = () => {
+    signOutPopUp.style.display = "none";
+
+}
+
+
+
+// --------- sidebar items active --------------
 let elem = document.querySelectorAll(".sidebar-items span , .sidebar-items svg");
 for (let i = 0; i < elem.length; i++) {
     elem[i].onclick = function () {
         let current = document.querySelector(".sidebar-items a.active");
         if (current) current.classList.remove("active");
         this.parentNode.classList.add('active');
-        console.log(this.parentNode);
+
     };
 }
 
-let myNotifications = document.getElementById('notifications');
-let myDash = document.getElementById('dashboard');
-document.addEventListener('click', () => {
-    if (notify.style.top === "30px" || notify.style.right === "20px") {
-        myNotifications.classList.add('active');
 
-    }
-    else {
-        myDash.classList.add('active');
-        myNotifications.classList.remove('active');
-    }
-})
 
-// notification blur
-function notificationsBlur() {
-    myNotifications.classList.remove('active');
-}
 
 
 
@@ -72,6 +73,9 @@ window.onclick = function (event) {
     }
 
 }
+
+
+
 
 
 
@@ -139,6 +143,8 @@ addMemberClose.onclick = () => {
 
 
 
+
+
 // ------------- Notifications popup ---------
 let notify = document.querySelector(".notify-modal");
 function showNotification() {
@@ -173,6 +179,22 @@ function showNotification() {
 
 
 }
+// notification close
+let myNotifications = document.getElementById('notifications');
+let myDash = document.getElementById('dashboard');
+myNotifications.addEventListener('click', () => {
+    if (notify.style.top === "30px" || notify.style.right === "20px") {
+        myNotifications.classList.add('active');
+
+    }
+    else {
+
+        myNotifications.classList.remove('active');
+
+        myDash.classList.add('active');
+
+    }
+})
 // close notification popup when click out
 var ignoreClickOnMeElement = document.getElementById('notification-container');
 let myCont = document.querySelector('.content')
