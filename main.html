@@ -190,13 +190,8 @@
                 </a>
 
                 <!-------------------------- card 2 --------------------->
-                <div class="card" id="card-2">two</div>
-                <div class="card" id="card-2">two</div>
 
-                <div class="card" id="card-2">two</div>
-                <div class="card" id="card-2">two</div>
-
-                <div class="card" id="card-2">
+                <div class="card">
                     <!------------- card header --------------->
                     <!-- circle photo -->
                     <div class="cards-nav">
@@ -236,7 +231,7 @@
                                         <button>Edit</button>
                                     </div>
 
-                                    <div class="dropdown-item">
+                                    <div class="dropdown-item" onclick="addMemberPopUp()">
                                         <img src="./svg/cards/plus-circle.svg" width="20" height="20">
                                         <button>Add Member</button>
                                     </div>
@@ -246,19 +241,40 @@
                         </div>
                     </div>
 
-                    <!--------------  3 dots popup ---------------- -->
+                    <!--------------  3 dots popups ---------------- -->
+                    <!-- ----------- add member popup ----------- -->
+                    <div id="add-member-modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-content-inputs">
+                                <label id="wc-add" class="font-bold">Add Member to Workspace</label>
+                                <input id="wc-add-input" class="font-bold" type="search" name="search box" required
+                                    minlength="4" maxlength="25" placeholder=" " style="font-family:Arial, FontAwesome">
+                                <div></div>
+                            </div>
+
+                            <div class="add-pop-btn">
+                                <button class="close">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--------------- Edit Popup ---------- -->
                     <!-- The Modal -->
-                    <div id="myModal" class="modal">
+                    <div id="edit-modal" class="modal">
 
                         <!-- Modal content -->
                         <div class="modal-content">
                             <div class="modal-content-inputs">
                                 <label id="wc-name" class="font-bold">Workspace Name</label>
-                                <input id="wc-name-input" class="font-bold" type="text" placeholder="Enter" required
-                                    minlength="4" maxlength="30" size="30">
+                                <input id="wc-name-input" class="font-bold" type="text" placeholder="Enter"
+                                    name="Workspace Name" required minlength="4" maxlength="25">
                                 <label id="wc-desc" class="font-bold">Workspace Description</label>
-                                <input id="wc-desc-input" class="font-bold" type="text"
-                                    placeholder="Workspacer Description">
+                                <input id="wc-desc-input" class="font-bold" type="text" name="Workspace Description"
+                                    required minlength="10" maxlength="40" placeholder="Workspacer Description">
                             </div>
 
                             <div class="pop-btn">
@@ -302,20 +318,20 @@
                         <!-- circle bubbles -->
                         <div class="card-bubbles">
 
-                            <div class="bubbles" style="z-index:1; background-color: rgb(244, 245, 247);">
+                            <div class="bubbles" style="z-index:1; ">
 
                                 <img src="./img/thotho.jpeg">
                             </div>
 
-                            <div class="bubbles" style="z-index:2; background-color: rgb(135, 248,176);">
+                            <div class="bubbles" style="z-index:2; ">
                                 <img src="./img/twm.jpeg">
                             </div>
 
-                            <div class="bubbles" style="z-index:3;  background-color: rgb(135,169,248);">
+                            <div class="bubbles" style="z-index:3;  ">
                                 <img src="./img/tony.jpeg">
                             </div>
 
-                            <div class="bubbles" style="z-index:4; background-color: rgb(248, 135, 135);">
+                            <div class="bubbles" style="z-index:4; ">
                                 <img src="./img/ahmed.jpg">
                             </div>
                         </div>

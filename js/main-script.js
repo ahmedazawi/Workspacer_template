@@ -114,19 +114,28 @@ function showBurgerIcon() {
 
 //  ------------ 3 dots popup ------------
 
-let modal = document.getElementById('myModal');
-let modalContent = document.querySelector('.modal-content p');
-let close = document.querySelector('.close');
+let editModal = document.getElementById('edit-modal');
+let editClose = document.querySelector('#edit-modal .close');
+let addMemberModal = document.getElementById('add-member-modal');
+let addMemberClose = document.querySelector('#add-member-modal .close');
 
 // edit popup
 function editPopUp() {
-    modal.style.display = "flex";
+    editModal.style.display = "flex";
+}
+// edit close
+editClose.onclick = () => {
+    editModal.style.display = "none";
 }
 
-close.onclick = () => {
-    modal.style.display = "none";
+// add member popup
+function addMemberPopUp() {
+    addMemberModal.style.display = "flex";
 }
-
+// add member close
+addMemberClose.onclick = () => {
+    addMemberModal.style.display = "none";
+}
 
 
 
@@ -164,7 +173,7 @@ function showNotification() {
 
 
 }
-
+// close notification popup when click out
 var ignoreClickOnMeElement = document.getElementById('notification-container');
 let myCont = document.querySelector('.content')
 myCont.addEventListener('click', function (event) {

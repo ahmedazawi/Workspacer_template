@@ -21,7 +21,7 @@
 
 
 
-/*---------- small screens under 720px nav --------*/
+/*---------- small screens under 720px nav bar 'Mobile nav bar' --------*/
 
 .mobile-container{
   display: none;
@@ -134,6 +134,7 @@
 
   /* ---------- logo heading h4 ------------ */
 .logo h4{
+  font-size: 21px;
     font-weight: 600;
     margin-left: 15px; 
 }
@@ -639,7 +640,6 @@
      }
    body { 
       width:150%;
- 
  }
 
 
@@ -781,9 +781,10 @@
 }
 
 .sub-name h3{
-   font-weight: lighter;
+  font-size:26px;
+   font-weight: 500;
    margin-bottom:0;
-   margin-top: 140px;
+   margin-top: 125px;
    
 }
 /* paragraph under the main heading */
@@ -889,19 +890,18 @@
   }
 
   .cards-nav header{
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background-color:   rgb(244, 245, 247);
     border-radius: 50%;
-    padding:5px;
     margin:20px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
   }
   .cards-nav header text{
-    justify-content: center;
-    align-items: center;
-    font-size:20px;
+    font-size:22px;
     color: rgb(42,42,42);
   
   }
@@ -920,6 +920,8 @@
 
  .dots-dropdown-container {
     margin:22px 28px;
+    font-size:22px;
+
   }
   .dots{
     cursor: pointer;
@@ -990,7 +992,8 @@ justify-content: left;
   -o-user-select: none;
 }
 .card-title h5{
-margin:5px 20px;
+  margin:5px 20px;
+  font-size:20px;
 }
 
 .card-title p{
@@ -1050,8 +1053,9 @@ margin:5px 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 15px;
+  margin-right: 10px;
   margin-top: -35px;
+  
 }
 .bubbles{
 
@@ -1059,7 +1063,7 @@ margin:5px 20px;
     width: 40px;
     border-radius: 50%;
     margin-left: -25px;
-    border: 1px solid white;
+    border:2px solid white;
     
     
 }
@@ -1228,13 +1232,13 @@ margin:5px 20px;
   background-color:#FF5555;
 }
 .pop-btn .close:hover{
-  background-color:rgba(253, 87, 90, 0.842);
+  background-color:#f73636;
 }
 .pop-btn .save{
   background-color:#2ECC71;
 }
 .pop-btn .save:hover{
-  background-color:rgba(57,203,117,0.842);
+  background-color:#19c962;
 }
 
 
@@ -1244,6 +1248,64 @@ margin:5px 20px;
   text-decoration: none;
   cursor: pointer;
 } */
+
+
+
+/*------------- add member popup -------------- */
+
+#add-member-modal{
+  display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-content-inputs #wc-add{
+  position:absolute;
+  margin-left:-20px;
+  margin-top: -10px;
+  
+}
+#wc-add-input::placeholder{    
+   background-image: url("../svg/cards/search.svg");
+  background-repeat: no-repeat;
+  
+}
+.add-pop-btn{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.add-pop-btn button{
+  color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  width:160px;
+  height:60px;
+  font-size: 22px;
+  font-weight: bold;
+  margin:0 2px;
+}
+
+.add-pop-btn .close{
+  background-color:#FF5555;
+}
+
+.add-pop-btn .close:hover{
+  background-color:#f73636;
+}
 
 /* -------------------------- */
 
