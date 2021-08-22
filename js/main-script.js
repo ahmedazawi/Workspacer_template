@@ -1,10 +1,10 @@
 
 setTimeout(() => {
     // window reload on resized
-    window.addEventListener('resize', function () {
-        "use strict";
-        window.location.reload();
-    });
+    // window.addEventListener('resize', function () {
+    //     "use strict";
+    //     window.location.reload();
+    // });
 
     // window reload on rotate
     if (window.DeviceOrientationEvent) {
