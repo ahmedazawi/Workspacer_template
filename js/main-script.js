@@ -1,16 +1,16 @@
 
-// setTimeout(() => {
-//     window reload on resized
-//     window.addEventListener('resize', function () {
-//         "use strict";
-//         window.location.reload();
-//     });
+setTimeout(() => {
+    // // window reload on resized
+    // window.addEventListener('resize', function () {
+    //     "use strict";
+    //     window.location.reload();
+    // });
 
-//     // window reload on rotate
-//     if (window.DeviceOrientationEvent) {
-//         window.addEventListener('orientationchange', function () { location.reload(); }, false);
-//     }
-// }, 1000)
+    // window reload on rotate
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('orientationchange', function () { location.reload(); }, false);
+    }
+}, 1000)
 
 // sidebar items active 
 let elem = document.querySelectorAll(".sidebar-items span , .sidebar-items svg");
