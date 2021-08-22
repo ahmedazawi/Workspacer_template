@@ -1,8 +1,16 @@
-// window reload on rotate
-if (window.DeviceOrientationEvent) {
-    window.addEventListener('orientationchange', function () { location.reload(); }, false);
-}
 
+setTimeout(() => {
+    // window reload on resized
+    window.addEventListener('resize', function () {
+        "use strict";
+        window.location.reload();
+    });
+
+    // window reload on rotate
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('orientationchange', function () { location.reload(); }, false);
+    }
+}, 1000)
 
 // sidebar items active 
 let elem = document.querySelectorAll(".sidebar-items span , .sidebar-items svg");
@@ -17,7 +25,7 @@ for (let i = 0; i < elem.length; i++) {
 
 let myNotifications = document.getElementById('notifications');
 let myDash = document.getElementById('dashboard');
-myNotifications.addEventListener('click', () => {
+document.addEventListener('click', () => {
     if (notify.style.top === "30px" || notify.style.right === "20px") {
         myNotifications.classList.add('active');
 
@@ -156,18 +164,26 @@ function showNotification() {
 
 
 }
-// notify.addEventListener('focusout', function (e) {
-//     e.target.style.top = '-700px';
-// });
+
+var ignoreClickOnMeElement = document.getElementById('notification-container');
+let myCont = document.querySelector('.content')
+myCont.addEventListener('click', function (event) {
+    var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+    if (!isClickInsideElement) {
+        if (window.innerWidth >= 1101) {
+            if (notify.style.top === "30px") {
+                notify.style.top = "-700px"
+
+            }
+        }
+        else if (window.innerWidth >= 721 & window.innerWidth <= 1100) {
+            if (notify.style.right === "20px") {
+                notify.style.right = "-400px"
+
+            }
+        }
+    }
 
 
-// window.addEventListener("orientationchange", function (event) {
-//     if (window.innerWidth >= 721 & window.innerWidth <= 900) {
-//         if (notify.style.top === "480px") {
-//             notify.style.left = "800px"
+});
 
-//         }
-//         else {
-//             notify.style.left = "350px"
-//         }
-//     });

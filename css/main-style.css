@@ -278,7 +278,7 @@
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
  div.content {             /*   dont move this block of code    */
-  margin:0 20vw;
+  margin:0 20%;
   padding: 1px 16px;
   height: 900px;
  
@@ -291,12 +291,6 @@
 @media screen and (min-width: 1101px) {
 
 
- div.content {
-   margin: 0 27vw;
-   transition:  0.3s;
-   
-     
- }
  .sidebar-select select{
    width: 200px;
    appearance: none;       /* Remove default arrow */
@@ -639,6 +633,17 @@
 
 
   @media screen and (max-width: 427px) {
+
+    html {
+      width:100%;
+     }
+   body { 
+      width:150%;
+ 
+ }
+
+
+  
 /*------- small screens nav bar --------*/
 .mobile-container{
   display:block;
@@ -667,9 +672,12 @@
        
     
 /* ------ contents -------- */
+
 .cards{
   justify-content: center;
+
 }
+
 
 
 
@@ -688,14 +696,14 @@
       background-color: rgba(243, 246, 255, 0.3);
       border: 1px solid white;
       border-radius:10px;
-      width: 350px; /* Could be more or less, depending on screen size */
+      width: 450px; /* Could be more or less, depending on screen size */
       height:650px;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       overflow:scroll;
       -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
     }
-    
+   
 
 
 
@@ -708,7 +716,7 @@
 
 
 
-  /* ------------ Screen larger than 600px? 2 column  -------------*/
+  /* ------------ Screen larger than 720px? 2 column  -------------*/
   @media (min-width: 720px) {
     .cards { grid-template-columns: repeat(2, 1fr); 
     
@@ -762,13 +770,9 @@
 
 
 
-
-
-
 /* --------------- the Grid system (Content Section) ---------------- */
 
 
-  html { font-size: 22px; }
   body { 
       /* padding: 1rem;  */
     margin:0;
