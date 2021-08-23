@@ -190,7 +190,6 @@ myNotifications.addEventListener('click', () => {
     else {
 
         myNotifications.classList.remove('active');
-
         myDash.classList.add('active');
 
     }
@@ -203,14 +202,16 @@ myCont.addEventListener('click', function (event) {
     if (!isClickInsideElement) {
         if (window.innerWidth >= 1101) {
             if (notify.style.top === "30px") {
-                notify.style.top = "-700px"
-
+                notify.style.top = "-700px";
+                myNotifications.classList.remove('active');
+                myDash.classList.add('active');
             }
         }
         else if (window.innerWidth >= 721 & window.innerWidth <= 1100) {
             if (notify.style.right === "20px") {
-                notify.style.right = "-400px"
-
+                notify.style.right = "-400px";
+                myNotifications.classList.remove('active');
+                myDash.classList.add('active');
             }
         }
     }
