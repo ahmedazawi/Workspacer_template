@@ -55,7 +55,8 @@
 }
 #sm-logo span{
   padding-left: 10px;
-  color: #5082cc;
+  color: rgb(26, 189, 196);
+
   font-weight: 600;
 }
 
@@ -68,7 +69,8 @@
   text-decoration: none;
   font-size: 17px;
   display: block;
-  background:#5082cc;
+  background:rgb(26, 189, 196);
+
   transition: all 0.5s;
 }
 .top-nav a.icon {
@@ -84,7 +86,8 @@
  
   transition: all 0.5s;
   background-color: white;
-  color:#5082cc;
+  color:rgb(26, 189, 196);
+
 } 
 
 
@@ -120,9 +123,9 @@
     margin-bottom:20px;
     display:flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content:center;
-    padding-top:10px;
+    padding-top:20px;
 }
 
 
@@ -133,10 +136,11 @@
 }
 
   /* ---------- logo heading h4 ------------ */
-.logo h4{
-  font-size: 21px;
+.logo div{
+  font-size: 28px;
     font-weight: 600;
-    margin-left: 15px; 
+    margin-left: -5px; 
+  
 }
 
 
@@ -294,25 +298,25 @@ border: none;
  
   
 .active span , .active .sidebar-icons{
-  color:#5082cc;
-  stroke:#5082cc;
+  color:rgb(26, 189, 196);
+  stroke:rgb(26, 189, 196);
   font-family:Rubik-Medium, Rubik;
   transition:  0.3s;
 
   }
   .active #bell-regular{
-    fill:#5082cc;
+    fill:rgb(26, 189, 196);
     stroke:white;
   }
 
   /* Links on mouse-over */
   .sidebar-items a:hover{
-    color:#5082cc;
+    color:rgb(26, 189, 196);
     transition:0.3s;
   }
 
   .sidebar-items a:hover path{
-    stroke:#5082cc;
+    stroke:rgb(26, 189, 196);
     transition:0.3s;
   }
 
@@ -321,7 +325,7 @@ border: none;
     
   }
   .sidebar-items a:last-child:hover path{
-    fill:#5082cc;
+    fill:rgb(26, 189, 196);
     stroke:white;
     transition:0.3s;
   }
@@ -871,7 +875,6 @@ border: none;
     grid-gap:2vw 2vw;
     padding-bottom: 20px;
    
-   
 
    
     
@@ -1000,7 +1003,7 @@ border: none;
   flex-direction: column;
   position: absolute;
   overflow: hidden;
-  background-color: #5082cc;
+  background-color:rgb(26, 189, 196);
   color: #fff;
   min-width: 100px;
   box-shadow: 0px 8px 8px 2px rgba(0,0,0,0.2);
@@ -1214,12 +1217,20 @@ justify-content: left;
 .modal-content {
   background-color: #fefefe;
   padding:10px 10px;
-  padding-top:30px;
+  padding-top:10px;
   border: 1px solid white;
   border-radius:10px;
   width: 350px; /* Could be more or less, depending on screen size */
   height:400px;
   
+}
+.modal-content .modal-title{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+  color:rgb(42,42,42);
+
 }
 
 .modal-content-inputs{
@@ -1231,7 +1242,7 @@ justify-content: left;
   padding:0 5px;
   font-size:large;
   background-color:white;
-  color:#3E80FF;
+  color:rgb(26, 189, 196);
 }
 .modal-content-inputs #wc-name{
   position:absolute;
@@ -1247,7 +1258,7 @@ justify-content: left;
 }
 
 .modal-content-inputs input{
- border:2px solid #3E80FF;
+ border:2px solid rgb(26, 189, 196);
  border-radius: 10px;
  width:300px;
  height:60px;

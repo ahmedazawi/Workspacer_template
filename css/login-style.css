@@ -68,9 +68,8 @@ body{
 
 .sidebar #logo{
     display:flex;
-    align-items:center;
+    align-items:baseline;
     justify-content: center; 
-    
 }
 
 /* logo svg img */
@@ -86,7 +85,6 @@ border-radius:15px;
 #logo h1{
     color: rgb(243,246,255);
     font-family:Rubik-Regular, Rubik;
-    
 }
 
 .sidebar p{

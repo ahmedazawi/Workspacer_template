@@ -31,9 +31,9 @@
                 <img class="w-logo" src="./svg/logo.svg">
 
                 <!-- Workspacer header -->
-                <h4>
-                    Workspacer
-                </h4>
+                <div>
+                    r Task
+                </div>
             </div>
 
 
@@ -56,24 +56,6 @@
                 <br>
             </div>
 
-            <!-- ----------- sign out pop ---------- -->
-
-
-            <div id="signout-modal">
-                <div class="warn-modal-content">
-                    <div class="modal-warning font-regular">
-                        <p>
-                            Are you sure you still want to sign out ?
-                        </p>
-                    </div>
-                    <div class="warn-pop-btn">
-                        <button class="sign-out">Sign Out</button>
-                        <button class="close">Cancel</button>
-
-                    </div>
-                </div>
-
-            </div>
 
 
 
@@ -239,7 +221,7 @@
                     <a class="font-regular" href="#home" id="sm-logo">
                         <img height="30" width="30" src="./svg/logo.svg">
                         <span>
-                            Workspacer
+                            Ur Task
                         </span>
                     </a>
 
@@ -276,7 +258,7 @@
             <!-------------------------- card 1---------------- -->
 
             <div class="cards font-regular">
-                <a href="" style="text-decoration: none;">
+                <a style="text-decoration: none;" onclick="createPopUp()">
                     <div class="card" id="card-1">
                         <img id="card-1-img" src="./svg/cards/card-1.svg">
                         <button id="card-1-btn" class="font-regular">Add new workspace</button>
@@ -337,12 +319,41 @@
                         </div>
                     </div>
 
+
+
+                    <!----------------------------------- popups -->
+
+
+
+                    <!-- ----------- sign out pop ---------- -->
+
+
+                    <div id="signout-modal">
+                        <div class="warn-modal-content">
+                            <div class="modal-warning font-regular">
+                                <p>
+                                    Are you sure you still want to sign out ?
+                                </p>
+                            </div>
+                            <div class="warn-pop-btn">
+                                <button class="sign-out">Sign Out</button>
+                                <button class="close">Cancel</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
                     <!--------------  3 dots popups ---------------- -->
+
+
+
                     <!-- ----------- add member popup ----------- -->
                     <div id="add-member-modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
+                        <div class="modal-content" style="padding-top: 30px;">
                             <div class="modal-content-inputs">
                                 <label id="wc-add" class="font-bold">Add Member to Workspace</label>
                                 <input id="wc-add-input" class="font-bold" type="search" name="search box" required
@@ -361,9 +372,8 @@
                     <!--------------- Edit Popup ---------- -->
                     <!-- The Modal -->
                     <div id="edit-modal" class="modal">
-
-                        <!-- Modal content -->
                         <div class="modal-content">
+                            <h2 class="modal-title"></h2>
                             <div class="modal-content-inputs">
                                 <label id="wc-name" class="font-bold">Workspace Name</label>
                                 <input id="wc-name-input" class="font-bold" type="text" placeholder="Enter"

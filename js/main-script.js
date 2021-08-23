@@ -123,8 +123,21 @@ let editClose = document.querySelector('#edit-modal .close');
 let addMemberModal = document.getElementById('add-member-modal');
 let addMemberClose = document.querySelector('#add-member-modal .close');
 
+
+function createEditPopUp(title, greenBtn, url) {
+    document.querySelector('.modal-title').innerHTML = `${title} Workspacer`;
+    document.querySelector('.pop-btn .save').innerHTML = `${greenBtn}`;
+}
+
+
+// create popUp
+function createPopUp() {
+    createEditPopUp("Add New", "Create")
+    editModal.style.display = "flex";
+}
 // edit popup
 function editPopUp() {
+    createEditPopUp("Edit", "Update")
     editModal.style.display = "flex";
 }
 // edit close
