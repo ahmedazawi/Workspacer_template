@@ -129,8 +129,8 @@
 
 /* --------- w-logo ---------- */
 .w-logo{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   
 }
 
@@ -857,7 +857,7 @@ border: none;
 /* paragraph under the main heading */
 .sub-name p{
     color:rgb(171, 181, 211);
-    font-size:smaller;
+    font-size:22px;
     font-weight:normal;
     margin-bottom: 5%;
     margin-top: 10px;
@@ -1441,10 +1441,10 @@ justify-content: left;
   cursor: pointer;
 }
 .task-form-btn button:first-child{
-  background-color:rgb(62,128,255);
+  background-color:rgb(26, 189, 196);
 }
 .task-form-btn button:first-child:hover{
-  background-color:rgb(37, 110, 245);
+  background-color:rgb(8, 156, 161);
 }
 .task-form-btn button:last-child{
   background-color:rgb(58, 66, 79);
