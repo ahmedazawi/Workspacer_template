@@ -58,7 +58,7 @@ body{
     padding-bottom:250px;
     width: calc(200px + 18.7vw) ;
     height: calc(400px + 22vw) ; 
-    background-color: rgb(62,128,255);
+    background-color: rgb(26, 189, 196);
     position:fixed;
     overflow: auto;
     transition: 0.5s;
@@ -93,8 +93,6 @@ border-radius:15px;
     font-size:30px ;
     font-family:Rubik-Light, Rubik;
     font-weight:300;
-    /* width:421px;
-    height:94px; */
     margin-left: calc(20px + 1vw);
 }
 #picture{
@@ -336,7 +334,7 @@ div.main {             /*   dont move this block of code    */
 .switch button{
     border: none;
     background:none;
-    color:#5082cc;
+    color:rgb(26, 89, 132);
     cursor: pointer;
     font-size:20px;
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
@@ -349,14 +347,14 @@ div.main {             /*   dont move this block of code    */
 /* login & sing up buttons mouse over */
 .switch button:hover{
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); ;
-    color:#0052cc;
+    color:rgb(26, 89, 132);
 }
 .switch .active{
     font-size:25px;
-    color:#0052cc;
+    color:rgb(26, 89, 132);
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); 
     /* background-color:#5082cc; */
-    border-bottom: 3px solid #0052cc;
+    border-bottom: 3px solid rgb(26, 89, 132);
     /* border: ; */
     /* border-radius: 10px; */
     
@@ -408,7 +406,7 @@ div.main {             /*   dont move this block of code    */
 #myForget{
     float: right; 
     font-size: small;
-    color: #5082cc;
+    color: rgb(26, 89, 132);
     text-decoration: none;
 }
 #myForget:hover{
@@ -445,8 +443,8 @@ div.main {             /*   dont move this block of code    */
     width: calc(30px + 24vw);
     height: 50px;
     border-radius: 7px;
-    border:1px solid rgb(0, 82, 204) ;
-    background-color: rgb(0, 82, 204);
+    border:1px solid rgb(26, 89, 132) ;
+    background-color: rgb(26, 89, 132);
     font-size:20px;
     font-family:Rubik-Bold, Rubik;
     /* font-weight: bold; */
@@ -455,7 +453,7 @@ div.main {             /*   dont move this block of code    */
     transition: 0.5s;
 }
 #btn:hover{
-    background-color: rgba(0, 82, 204, 0.849);
+    background-color:rgba(26, 89, 132, 0.849);
     transition: 0.5s;
 }
 
@@ -536,8 +534,8 @@ div.main {             /*   dont move this block of code    */
     width: calc(30px + 24vw) ;
     height: 50px;
     border-radius: 7px;
-    border:1px solid rgb(0, 82, 204) ;
-    background-color: rgb(0, 82, 204);
+    border:1px solid rgb(26, 89, 132) ;
+    background-color: rgb(26, 89, 132);
     font-size:20px;
     font-family:Rubik-Bold, Rubik;
     /* font-weight: bold; */
@@ -547,7 +545,7 @@ div.main {             /*   dont move this block of code    */
     margin-top:2vw;
 }
 #new-btn:hover{
-    background-color: rgba(0, 82, 204, 0.849);
+    background-color: rgba(26, 89, 132, 0.849);
     transition: 0.5s;
 }
 
@@ -583,7 +581,7 @@ div.main {             /*   dont move this block of code    */
 }
 .checkbox-div label a{
     text-decoration: none;
-    color: #0052cc;
+    color: rgb(26, 89, 132);
 }
 .checkbox-div label a:hover{
     text-decoration:underline;

@@ -14,10 +14,27 @@ setTimeout(() => {
 
 
 // ------------  sidebar account sign out popup ----------
-let signOutPopUp = document.getElementById('signout-modal');
-let signOutClose = document.querySelector('#signout-modal .close');
+const signDeletePopUp = document.getElementById('sign-delete-popup');
+const signOutPopUp = document.getElementById('signout-modal');
+const signOutClose = document.querySelector('#signout-modal .close');
+const deletePopup = document.querySelector('.dropdown-content #delete-task')
+const popUpParagraph = document.querySelector('.modal-warning p');
+const warnFirstBtn = document.querySelector('.warn-pop-btn #red-btn');
 
+function signoutaAndDeletePopUp(paragraph, redBtn, url) {
+    popUpParagraph.innerHTML = ` Are you sure you want to ${paragraph}?`
+    warnFirstBtn.innerHTML = `${redBtn}`
+}
+// 3 dots delete task popup
+deletePopup.onclick = function () {
+    signoutaAndDeletePopUp("delete this workspace", "Delete")
+    signOutPopUp.style.display = "flex";
+}
+
+
+//  sign out popup
 function signOut() {
+    signoutaAndDeletePopUp("Sign Out", "Sign Out")
     signOutPopUp.style.display = "flex";
 }
 // close 
@@ -48,7 +65,7 @@ for (let i = 0; i < elem.length; i++) {
 
 // ---------- card 3 dots -----------
 document.querySelector(".dots").addEventListener('click', () => {
-    let dropDownList = document.querySelector(".dot-dropdown");
+    const dropDownList = document.querySelector(".dot-dropdown");
     if (dropDownList.style.display === "block") {
         dropDownList.style.display = "none";
     }
@@ -114,9 +131,7 @@ function showBurgerIcon() {
 
 
 
-
-
-//  ------------ 3 dots popup ------------
+//  ------------ 3 dots popup & Create new workspace ------------
 
 let editModal = document.getElementById('edit-modal');
 let editClose = document.querySelector('#edit-modal .close');
@@ -160,7 +175,9 @@ addMemberClose.onclick = () => {
 
 // ------------- Notifications popup ---------
 let notify = document.querySelector(".notify-modal");
+const smNotification = document.querySelector('#notifications-sm-icon svg');
 function showNotification() {
+
     if (window.innerWidth > 1100) {
         if (notify.style.top === "30px") {
             notify.style.top = "-700px";
@@ -184,9 +201,12 @@ function showNotification() {
     else if (window.innerWidth <= 720) {
         if (notify.style.left === "10px") {
             notify.style.left = "-550px"
+            smNotification.setAttribute("fill", "#abb4d4")
+
         }
         else {
             notify.style.left = "10px"
+            smNotification.setAttribute("fill", "rgb(26, 189, 196)")
         }
     }
 
