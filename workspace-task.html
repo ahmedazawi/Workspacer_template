@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
+    <link rel="stylesheet" href="css/workspace-task.css">
+    <!-- ------------ google fonts ------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Tasks</title>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif;">
+    <!-- Warning! 
+    classes that include font name like " font-regular or font-light "
+    used to give the elements a font family 
+
+-->
+
+    <div class="container">
+        <!-------------------------- Sidebar ---------------------->
+
+        <div class="sidebar">
+            <!------- logo -------->
+            <div class="logo">
+
+                <img class="w-logo" src="./svg/logo.svg">
+
+                <!-- Workspacer header -->
+                <div class="logo-title">
+                    r Task
+                </div>
+            </div>
+
+
+
+            <!-- Sidebar select -->
+            <div class="sidebar-account">
+
+                <div class="bubbles">
+                    <img src="./img/ahmed.jpg">
+                </div>
+
+                <div class="description">
+                    <span style="font-size: 14px; font-weight:700; color:rgb(42, 42, 42);">Web Developer <br>
+                    </span>
+                    <!-- <small class="font-light" style="color:rgb(171, 180, 212);">Workspace</small> -->
+                </div>
+                <div class="arrow-down" onclick="signOut()">
+                    <img src="./svg/sign-out-alt.svg" width="20" height="20">
+                </div>
+                <br>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Sidebar items -->
+            <div class="sidebar-items">
+                <a id="dashboard" href="#" class="active">
+                    <span>Waiting(<i>0</i> )</span>
+
+                </a>
+
+
+                <a href="#">
+                    <span>InProcess(<i>0</i> )</span>
+                </a>
+
+
+
+                <a href="#">
+                    <span>Stuck(<i>0</i> )</span>
+                </a>
+
+                <a href="#">
+                    <span>Done(<i>0</i> )</span>
+                </a>
+
+                <div id="notifications" onclick="showNotification()">
+                    <span>Notification</span>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- --  ----------- Notification PopUp  ---------------- -->
+
+
+        <div id="notification-container" class="notify-modal">
+            <div class="notify-modal-content">
+                <ul style="list-style: none; padding:0;">
+                    <h4 style="padding-left:15px; margin-top: -10px; font-weight:bold; ">
+                        Notifications</h4>
+                    <li>
+                        <div class="task-option">
+                            <div class="task-image">
+                                <div>
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+                            <div class="task-form">
+                                <p>
+                                    <strong>Ahmed Al-azzawi</strong> invited you to join
+                                    <strong>MSMAR - مسمار</strong><br>
+                                    <small>about a minute ago</small>
+                                </p>
+                                <div class="task-form-btn">
+                                    <button>Accept</button>
+                                    <button>Ignore</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="task-description">
+                            <div class="task-image">
+                                <div>
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+                            <div class="task-form">
+                                <p>
+                                    <strong>Ahmed Al-azzawi</strong> assigned you new task
+                                    <strong>Create Notification UI Adobe XD</strong><br>
+                                    <small>about a minute ago</small>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-------------------- Page content -------------------->
+
+        <div class="content">
+            <div class="content-header">
+                <div style="font-size:xxx-large;">Tasks</div>
+                <div>
+                    <a class="add-new-task ">
+                        <img src="svg/tasks/plus.svg" width="15" height="15" alt="add new image">
+                        <span>New</span>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- -------------------------- Tasks ------------------------->
+
+            <div class="cards">
+
+                <!-------------------------- task 1 --------------------->
+
+                <div class="card">
+                    <!------------- card header --------------->
+                    <!-- circle photo -->
+                    <div class="cards-nav">
+                        <header>
+                            <div></div>
+                        </header>
+
+                        <!-- 3 dots options -->
+                        <div class="dots-dropdown-container">
+                            <div class="dots">
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                                <a class="dot"></a>
+                            </div>
+                            <div class="dot-dropdown">
+                                <div class="dropdown-content">
+
+                                    <div id="delete-task" class="dropdown-item">
+                                        <img src="./svg/cards/trash-alt.svg" width="20" height="20">
+                                        <button>Delete</button>
+                                    </div>
+
+                                    <div class="dropdown-item" onclick="editPopUp()">
+                                        <img src="./svg/cards/edit.svg" width="20" height="20">
+                                        <button>Edit</button>
+                                    </div>
+
+                                    <div class="dropdown-item">
+                                        <img src="./svg/cards/plus-circle.svg" width="20" height="20">
+                                        <button>Add Action</button>
+                                    </div>
+
+                                    <div class="dropdown-item" onclick="addMemberPopUp()">
+                                        <img src="./svg/cards/plus-circle.svg" width="20" height="20">
+                                        <button>Add Member</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!----------------------------------- popups -->
+
+
+
+                    <!-- ----------- sign out & delete pop ---------- -->
+
+                    <div id="sign-delete-popup">
+                        <div id="signout-modal">
+                            <div class="warn-modal-content">
+                                <div class="modal-warning font-regular">
+                                    <p>
+                                    </p>
+                                </div>
+                                <div class="warn-pop-btn">
+                                    <button id="red-btn" class="sign-out"></button>
+                                    <button class="close">Cancel</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <!--------------  3 dots popups ---------------- -->
+
+
+
+                    <!-- ----------- add member popup ----------- -->
+                    <div id="add-member-modal">
+                        <div class="modal-content" style="padding-top: 30px;">
+                            <div class="modal-content-inputs">
+                                <label id="wc-add" class="font-bold">Add Member to Workspace</label>
+                                <input id="wc-add-input" class="font-bold" type="search" name="search box" required
+                                    minlength="4" maxlength="25" placeholder=" " style="font-family:Arial, FontAwesome">
+                                <div></div>
+                            </div>
+
+                            <div class="add-pop-btn">
+                                <button class="close">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--------------- Edit Popup ---------- -->
+                    <!-- The Modal -->
+                    <div id="edit-modal" class="modal">
+                        <div class="modal-content">
+                            <h2 class="modal-title"></h2>
+                            <div class="modal-content-inputs">
+                                <label id="wc-name" class="font-bold">Workspace Name</label>
+                                <input id="wc-name-input" class="font-bold" type="text" placeholder="Enter"
+                                    name="Workspace Name" required minlength="4" maxlength="25">
+                                <label id="wc-desc" class="font-bold">Workspace Description</label>
+                                <input id="wc-desc-input" class="font-bold" type="text" name="Workspace Description"
+                                    required minlength="10" maxlength="40" placeholder="Workspacer Description">
+                            </div>
+
+                            <div class="pop-btn">
+                                <button class="close">Close</button>
+                                <button type="submit" class="save">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <!------------- card title --------------->
+
+                    <div class="card-title">
+                        <h5 class="font-bold">Create ToDo</h5>
+                        <p class="font-regular">Using Javascript</p>
+                    </div>
+
+
+                    <!------------- card bottom --------------->
+                    <div class="card-bottom">
+                        <div>
+                            <div class="card-ui">
+                                <img src="./svg/cards/bulding-ui.svg">
+                                <span>Building UI</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-date">
+                                    <img src="./svg/cards/date.svg">
+                                    <span>2021/02/22</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- js file -->
+    <script type="text/javascript" src="js/workspace-task.js"></script>
+
+
+</body>
+
+</html>
