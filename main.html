@@ -10,30 +10,26 @@
     <!-- ------------ google fonts ------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <title>Home</title>
 </head>
 
-<body>
-    <!-- Warning! 
-    classes that include font name like " font-regular or font-light "
-    used to give the elements a font family 
-
--->
+<body style="font-family: 'Roboto', sans-serif;">
 
     <div class="container">
         <!-------------------------- Sidebar ---------------------->
 
         <div class="sidebar">
             <!------- logo -------->
-            <div class="logo font-regular">
+            <div class="logo ">
 
                 <img class="w-logo" src="./svg/logo.svg">
 
                 <!-- Workspacer header -->
-                <div class="logo-title">
+                <!-- <div class="logo-title">
                     r Task
-                </div>
+                </div> -->
             </div>
 
 
@@ -46,9 +42,10 @@
                 </div>
 
                 <div class="description">
-                    <span class="font-regular" style="font-size: 14px; color:rgb(42, 42, 42);">Web Developer <br>
+                    <span style="font-size: 14px; color:rgb(42, 42, 42);">Web Developer
+                        <br>
                     </span>
-                    <!-- <small class="font-light" style="color:rgb(171, 180, 212);">Workspace</small> -->
+                    <!-- <small  style="color:rgb(171, 180, 212);">Workspace</small> -->
                 </div>
                 <div class="arrow-down" onclick="signOut()">
                     <img src="./svg/sign-out-alt.svg" width="20" height="20">
@@ -64,7 +61,7 @@
 
 
             <!-- Sidebar items -->
-            <div class="sidebar-items font-regular">
+            <div class="sidebar-items ">
                 <a id="dashboard" href="#" class="active">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.828" height="32" viewBox="0 0 27.828 27">
@@ -152,7 +149,7 @@
         <div id="notification-container" class="notify-modal">
             <div class="notify-modal-content">
                 <ul style="list-style: none; padding:0;">
-                    <h4 class="font-regular" style="padding-left:15px; margin-top: -10px; font-weight:bold;">
+                    <h4 class="" style="padding-left:15px; margin-top: -10px; font-weight:bold;">
                         Notifications</h4>
                     <li>
                         <div class="task-option">
@@ -162,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="task-form">
-                                <p class="font-light">
+                                <p>
                                     <strong>Ahmed Al-azzawi</strong> invited you to join
                                     <strong>MSMAR - مسمار</strong><br>
                                     <small>about a minute ago</small>
@@ -183,7 +180,7 @@
                                 </div>
                             </div>
                             <div class="task-form">
-                                <p class="font-light">
+                                <p>
                                     <strong>Ahmed Al-azzawi</strong> assigned you new task
                                     <strong>Create Notification UI Adobe XD</strong><br>
                                     <small>about a minute ago</small>
@@ -218,18 +215,16 @@
                                 transform="translate(0.001)" />
                         </svg>
                     </div>
-                    <a class="font-regular" href="#home" id="sm-logo">
-                        <img height="30" width="30" src="./svg/logo.svg">
-                        <span>
-                            r Task
-                        </span>
+                    <a class="" href="#home" id="sm-logo">
+                        <img height="40" width="40" src="./svg/logo.svg">
+
                     </a>
 
                     <a class="icon" onclick="showBurgerIcon()">
                         <i><img src="./svg//cards/bars.svg" width="30" height="30"></i>
                     </a>
                 </div>
-                <div class="font-regular" id="myLinks">
+                <div class="" id="myLinks">
                     <a href="#Dashboard" class="active">Dashboard</a>
                     <a href="#Favorites">Favorites</a>
                     <a href="#Settings">Settings</a>
@@ -243,7 +238,7 @@
         <!-------------------- Page content -------------------->
 
         <div class="content">
-            <div class="sub-name font-regular">
+            <div class="sub-name ">
                 <h3>Hello, Mouamle!</h3>
                 <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
             </div>
@@ -257,12 +252,12 @@
 
             <!-------------------------- card 1---------------- -->
 
-            <div class="cards font-regular">
+            <div class="cards ">
                 <a style="text-decoration: none;" onclick="createPopUp()">
                     <div class="card" id="card-1">
                         <img id="card-1-img" src="./svg/cards/card-1.svg">
-                        <button id="card-1-btn" class="font-regular">Add new workspace</button>
-                        <p class="font-light" id="card-1-p">Still not enough? Click on a title to
+                        <button id="card-1-btn" class="">Add new workspace</button>
+                        <p id="card-1-p">Still not enough? Click on a title to
                             add a new workspace</p>
                     </div>
                 </a>
@@ -330,7 +325,7 @@
                     <div id="sign-delete-popup">
                         <div id="signout-modal">
                             <div class="warn-modal-content">
-                                <div class="modal-warning font-regular">
+                                <div class="modal-warning ">
                                     <p>
                                     </p>
                                 </div>
@@ -403,14 +398,14 @@
                     <a href="#" class="cards-btn">
                         <div class="card-title">
                             <h5 class="font-bold">Workspace title</h5>
-                            <p class="font-regular">Description goes here, Description goes
-                                here</p>
+                            <p class="">Description goes here, Description goes
+                                here </p>
                         </div>
                     </a>
 
                     <!------------- card bottom --------------->
                     <div class="card-bottom">
-                        <div class="card-ui font-regular">
+                        <div class="card-ui ">
                             <img src="./svg/cards/bulding-ui.svg">
                             <span>Building UI</span>
                         </div>

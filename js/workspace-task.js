@@ -1,11 +1,5 @@
 
 setTimeout(() => {
-    // // window reload on resized
-    // window.addEventListener('resize', function () {
-    //     "use strict";
-    //     window.location.reload();
-    // });
-
     // window reload on rotate
     if (window.DeviceOrientationEvent) {
         window.addEventListener('orientationchange', function () { location.reload(); }, false);
@@ -63,47 +57,17 @@ for (let i = 0; i < elem.length; i++) {
 
 
 
-// ---------- card 3 dots -----------
-document.querySelector(".dots").addEventListener('click', () => {
-    const dropDownList = document.querySelector(".dot-dropdown");
-    if (dropDownList.style.display === "block") {
-        dropDownList.style.display = "none";
-    }
-    else {
-        dropDownList.style.display = "block";
-
-    }
-
-})
-window.onclick = function (event) {
+// tasks tabs 
+let taskTabItems = document.querySelectorAll(".task-tab span");
+for (let i = 0; i < taskTabItems.length; i++) {
+    taskTabItems[i].onclick = function () {
+        let currentTab = document.querySelector(".task-tab div.task-tab-active");
+        if (currentTab) currentTab.classList.remove("task-tab-active");
+        this.parentNode.classList.add('task-tab-active');
 
 
-    // close dropdown list when click out
-    let dropdowns = document.querySelectorAll(".dot-dropdown");
-    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-                openDropdown.style.display = "none";
-            }
-        }
-    }
-
+    };
 }
-
-
-
-
-
-
-
-
-
-// ---------------- favorite star active ------------
-function favorite() {
-    document.querySelector('.fav-star').classList.toggle('star-active');
-}
-
 
 
 
@@ -125,6 +89,33 @@ function showBurgerIcon() {
         myBurgerIcon.style.transform = "rotate(-90deg)";
 
     }
+}
+
+
+// ---------- card 3 dots -----------
+document.querySelector(".dots").addEventListener('click', () => {
+    const dropDownList = document.querySelector(".dot-dropdown");
+    if (dropDownList.style.display === "block") {
+        dropDownList.style.display = "none";
+    }
+    else {
+        dropDownList.style.display = "block";
+
+    }
+
+})
+window.onclick = function (event) {
+    // close dropdown list when click out
+    let dropdowns = document.querySelectorAll(".dot-dropdown");
+    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+
 }
 
 
@@ -175,7 +166,7 @@ addMemberClose.onclick = () => {
 
 // ------------- Notifications popup ---------
 let notify = document.querySelector(".notify-modal");
-const smNotification = document.querySelector('#notifications-sm-icon svg');
+const smNotification = document.querySelector('#notifications-sm-icon svg path');
 function showNotification() {
 
     if (window.innerWidth > 1100) {
