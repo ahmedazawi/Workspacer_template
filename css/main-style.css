@@ -112,18 +112,6 @@
   
 }
 
-  /* ---------- logo heading h4 ------------ */
-  
-/* .logo .logo-title{
-  font-size: 28px;
-  font-weight: 600;
-  margin-left: -5px; 
-  padding-bottom: 15px; 
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  color: white;
-} */
-
 
  /* ----------- Sidebar account ------------   */
  .sidebar-account{
@@ -161,6 +149,20 @@ border: none;
 
 
 /* ------------ sign out popup --------- */
+#delete-popup{
+  display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); 
+}
+
 #signout-modal{
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
@@ -1271,7 +1273,6 @@ display: -webkit-box;
 }
 
 .modal-content-inputs input::placeholder{
-  font-family:Rubik-Bold,Rubik;
   font-size:large;
  
 }

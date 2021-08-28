@@ -14,27 +14,23 @@ setTimeout(() => {
 
 
 // ------------  sidebar account sign out popup ----------
-const signDeletePopUp = document.getElementById('sign-delete-popup');
+
 const signOutPopUp = document.getElementById('signout-modal');
 const signOutClose = document.querySelector('#signout-modal .close');
-const deletePopup = document.querySelector('.dropdown-content #delete-task')
-const popUpParagraph = document.querySelector('.modal-warning p');
-const warnFirstBtn = document.querySelector('.warn-pop-btn #red-btn');
+const deletePopup = document.querySelector('#delete-popup')
+const closeDeletePopup = document.querySelector('#delete-popup .close')
 
-function signoutaAndDeletePopUp(paragraph, redBtn, url) {
-    popUpParagraph.innerHTML = ` Are you sure you want to ${paragraph}?`
-    warnFirstBtn.innerHTML = `${redBtn}`
-}
+
 // 3 dots delete task popup
-deletePopup.onclick = function () {
-    signoutaAndDeletePopUp("delete this workspace", "Delete")
-    signOutPopUp.style.display = "flex";
+function deleteWorkspace() {
+    deletePopup.style.display = "flex";
 }
+closeDeletePopup.onclick = () => {
+    deletePopup.style.display = "none";
 
-
+}
 //  sign out popup
 function signOut() {
-    signoutaAndDeletePopUp("Sign Out", "Sign Out")
     signOutPopUp.style.display = "flex";
 }
 // close 
@@ -75,9 +71,8 @@ document.querySelector(".dots").addEventListener('click', () => {
     }
 
 })
+
 window.onclick = function (event) {
-
-
     // close dropdown list when click out
     let dropdowns = document.querySelectorAll(".dot-dropdown");
     if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
@@ -251,4 +246,6 @@ myCont.addEventListener('click', function (event) {
 
 
 });
+
+
 

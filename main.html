@@ -194,8 +194,21 @@
 
         </div>
 
+        <!-- ------------------ sign out modal popup ---------------- -->
+        <div id="signout-modal">
+            <div class="warn-modal-content">
+                <div class="modal-warning ">
+                    <p>
+                        Are you sure you want to Sign Out?
+                    </p>
+                </div>
+                <div class="warn-pop-btn">
+                    <button class="sign-out">Sign Out</button>
+                    <button class="close">Cancel</button>
+                </div>
+            </div>
 
-
+        </div>
 
 
 
@@ -294,7 +307,7 @@
                             <div class="dot-dropdown">
                                 <div class="dropdown-content">
 
-                                    <div id="delete-task" class="dropdown-item">
+                                    <div id="delete-task" class="dropdown-item" onclick="deleteWorkspace()">
                                         <img src="./svg/cards/trash-alt.svg" width="20" height="20">
                                         <button>Delete</button>
                                     </div>
@@ -320,22 +333,20 @@
 
 
 
-                    <!-- ----------- sign out & delete pop ---------- -->
+                    <!-- ----------- delete popup ---------- -->
 
-                    <div id="sign-delete-popup">
-                        <div id="signout-modal">
-                            <div class="warn-modal-content">
-                                <div class="modal-warning ">
-                                    <p>
-                                    </p>
-                                </div>
-                                <div class="warn-pop-btn">
-                                    <button id="red-btn" class="sign-out"></button>
-                                    <button class="close">Cancel</button>
-
-                                </div>
+                    <div id="delete-popup">
+                        <div class="warn-modal-content">
+                            <div class="modal-warning ">
+                                <p>
+                                    Are you sure you want to delete this workspace?
+                                </p>
                             </div>
+                            <div class="warn-pop-btn">
+                                <button class="sign-out">Delete</button>
+                                <button class="close">Cancel</button>
 
+                            </div>
                         </div>
                     </div>
 
