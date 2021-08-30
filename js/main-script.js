@@ -17,6 +17,7 @@ setTimeout(() => {
 
 const signOutPopUp = document.getElementById('signout-modal');
 const signOutClose = document.querySelector('#signout-modal .close');
+
 const deletePopup = document.querySelector('#delete-popup')
 const closeDeletePopup = document.querySelector('#delete-popup .close')
 
@@ -27,8 +28,8 @@ function deleteWorkspace() {
 }
 closeDeletePopup.onclick = () => {
     deletePopup.style.display = "none";
-
 }
+
 //  sign out popup
 function signOut() {
     signOutPopUp.style.display = "flex";
@@ -127,33 +128,36 @@ function showBurgerIcon() {
 
 
 //  ------------ 3 dots popup & Create new workspace ------------
+const addNewWorkspaceModal = document.getElementById('add-new-modal');
+const addNewWorkspaceClose = document.querySelector('#add-new-modal .close');
 
-let editModal = document.getElementById('edit-modal');
-let editClose = document.querySelector('#edit-modal .close');
-let addMemberModal = document.getElementById('add-member-modal');
-let addMemberClose = document.querySelector('#add-member-modal .close');
+const editModal = document.getElementById('edit-modal');
+const editClose = document.querySelector('#edit-modal .close');
+
+const addMemberModal = document.getElementById('add-member-modal');
+const addMemberClose = document.querySelector('#add-member-modal .close');
 
 
-function createEditPopUp(title, greenBtn, url) {
-    document.querySelector('.modal-title').innerHTML = `${title} Workspacer`;
-    document.querySelector('.pop-btn .save').innerHTML = `${greenBtn}`;
+
+// add new workspace popUp
+function createNewWorkspace() {
+    addNewWorkspaceModal.style.display = "flex";
+}
+// add new workspace close
+addNewWorkspaceClose.onclick = () => {
+    addNewWorkspaceModal.style.display = "none";
 }
 
 
-// create popUp
-function createPopUp() {
-    createEditPopUp("Add New", "Create")
-    editModal.style.display = "flex";
-}
 // edit popup
 function editPopUp() {
-    createEditPopUp("Edit", "Update")
     editModal.style.display = "flex";
 }
 // edit close
 editClose.onclick = () => {
     editModal.style.display = "none";
 }
+
 
 // add member popup
 function addMemberPopUp() {

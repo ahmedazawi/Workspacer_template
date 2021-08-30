@@ -1,4 +1,40 @@
-/*---------- small screens under 720px nav bar 'Mobile nav bar' --------*/
+.close-btn{
+background-color:rgb(58, 66, 79) !important;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+}
+  .close-btn:hover{
+  background-color: rgb(33, 37, 44) !important;
+}
+  .submit-btn{
+    background-color: rgb(26, 189, 196) !important;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+  }
+  .submit-btn:hover{
+    background-color: rgb(6, 165, 170) !important;
+  }
+  
+
+
+
+
+
+
+
+
+
+ /*---------- small screens under 720px nav bar 'Mobile nav bar' --------*/
 
 .mobile-container{
   display: none;
@@ -150,6 +186,20 @@
     margin-top: 5px;
   }
   /* ------------ sign out popup --------- */
+  #delete-popup{
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); 
+  }
+
   #signout-modal{
     display: none; /* Hidden by default */
     position:fixed; /* Stay in place */
@@ -182,31 +232,7 @@
   .modal-warning p {
     text-align: center;
   }
-  .warn-pop-btn button{
-    color: white;
-    border: 1px solid;
-    border-radius: 10px;
-    width:120px;
-    height:50px;
-    font-size: 22px;
-    font-weight: bold;
-    margin:0 2px;
-    cursor: pointer;
-  }
-  .warn-pop-btn .sign-out{
-    background-color:#FF5555;
-  }
-  .warn-pop-btn .sign-out:hover{
-    background-color:#f73636;
-  }
-  
-  .warn-pop-btn .close{
-    background-color:#2ECC71;
-  }
-  .warn-pop-btn .close:hover{
-    background-color:#19c962;
-  }
-  
+ 
   
   
   
@@ -754,8 +780,6 @@ div.mobile-container{
 
 
 
-
-
 /* --------------- the Grid system (Content Section) ---------------- */
 
 
@@ -827,6 +851,25 @@ margin-left: 5px;
 }
 
 
+/* -------------- add new task popup -----------*/
+
+#add-new-task-modal{
+  display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+
 /* Card */
 .card {
   background-color: white;
@@ -877,18 +920,8 @@ margin-left: 5px;
 
 
   /* ---------------- cards content --------------- */
-  .card button{
-    border: none;
-    background:none;
-    cursor: pointer;
-  }
 
-.cards-btn {
-  text-decoration: none !important;
-}
-.cards-btn .card-title h5{
-  color:rgb(42,42,42);
-}
+
 
 
 
@@ -955,12 +988,14 @@ margin-left: 5px;
   z-index: 5;
   margin-top:15px;
   margin-left:-100px;
+  
 }
 .dropdown-item{
  display: flex;
  flex-direction: row;
  justify-content: left;
  padding: 10px 16px;
+ 
 
 }
 .dropdown-item button{
@@ -968,6 +1003,8 @@ margin-left: 5px;
   display: block;
   font-size: 15px;
   border: none;
+  background:none;
+  cursor: pointer;
 
 }
 
@@ -1087,6 +1124,9 @@ margin-left: 5px;
 }
 
 .modal-content {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fefefe;
   padding:10px 10px;
   padding-top:10px;
@@ -1096,11 +1136,16 @@ margin-left: 5px;
   height:400px;
   
 }
+.edit-modal-content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 .modal-content .modal-title{
   display:flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0;
+  padding: 0;
   color:rgb(42,42,42);
 
 }
@@ -1108,7 +1153,7 @@ margin-left: 5px;
 .modal-content-inputs{
   display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .modal-content-inputs label{
   padding:0 5px;
@@ -1118,13 +1163,13 @@ margin-left: 5px;
 }
 .modal-content-inputs #wc-name{
   position:absolute;
-  margin-left:-110px;
+  margin-left:20px;
   margin-top: -10px;
   
 }
 .modal-content-inputs #wc-desc{
   position:absolute;
-  margin-left:-50px;
+  margin-left:20px;
   margin-top: 95px;
  
 }
@@ -1147,37 +1192,57 @@ margin-left: 5px;
  
 }
 
-.pop-btn{
-  display: flex;
-  flex-direction: row;
+
+
+
+
+/*----------- add action popup --------------------------*/
+.add-action-popup{
+  display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
   justify-content: center;
-  align-items: flex-end;
-  height: 45%;
+  align-items: center;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
 }
-.pop-btn button {
-  color: white;
-  border: 1px solid;
+.add-action-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
   border-radius: 10px;
-  width:160px;
-  height:60px;
-  font-size: 22px;
+  padding:15px;
+ 
+}
+
+.add-action-list button{
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size:12px;
   font-weight: bold;
-  margin:0 2px;
+  background-color:rgb(243, 246, 255);
+  width:80px;
+  height:40px;
 }
-.pop-btn .close{
-  background-color:#FF5555;
+.add-action-field textarea{
+  font-family:'Roboto', sans-serif;
+  width:310px;
+  height: 150px;
+  margin:10px 0;
+  padding:10px;
+  border:none;
+  border-radius: 10px;
+  background-color:rgb(243, 246, 255);
+  outline: none;
+  resize: none;
 }
-.pop-btn .close:hover{
-  background-color:#f73636;
-}
-.pop-btn .save{
-  background-color:#2ECC71;
-}
-.pop-btn .save:hover{
-  background-color:#19c962;
-}
-
-
 
 
 
@@ -1203,7 +1268,7 @@ margin-left: 5px;
 }
 .modal-content-inputs #wc-add{
   position:absolute;
-  margin-left:-20px;
+  margin-left:20px;
   margin-top: -10px;
   
 }
@@ -1218,24 +1283,7 @@ margin-left: 5px;
   justify-content: flex-end;
   align-items: center;
 }
-.add-pop-btn button{
-  color: white;
-  border: 1px solid;
-  border-radius: 10px;
-  width:160px;
-  height:60px;
-  font-size: 22px;
-  font-weight: bold;
-  margin:0 2px;
-}
 
-.add-pop-btn .close{
-  background-color:#FF5555;
-}
-
-.add-pop-btn .close:hover{
-  background-color:#f73636;
-}
 
 /* -------------------------- */
 

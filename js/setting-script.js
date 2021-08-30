@@ -1,5 +1,10 @@
-
 setTimeout(() => {
+    // // window reload on resized
+    // window.addEventListener('resize', function () {
+    //     "use strict";
+    //     window.location.reload();
+    // });
+
     // window reload on rotate
     if (window.DeviceOrientationEvent) {
         window.addEventListener('orientationchange', function () { location.reload(); }, false);
@@ -12,6 +17,10 @@ setTimeout(() => {
 const signOutPopUp = document.getElementById('signout-modal');
 const signOutClose = document.querySelector('#signout-modal .close');
 
+const deletePopup = document.querySelector('#delete-popup')
+const closeDeletePopup = document.querySelector('#delete-popup .close')
+
+
 //  sign out popup
 function signOut() {
     signOutPopUp.style.display = "flex";
@@ -23,6 +32,7 @@ signOutClose.onclick = () => {
 }
 
 
+
 // --------- sidebar items active --------------
 let elem = document.querySelectorAll(".sidebar-items span , .sidebar-items svg");
 for (let i = 0; i < elem.length; i++) {
@@ -30,28 +40,10 @@ for (let i = 0; i < elem.length; i++) {
         let current = document.querySelector(".sidebar-items a.active");
         if (current) current.classList.remove("active");
         this.parentNode.classList.add('active');
-
     };
 }
 
 
-
-
-
-
-
-
-// tasks tabs 
-let taskTabItems = document.querySelectorAll(".task-tab span");
-for (let i = 0; i < taskTabItems.length; i++) {
-    taskTabItems[i].onclick = function () {
-        let currentTab = document.querySelector(".task-tab div.task-tab-active");
-        if (currentTab) currentTab.classList.remove("task-tab-active");
-        this.parentNode.classList.add('task-tab-active');
-
-
-    };
-}
 
 
 
@@ -76,109 +68,12 @@ function showBurgerIcon() {
 }
 
 
-// ---------- card 3 dots -----------
-document.querySelector(".dots").addEventListener('click', () => {
-    const dropDownList = document.querySelector(".dot-dropdown");
-    if (dropDownList.style.display === "block") {
-        dropDownList.style.display = "none";
-    }
-    else {
-        dropDownList.style.display = "block";
-
-    }
-
-})
-window.onclick = function (event) {
-    // close dropdown list when click out
-    let dropdowns = document.querySelectorAll(".dot-dropdown");
-    if (!event.target.matches('.dots') && !event.target.matches('.dot')) {
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-                openDropdown.style.display = "none";
-            }
-        }
-    }
-
-}
-
-
-
-
-
-//  ------------ 3 dots popup & Create new workspace ------------
-const addNewTaskModal = document.getElementById('add-new-task-modal');
-const addNewTaskClose = document.querySelector('#add-new-task-modal .close');
-
-const deletePopup = document.querySelector('#delete-popup')
-const closeDeletePopup = document.querySelector('#delete-popup .close')
-
-const editModal = document.getElementById('edit-modal');
-const editClose = document.querySelector('#edit-modal .close');
-
-const addAction = document.querySelector('.add-action-popup');
-const addActionClose = document.querySelector('.add-action-popup .close');
-
-const addMemberModal = document.getElementById('add-member-modal');
-const addMemberClose = document.querySelector('#add-member-modal .close');
-
-
-// add new workspace popUp
-function createNewTask() {
-    addNewTaskModal.style.display = "flex";
-}
-// add new workspace close
-addNewTaskClose.onclick = () => {
-    addNewTaskModal.style.display = "none";
-}
-
-
-// 3 dots delete task popup
-function deleteWorkspace() {
-    deletePopup.style.display = "flex";
-}
-closeDeletePopup.onclick = () => {
-    deletePopup.style.display = "none";
-}
-
-
-
-// edit popup
-function editPopUp() {
-    editModal.style.display = "flex";
-}
-// edit close
-editClose.onclick = () => {
-    editModal.style.display = "none";
-}
-
-// add action popup
-function addActionPopup() {
-    addAction.style.display = "flex"
-}
-// add action close
-
-addActionClose.onclick = () => {
-    addAction.style.display = "none"
-}
-
-
-// add member popup
-function addMemberPopUp() {
-    addMemberModal.style.display = "flex";
-}
-// add member close
-addMemberClose.onclick = () => {
-    addMemberModal.style.display = "none";
-}
-
-
 
 
 
 // ------------- Notifications popup ---------
 let notify = document.querySelector(".notify-modal");
-const smNotification = document.querySelector('#notifications-sm-icon svg path');
+const smNotification = document.querySelector('#notifications-sm-icon svg');
 function showNotification() {
 
     if (window.innerWidth > 1100) {
@@ -217,7 +112,7 @@ function showNotification() {
 }
 // notification close
 let myNotifications = document.getElementById('notifications');
-let myDash = document.getElementById('dashboard');
+let mySetting = document.getElementById('settings');
 myNotifications.addEventListener('click', () => {
     if (notify.style.top === "30px" || notify.style.right === "20px") {
         myNotifications.classList.add('active');
@@ -226,7 +121,7 @@ myNotifications.addEventListener('click', () => {
     else {
 
         myNotifications.classList.remove('active');
-        myDash.classList.add('active');
+        mySetting.classList.add('active');
 
     }
 })
@@ -240,14 +135,14 @@ myCont.addEventListener('click', function (event) {
             if (notify.style.top === "30px") {
                 notify.style.top = "-700px";
                 myNotifications.classList.remove('active');
-                myDash.classList.add('active');
+                mySetting.classList.add('active');
             }
         }
         else if (window.innerWidth >= 721 & window.innerWidth <= 1100) {
             if (notify.style.right === "20px") {
                 notify.style.right = "-400px";
                 myNotifications.classList.remove('active');
-                myDash.classList.add('active');
+                mySetting.classList.add('active');
             }
         }
     }

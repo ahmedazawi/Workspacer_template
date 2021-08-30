@@ -63,7 +63,7 @@
 
             <!-- Sidebar items -->
             <div class="sidebar-items font-regular">
-                <a id="dashboard" href="#" class="active">
+                <a id="dashboard" href="./main.html" class="active">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.828" height="32" viewBox="0 0 27.828 27">
                         <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(1.414 1)">
@@ -79,7 +79,7 @@
                 </a>
 
 
-                <a href="#">
+                <!-- <a href="#">
 
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.065" height="32.657" viewBox="0 0 34.065 32.657">
@@ -95,11 +95,11 @@
 
                     <span>Favorites</span>
 
-                </a>
+                </a> -->
 
 
 
-                <a href="#">
+                <a href="./Settings.html">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
                         <g id="Group_15" data-name="Group 15" transform="translate(-2 -2)">
@@ -194,6 +194,25 @@
 
         </div>
 
+        <!-- ------------------ sign out modal popup ---------------- -->
+        <div id="signout-modal">
+            <div class="warn-modal-content">
+                <div class="modal-warning ">
+                    <p>
+                        Are you sure you want to Sign Out?
+                    </p>
+                </div>
+                <div class="warn-pop-btn">
+                    <button class="close-btn sign-out">Sign Out</button>
+                    <button class="submit-btn close">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- ---------------------------- -->
 
 
         <!----------- small screens nav bar - under 720px ----------->
@@ -235,13 +254,39 @@
                 <div class="content-header">
                     <div style="font-size:xxx-large;">Tasks</div>
                     <div>
-                        <a class="add-new-task ">
+                        <a class="add-new-task" onclick="createNewTask()">
                             <img src="svg/tasks/plus.svg" width="15" height="15" alt="add new image">
                             <span>New</span>
                         </a>
                     </div>
                 </div>
             </div>
+
+
+            <!--------------------- add new task popup -------------- -->
+
+            <div id="add-new-task-modal">
+                <div class="modal-content">
+                    <div class="edit-modal-content">
+                        <h2 class="modal-title">Add new Task</h2>
+                        <div class="modal-content-inputs">
+                            <label id="wc-name">Task Name</label>
+                            <input id="wc-name-input" type="text" placeholder="Enter" name="Task Name" required
+                                minlength="4" maxlength="25">
+                            <label id="wc-desc">Task Description</label>
+                            <input id="wc-desc-input" type="text" name="Task Description" required minlength="10"
+                                maxlength="40" placeholder="Task Description">
+                        </div>
+                    </div>
+                    <div class="pop-btn">
+                        <button class="close-btn close">Close</button>
+                        <button type="submit" class="submit-btn">Create</button>
+
+                    </div>
+                </div>
+
+            </div>
+
 
             <!-------------- page tabs ------------>
             <div class="task-tab">
@@ -288,7 +333,7 @@
                             <div class="dot-dropdown">
                                 <div class="dropdown-content">
 
-                                    <div id="delete-task" class="dropdown-item">
+                                    <div id="delete-task" class="dropdown-item" onclick="deleteWorkspace()">
                                         <img src="./svg/cards/trash-alt.svg" width="20" height="20">
                                         <button>Delete</button>
                                     </div>
@@ -298,7 +343,7 @@
                                         <button>Edit</button>
                                     </div>
 
-                                    <div class="dropdown-item">
+                                    <div class="dropdown-item" onclick="addActionPopup()">
                                         <img src="./svg/tasks/bookmark.svg" width="20" height="20">
                                         <button>Add Action</button>
                                     </div>
@@ -317,74 +362,98 @@
 
                     <!----------------------------------- popups -->
 
-
-
-                    <!-- ----------- sign out & delete pop ---------- -->
-
-                    <div id="sign-delete-popup">
-                        <div id="signout-modal">
-                            <div class="warn-modal-content">
-                                <div class="modal-warning font-regular">
-                                    <p>
-                                    </p>
-                                </div>
-                                <div class="warn-pop-btn">
-                                    <button id="red-btn" class="sign-out"></button>
-                                    <button class="close">Cancel</button>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
                     <!--------------  3 dots popups ---------------- -->
 
 
+                    <!-- ----------- delete popup ---------- -->
 
-                    <!-- ----------- add member popup ----------- -->
-                    <div id="add-member-modal">
-                        <div class="modal-content" style="padding-top: 30px;">
-                            <div class="modal-content-inputs">
-                                <label id="wc-add" class="font-bold">Add Member to Workspace</label>
-                                <input id="wc-add-input" class="font-bold" type="search" name="search box" required
-                                    minlength="4" maxlength="25" placeholder=" " style="font-family:Arial, FontAwesome">
-                                <div></div>
+                    <div id="delete-popup">
+                        <div class="warn-modal-content">
+                            <div class="modal-warning ">
+                                <p>
+                                    Are you sure you want to delete this workspace?
+                                </p>
                             </div>
+                            <div class="warn-pop-btn">
+                                <button class="close-btn sign-out">Delete</button>
+                                <button class="submit-btn close">Cancel</button>
 
-                            <div class="add-pop-btn">
-                                <button class="close">Close</button>
                             </div>
                         </div>
-
                     </div>
+
 
 
                     <!--------------- Edit Popup ---------- -->
                     <!-- The Modal -->
                     <div id="edit-modal" class="modal">
                         <div class="modal-content">
-                            <h2 class="modal-title"></h2>
-                            <div class="modal-content-inputs">
-                                <label id="wc-name" class="font-bold">Workspace Name</label>
-                                <input id="wc-name-input" class="font-bold" type="text" placeholder="Enter"
-                                    name="Workspace Name" required minlength="4" maxlength="25">
-                                <label id="wc-desc" class="font-bold">Workspace Description</label>
-                                <input id="wc-desc-input" class="font-bold" type="text" name="Workspace Description"
-                                    required minlength="10" maxlength="40" placeholder="Workspacer Description">
+                            <div class="edit-modal-content">
+                                <h2 class="modal-title"></h2>
+                                <div class="modal-content-inputs">
+                                    <label id="wc-name">task Name</label>
+                                    <input id="wc-name-input" type="text" placeholder="Enter" name="task Name" required
+                                        minlength="4" maxlength="25">
+                                    <label id="wc-desc">task Description</label>
+                                    <input id="wc-desc-input" type="text" name="task Description" required
+                                        minlength="10" maxlength="40" placeholder="taskr Description">
+                                </div>
                             </div>
 
                             <div class="pop-btn">
-                                <button class="close">Close</button>
-                                <button type="submit" class="save">Save</button>
+                                <button class="close-btn close">Close</button>
+                                <button type="submit" class="submit-btn save">Save</button>
 
                             </div>
                         </div>
 
                     </div>
+
+
+                    <!------------------------- add action popup --------------------->
+                    <div class="add-action-popup">
+                        <div class="add-action-content">
+                            <h2>Take Action</h2>
+                            <span style="font-size: x-large;">Create ToDo</span>
+                            <div class="action-tabs">
+                                <h2>Status</h2>
+                                <div class="add-action-list">
+                                    <button>Waiting(<b>0</b>)</button>
+                                    <button>InProcess(<b>0</b>)</button>
+                                    <button>Stuck(<b>0</b>)</button>
+                                    <button>Done(<b>0</b>)</button>
+                                </div>
+                            </div>
+                            <div class="add-action-field">
+                                <textarea type="text" name="comment"
+                                    placeholder="Please leave a comment or let us know your progress"></textarea>
+                            </div>
+                            <div class="add-action-popup-btn">
+                                <button id="task-popup-close" class="close-btn close">Close</button>
+                                <button id="task-popup-submit" class="submit-btn" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ----------- add member popup ----------- -->
+                    <div id="add-member-modal">
+                        <div class="modal-content" style="padding-top: 30px;">
+                            <div class="modal-content-inputs">
+                                <label id="wc-add">Add Member to task</label>
+                                <input id="wc-add-input" type="search" name="search box" required minlength="4"
+                                    maxlength="25" placeholder=" " style="padding:0 10px">
+
+                            </div>
+
+                            <div class="add-pop-btn">
+                                <button class="close-btn close">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
 
 
 
@@ -396,8 +465,8 @@
                     <!------------- card title --------------->
 
                     <div class="card-title">
-                        <h5 class="font-bold">Create ToDo</h5>
-                        <p class="font-regular">Using Javascript</p>
+                        <h5>Create ToDo</h5>
+                        <p>Using Javascript</p>
                     </div>
 
 

@@ -1,0 +1,720 @@
+.close-btn{
+    background-color:rgb(58, 66, 79) !important;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      height: 40px;
+      width: 100px;
+      font-size: 20px;
+    }
+      .close-btn:hover{
+      background-color: rgb(33, 37, 44) !important;
+    }
+      .submit-btn{
+        background-color: rgb(26, 189, 196) !important;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        width: 100px;
+        font-size: 20px;
+      }
+      .submit-btn:hover{
+        background-color: rgb(6, 165, 170) !important;
+      }
+      
+  
+  /*---------- small screens under 720px nav bar 'Mobile nav bar' --------*/
+  
+  .mobile-container{
+    display: none;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    height:10px;
+    transition: 0.5s;
+    z-index:99;
+  }
+  .top-nav {
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+  
+  }
+  .nav-grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items:center;
+    align-items: center;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  
+  .top-nav #sm-logo{
+    background:white;
+  }
+  
+  
+  .top-nav #myLinks {
+    max-height:0;
+  }
+  .top-nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    background:rgb(26, 189, 196);
+    transition: all 0.5s;
+  }
+  .top-nav a.icon {
+    background:white;
+    display: block;
+    right: 0;
+    top: 0;
+    padding: 0;
+  }
+  
+  .top-nav #myLinks a:hover{
+   
+    transition: all 0.5s;
+    background-color: white;
+    color:rgb(26, 189, 196);
+  
+  } 
+  
+  .bell-sm-active{
+    fill:rgb(26, 189, 196);
+    /* stroke:white; */
+    transition:0.3s;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ------------- Sidebar Section "large screen" ( 3 column )-----------------*/
+  
+  
+  /* -------------- Sidebar ----------------------- */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px;
+    height:1080px;
+    background-color: white;
+    position: fixed;
+    transition: 0.5s;
+    }
+  
+  
+  
+  /* ---------- Sidebar logo ---------- */
+  .sidebar .logo{
+    
+    margin:20px 0;
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;    
+    padding:5px;
+  }
+  
+  
+  /* --------- w-logo ---------- */
+  .w-logo{
+    width: 70px;
+    height: 70px;
+    
+  }
+  
+  
+   /* ----------- Sidebar account ------------   */
+   .sidebar-account{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:rgb(243, 246, 255) ;
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    border-color: #F3F6FF;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .sidebar-account .bubbles{
+  margin-left: 0;
+  border: none;
+  }
+  .sidebar-account .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width:100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .arrow-down{
+    margin-top: 5px;
+  }
+  
+  
+  /* ------------ sign out popup --------- */
+  #delete-popup{
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  #signout-modal{
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+  }
+  
+  .warn-modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fefefe;
+    padding:10px 10px;
+    /* padding-top:30px; */
+    border: 1px solid white;
+    border-radius:10px;
+    width: 350px; /* Could be more or less, depending on screen size */
+    height:200px;
+    overflow: hidden;
+  }
+  .modal-warning p {
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    /* -------------- Sidebar items -------------*/
+    .sidebar-items {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-size:23;
+      font-weight:500;
+      transition: 0.5s;
+      padding-top:30px;
+    }
+  
+    .sidebar-items a:first-child{
+      padding-top:0;
+    }
+  .sidebar-items a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    color: rgb(172, 181, 211);
+    padding-top:40px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  .sidebar-items #notifications{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    color: rgb(172, 181, 211);
+    padding-top:40px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  
+  .sidebar-items span {
+    transition:  0.3s;
+    font-size:20px;
+    width: 120px;
+    font-weight:500;
+    margin-left: 20px;
+    }
+   
+    
+  .active span , .active .sidebar-icons{
+    color:rgb(26, 189, 196);
+    stroke:rgb(26, 189, 196);
+    transition:  0.3s;
+    font-size: 26px;
+  
+    }
+    .active #bell-regular{
+      fill:rgb(26, 189, 196);
+      stroke:white;
+    }
+  
+    /* Links on mouse-over */
+    .sidebar-items a:hover{
+      color:rgb(26, 189, 196);
+      transition:0.3s;
+    }
+  
+    .sidebar-items a:hover path{
+      stroke:rgb(26, 189, 196);
+      transition:0.3s;
+    }
+  
+    .sidebar-items a svg path{
+      transition:0.3s;
+      
+    }
+    .sidebar-items a:last-child:hover path{
+      fill:rgb(26, 189, 196);
+      stroke:white;
+      transition:0.3s;
+    }
+  /* ------------------------------------------ */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+/* ----------------- ----------grid system --------- ---------------- */
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {             /*   dont move this block of code    */
+    margin:0 20%;
+    padding: 1px 16px;
+    height: 900px;
+   
+  }
+  
+  
+  
+  
+  
+  @media screen and (min-width: 1201px) {
+  
+  
+   .notify-modal{
+    position:fixed; 
+    align-items:center;
+    z-index: 100;
+    left: 280px;
+    top: -700px;
+    transition: all 0.5s;
+    
+    
+  
+  }
+  .notify-modal-content{
+    background-color: rgba(243, 246, 255, 0.3);
+    border: 1px solid white;
+    border-radius:10px;
+    width: 400px; 
+    height:650px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow:scroll;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  } 
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ------------- Sidebar Section "medium screen" ( 2 column )-----------------*/
+    
+    
+    /* On screens that are less than 1100px wide, make the sidebar into a topbar */
+    @media screen and (min-width: 901px) and (max-width: 1200px) {
+  
+  /* -------- logo -------- */
+  
+      .logo{
+        font-size:50px;
+        justify-content: flex-start;
+      }
+      .logo img{
+        width:100px;
+        height:100px
+      }
+  
+      /* ------- sidebar ------ */
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+       
+       
+      
+      }
+  
+       
+  
+  
+    /* ----- sidebar items ----- */
+      .sidebar-items{
+        justify-content: center;
+        flex-direction: row;
+      }
+      .sidebar-items a:first-child{
+        padding-top:20px;
+      }
+      .sidebar-items a {
+        float: none;       /* float:left; to make the element horizontal */
+        text-align: center;
+        transition:  0.3s;
+        padding:20px;
+        cursor: pointer;
+      }    
+      .sidebar-items #notifications{
+       padding-top: 0;
+      }
+   
+  
+  
+  
+  
+  
+  
+      /* -------Notificatio popup------- */
+      .notify-modal{
+        position:fixed;
+        align-items:center;
+        z-index: 100; /* Sit on top */
+        right: -400px;
+        top: 400px;
+        transition: all 0.5s;
+        
+        
+      
+      }
+      .notify-modal-content{
+        background-color: rgba(243, 246, 255, 0.3);
+        border: 1px solid white;
+        border-radius:10px;
+        width: 400px; /* Could be more or less, depending on screen size */
+        height:650px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        overflow:scroll;
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+      }
+  
+  
+  
+  
+  
+    }
+    
+  
+  
+  
+   
+   @media screen and (min-width: 721px) and (max-width: 900px) {
+  
+  /* -------- logo -------- */
+    .logo{
+      font-size:50px;
+      justify-content: center;
+    }
+    .logo img{
+      width:100px;
+      height:100px
+    }
+  
+  
+    /* ------- sidebar ------ */
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+  
+    /* ----- sidebar items ----- */
+  .sidebar-items{
+    justify-content: center;
+    flex-direction: row;
+  }
+  .sidebar-items a:first-child{
+    padding:20px;
+  }
+  .sidebar-items a {
+    float: none;       /* float:left; to make the element horizontal */
+    text-align: center;
+    transition:  0.3s;
+    padding:20px;
+    
+  }    
+  .sidebar-items #notifications{
+    /* padding-top: 0; */
+    padding:20px;
+  
+   }
+  
+  
+  /* -------Notificatio popup------- */
+  .notify-modal{
+    position:fixed;
+    align-items:center;
+    z-index: 100; /* Sit on top */
+    right: -400px;
+    top: 480px;
+    transition: all 0.5s;
+    
+  
+  }
+  .notify-modal-content{
+    background-color: rgba(243, 246, 255, 0.3);
+    border: 1px solid white;
+    border-radius:10px;
+    width: 400px; /* Could be more or less, depending on screen size */
+    height:450px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow:scroll;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    /* ------------- Sidebar Section "small screen" ( 1 column )-----------------*/
+  
+    
+    @media screen and (min-width: 428px) and (max-width: 720px) {
+  /*------- small screens nav bar --------*/
+  .mobile-container{
+    display:block;
+    transition:  0.3s;
+  }
+  
+  
+  /* -------- logo -------- */
+      .logo{
+        font-size:50px;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo img{
+        width:100px;
+        height:100px
+      }
+     
+  
+  /* ------- sidebar = none ------ */
+      .sidebar {
+        display: none;
+      }
+  
+
+  
+  
+  
+  /* -------Notification popup------- */
+  .notify-modal{
+    position:fixed;
+    align-items:center;
+    z-index: 100; /* Sit on top */
+    left:-450px;
+    top: 80px;
+    transition: all 0.5s;
+    
+  
+  }
+  .notify-modal-content{
+    background-color: rgba(243, 246, 255, 0.3);
+    border: 1px solid white;
+    border-radius:10px;
+    width: 400px; /* Could be more or less, depending on screen size */
+    height:450px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow:scroll;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+  
+      
+}
+  
+  
+  
+  
+  
+  
+  
+    @media screen and (max-width: 427px) {
+  
+    html {
+        width:100%;
+       }
+    body { 
+        width:150%;
+   }
+  
+  
+   .sub-name{
+    text-align: center;
+    margin-top:80px;
+  }
+  /*------- small screens nav bar --------*/
+  .mobile-container{
+    display:block;
+    transition:  0.3s;
+  
+  }
+  
+  /* -------- logo -------- */
+.logo{
+
+    font-size:20px;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo img{
+    width:60px;
+    height:60px
+}
+
+  /* ------- sidebar = none ------ */
+  .sidebar {
+   display: none;
+          
+  }
+         
+  
+  
+  
+
+/* -------Notificatio popup------- */
+    .notify-modal{
+    position:fixed;
+    align-items:center;
+    z-index: 100; /* Sit on top */
+    left:-450px;
+    top: 80px;
+    transition: all 0.5s;
+    
+    
+    }
+    .notify-modal-content{
+    background-color: rgba(243, 246, 255, 0.3);
+    border: 1px solid white;
+    border-radius:10px;
+    width: 450px; /* Could be more or less, depending on screen size */
+    height:650px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow:scroll;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    }
+
+
+    .bell-sm-active{
+    fill:rgb(26, 189, 196);
+    /* stroke:white; */
+    transition:0.3s;
+    }
+    
+
+
+
+}

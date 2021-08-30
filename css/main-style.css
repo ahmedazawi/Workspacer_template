@@ -1,4 +1,30 @@
-
+.close-btn{
+  background-color:rgb(58, 66, 79) !important;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+  }
+    .close-btn:hover{
+    background-color: rgb(33, 37, 44) !important;
+  }
+    .submit-btn{
+      background-color: rgb(26, 189, 196) !important;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      height: 40px;
+      width: 100px;
+      font-size: 20px;
+    }
+    .submit-btn:hover{
+      background-color: rgb(6, 165, 170) !important;
+    }
+    
 
 /*---------- small screens under 720px nav bar 'Mobile nav bar' --------*/
 
@@ -107,8 +133,8 @@
 
 /* --------- w-logo ---------- */
 .w-logo{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   
 }
 
@@ -194,30 +220,6 @@ border: none;
 }
 .modal-warning p {
   text-align: center;
-}
-.warn-pop-btn button{
-  color: white;
-  border: 1px solid;
-  border-radius: 10px;
-  width:120px;
-  height:50px;
-  font-size: 22px;
-  font-weight: bold;
-  margin:0 2px;
-  cursor: pointer;
-}
-.warn-pop-btn .sign-out{
-  background-color:#FF5555;
-}
-.warn-pop-btn .sign-out:hover{
-  background-color:#f73636;
-}
-
-.warn-pop-btn .close{
-  background-color:#2ECC71;
-}
-.warn-pop-btn .close:hover{
-  background-color:#19c962;
 }
 
 
@@ -910,7 +912,7 @@ border: none;
 
 
   /* ---------------- cards content --------------- */
-  .card button{
+  #card-1 button{
     border: none;
     background:none;
     cursor: pointer;
@@ -1017,6 +1019,8 @@ justify-content: left;
   display: block;
   font-size: 15px;
   border: none;
+  background:none;
+  cursor: pointer;
 
 }
 
@@ -1200,7 +1204,19 @@ display: -webkit-box;
 
 
 /* ------------------ 3 dots popup ------------------- */
-
+#add-new-modal{
+  display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 .modal {
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
@@ -1217,6 +1233,9 @@ display: -webkit-box;
 }
 
 .modal-content {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fefefe;
   padding:10px 10px;
   padding-top:10px;
@@ -1225,6 +1244,11 @@ display: -webkit-box;
   width: 350px; /* Could be more or less, depending on screen size */
   height:400px;
   
+}
+.edit-modal-content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal-content .modal-title{
   display:flex;
@@ -1238,7 +1262,7 @@ display: -webkit-box;
 .modal-content-inputs{
   display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .modal-content-inputs label{
   padding:0 5px;
@@ -1248,13 +1272,13 @@ display: -webkit-box;
 }
 .modal-content-inputs #wc-name{
   position:absolute;
-  margin-left:-110px;
+  margin-left:20px;
   margin-top: -10px;
   
 }
 .modal-content-inputs #wc-desc{
   position:absolute;
-  margin-left:-50px;
+  margin-left:20px;
   margin-top: 95px;
  
 }
@@ -1277,43 +1301,6 @@ display: -webkit-box;
  
 }
 
-.pop-btn{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  height: 45%;
-}
-.pop-btn button {
-  color: white;
-  border: 1px solid;
-  border-radius: 10px;
-  width:160px;
-  height:60px;
-  font-size: 22px;
-  font-weight: bold;
-  margin:0 2px;
-}
-.pop-btn .close{
-  background-color:#FF5555;
-}
-.pop-btn .close:hover{
-  background-color:#f73636;
-}
-.pop-btn .save{
-  background-color:#2ECC71;
-}
-.pop-btn .save:hover{
-  background-color:#19c962;
-}
-
-
-/* .close:hover,
-.close:focus {
-  color:#5082cc;
-  text-decoration: none;
-  cursor: pointer;
-} */
 
 
 
@@ -1339,7 +1326,7 @@ display: -webkit-box;
 }
 .modal-content-inputs #wc-add{
   position:absolute;
-  margin-left:-20px;
+  margin-left:20px;
   margin-top: -10px;
   
 }
@@ -1353,24 +1340,6 @@ display: -webkit-box;
   flex-direction:column;
   justify-content: flex-end;
   align-items: center;
-}
-.add-pop-btn button{
-  color: white;
-  border: 1px solid;
-  border-radius: 10px;
-  width:160px;
-  height:60px;
-  font-size: 22px;
-  font-weight: bold;
-  margin:0 2px;
-}
-
-.add-pop-btn .close{
-  background-color:#FF5555;
-}
-
-.add-pop-btn .close:hover{
-  background-color:#f73636;
 }
 
 /* -------------------------- */
