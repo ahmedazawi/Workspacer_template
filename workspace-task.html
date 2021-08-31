@@ -266,22 +266,37 @@
             <!--------------------- add new task popup -------------- -->
 
             <div id="add-new-task-modal">
-                <div class="modal-content">
+                <div class="new-task-modal-content">
                     <div class="edit-modal-content">
                         <h2 class="modal-title">Add new Task</h2>
                         <div class="modal-content-inputs">
-                            <label id="wc-name">Task Name</label>
-                            <input id="wc-name-input" type="text" placeholder="Enter" name="Task Name" required
-                                minlength="4" maxlength="25">
-                            <label id="wc-desc">Task Description</label>
-                            <input id="wc-desc-input" type="text" name="Task Description" required minlength="10"
+                            <label class="wc-name">Task Name</label>
+                            <input class="wc-name-input" type="text" placeholder="Enter Task Name" name="Task Name"
+                                required minlength="4" maxlength="25">
+                            <label class="wc-desc">Task Description</label>
+                            <input class="wc-desc-input" type="text" name="Task Description" required minlength="10"
                                 maxlength="40" placeholder="Task Description">
                         </div>
                     </div>
-                    <div class="pop-btn">
-                        <button class="close-btn close">Close</button>
-                        <button type="submit" class="submit-btn">Create</button>
+                    <div class="priority-btn">
+                        <div class="priority-form">
+                            <span>Priority</span><br>
+                            <div id="switch-priority-id" class="switch-priority">
+                                <input type="radio" id="normal-priority" name="switch-priority" value="Normal"
+                                    checked />
+                                <label for="normal-priority">Normal</label>
+                                <input type="radio" id="urgent-priority" name="switch-priority" value="Urgent" />
+                                <label for="urgent-priority">Urgent</label>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="pop-btn-container">
+                        <div class="pop-btn">
+                            <button class="close-btn close">Close</button>
+                            <button type="submit" class="submit-btn">Create</button>
+
+                        </div>
                     </div>
                 </div>
 
@@ -391,11 +406,11 @@
                             <div class="edit-modal-content">
                                 <h2 class="modal-title"></h2>
                                 <div class="modal-content-inputs">
-                                    <label id="wc-name">task Name</label>
-                                    <input id="wc-name-input" type="text" placeholder="Enter" name="task Name" required
-                                        minlength="4" maxlength="25">
-                                    <label id="wc-desc">task Description</label>
-                                    <input id="wc-desc-input" type="text" name="task Description" required
+                                    <label class="wc-name">task Name</label>
+                                    <input class="wc-name-input" type="text" placeholder="Enter" name="task Name"
+                                        required minlength="4" maxlength="25">
+                                    <label class="wc-desc">task Description</label>
+                                    <input class="wc-desc-input" type="text" name="task Description" required
                                         minlength="10" maxlength="40" placeholder="taskr Description">
                                 </div>
                             </div>
@@ -416,12 +431,23 @@
                             <h2>Take Action</h2>
                             <span style="font-size: x-large;">Create ToDo</span>
                             <div class="action-tabs">
-                                <h2>Status</h2>
-                                <div class="add-action-list">
-                                    <button>Waiting(<b>0</b>)</button>
-                                    <button>InProcess(<b>0</b>)</button>
-                                    <button>Stuck(<b>0</b>)</button>
-                                    <button>Done(<b>0</b>)</button>
+                                <span>Status</span>
+                                <div id="status-switch" class="priority-form">
+                                    <div class="switch-priority">
+                                        <input type="radio" id="waiting-btn" name="switch-priority" value="waiting"
+                                            checked />
+                                        <label for="waiting-btn">Waiting(<b>0</b>)</label>
+
+                                        <input type="radio" id="in-process" name="switch-priority" value="InProcess" />
+                                        <label for="in-process">InProcess(<b>0</b>)</label>
+
+                                        <input type="radio" id="stuck-btn" name="switch-priority" value="Stuck" />
+                                        <label for="stuck-btn">Stuck(<b>0</b>)</label>
+
+                                        <input type="radio" id="done-btn" name="switch-priority" value="Done" />
+                                        <label for="done-btn">Done(<b>0</b>)</label>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="add-action-field">
@@ -440,8 +466,8 @@
                     <div id="add-member-modal">
                         <div class="modal-content" style="padding-top: 30px;">
                             <div class="modal-content-inputs">
-                                <label id="wc-add">Add Member to task</label>
-                                <input id="wc-add-input" type="search" name="search box" required minlength="4"
+                                <label class="wc-add">Add Member to task</label>
+                                <input class="wc-add-input" type="search" name="search box" required minlength="4"
                                     maxlength="25" placeholder=" " style="padding:0 10px">
 
                             </div>
