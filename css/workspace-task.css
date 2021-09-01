@@ -353,6 +353,9 @@ div.content {             /*   dont move this block of code    */
   margin:0 20%;
   padding: 1px 16px;
   height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
   
 }
 
@@ -400,7 +403,10 @@ div.content {             /*   dont move this block of code    */
   /* On screens that are less than 1100px wide, make the sidebar into a topbar */
   @media screen and (min-width: 901px) and (max-width: 1200px) {
 
-
+    div.content {           
+      align-items:center;
+     
+    }
 /* -------- logo -------- */
     
 
@@ -495,7 +501,10 @@ div.content {             /*   dont move this block of code    */
 
  @media screen and (min-width: 721px) and (max-width: 900px) {
 
-
+  div.content {           
+    align-items:center;
+   
+  }
   /* ------- sidebar ------ */
   .sidebar {
     width: 100%;
@@ -505,18 +514,19 @@ div.content {             /*   dont move this block of code    */
 
 
   /* ----- sidebar items ----- */
-.sidebar-items{
-  justify-content: center;
-  flex-direction: row;
-}
-.sidebar-items a:first-child{
-  padding:10px;
-}
-.sidebar-items a {
-  transition:  0.3s;
-  padding:10px;
-  
-}    
+  .sidebar-items{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .sidebar-items a:first-child{
+    padding:0 40px;
+  }
+  .sidebar-items a {
+    transition:  0.3s;
+    padding:0;
+    cursor: pointer;
+  }    
 .sidebar-items #notifications{
   padding:10px;
 
@@ -584,7 +594,10 @@ div.content {             /*   dont move this block of code    */
 
   
 @media screen and (min-width: 428px) and (max-width: 720px) {
-
+  div.content {           
+    align-items:center;
+   
+  }
 /* ------- sidebar = none ------ */
 .sidebar {
   display: none;
@@ -645,7 +658,10 @@ div.mobile-container{
 
 
 @media screen and (max-width: 427px) {
-
+  div.content {           
+    align-items:center;
+   
+  }
 .content .content-title{
   display:flex ;
   justify-content:center;
@@ -701,7 +717,7 @@ div.mobile-container{
   border: 1px solid white;
   border-radius:10px;
   width: 350px; /* Could be more or less, depending on screen size */
-  height:650px;
+  height:550px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   
   -webkit-backdrop-filter: blur(18px);
@@ -719,6 +735,10 @@ div.mobile-container{
   }
 body { 
   width:120%;
+}
+div.content {           
+  align-items:center;
+ 
 }
 .task-tab{
   /* width: 300px;
@@ -1416,12 +1436,7 @@ margin-left: 5px;
 
 
 /* ---------- notification Popup -------------*/
-#notification-container{
-  overflow: hidden !important;
-}
-.notify-modal-content{
-  overflow:scroll !important;
-}
+
 .notify-modal-content ul li{
   margin-top:10px;
 }

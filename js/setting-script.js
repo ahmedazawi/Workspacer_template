@@ -77,11 +77,11 @@ const smNotification = document.querySelector('#notifications-sm-icon svg');
 function showNotification() {
 
     if (window.innerWidth > 1100) {
-        if (notify.style.top === "30px") {
+        if (notify.style.top === "20px") {
             notify.style.top = "-700px";
         }
         else {
-            notify.style.top = "30px";
+            notify.style.top = "20px";
         }
     }
 
@@ -114,7 +114,7 @@ function showNotification() {
 let myNotifications = document.getElementById('notifications');
 let mySetting = document.getElementById('settings');
 myNotifications.addEventListener('click', () => {
-    if (notify.style.top === "30px" || notify.style.right === "20px") {
+    if (notify.style.top === "20px" || notify.style.right === "20px") {
         myNotifications.classList.add('active');
 
     }
@@ -132,7 +132,7 @@ myCont.addEventListener('click', function (event) {
     var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
     if (!isClickInsideElement) {
         if (window.innerWidth >= 1101) {
-            if (notify.style.top === "30px") {
+            if (notify.style.top === "20px") {
                 notify.style.top = "-700px";
                 myNotifications.classList.remove('active');
                 mySetting.classList.add('active');

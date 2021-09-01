@@ -34,7 +34,7 @@
 
 
 
-            <!-- Sidebar select -->
+            <!-- Sidebar account -------------------- -->
             <div class="sidebar-account">
 
                 <div class="bubbles">
@@ -249,241 +249,241 @@
 
 
         <!-------------------- Page content -------------------->
-
-        <div class="content">
-            <div class="sub-name">
-                <h3>Hello, Mouamle!</h3>
-                <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
-            </div>
-            <br>
-
-
-
-
-            <!-- -------------------------- Cards ------------------------->
-
-
-            <!-------------------------- card 1---------------- -->
-
-            <div class="cards ">
-                <a style="text-decoration: none;" onclick="createNewWorkspace()">
-                    <div class="card" id="card-1">
-                        <img id="card-1-img" src="./svg/cards/card-1.svg">
-                        <button id="card-1-btn" class="">Add new workspace</button>
-                        <p id="card-1-p">Still not enough? Click on a title to
-                            add a new workspace</p>
-                    </div>
-                </a>
-
-
-                <!------------- add new workspace ------------->
-                <div id="add-new-modal">
-                    <div class="modal-content">
-                        <div class="edit-modal-content">
-                            <h2 class="modal-title">Add new workspace</h2>
-                            <div class="modal-content-inputs">
-                                <label id="wc-name">Workspace Name</label>
-                                <input id="wc-name-input" type="text" placeholder="Enter" name="Workspace Name" required
-                                    minlength="4" maxlength="25">
-                                <label id="wc-desc">Workspace Description</label>
-                                <input id="wc-desc-input" type="text" name="Workspace Description" required
-                                    minlength="10" maxlength="40" placeholder="Workspacer Description">
-                            </div>
-                        </div>
-                        <div class="pop-btn">
-                            <button class="close-btn close">Close</button>
-                            <button type="submit" class="submit-btn">Create</button>
-
-                        </div>
-                    </div>
-
+        <div class="content-container">
+            <div class="content">
+                <div class="sub-name">
+                    <h3>Hello, Mouamle!</h3>
+                    <p> <small>How's going on today, are you ready to do somthing amazing?</small></p>
                 </div>
+                <br>
 
-                <!-------------------------- card 2 --------------------->
 
-                <div class="card">
-                    <!------------- card header --------------->
-                    <!-- circle photo -->
-                    <div class="cards-nav">
-                        <header>
-                            <text>C</text>
-                        </header>
-                        <!-- favorite star -->
-                        <a class="star" onclick="favorite()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="20.158"
-                                viewBox="0 0 21.037 20.158">
-                                <g id="Component_5_2" data-name="Component 5 – 2" transform="translate(0.519 0.5)">
-                                    <path class="fav-star" id="Path_6" data-name="Path 6"
-                                        d="M11.645,2.976a1.071,1.071,0,0,1,2.037,0l1.627,5.006a1.071,1.071,0,0,0,1.017.739H21.59a1.072,1.072,0,0,1,.63,1.939l-4.258,3.093a1.071,1.071,0,0,0-.389,1.2L19.2,19.956a1.07,1.07,0,0,1-1.647,1.2L13.293,18.06a1.071,1.071,0,0,0-1.26,0L7.775,21.153a1.07,1.07,0,0,1-1.647-1.2L7.754,14.95a1.071,1.071,0,0,0-.389-1.2L3.106,10.66a1.072,1.072,0,0,1,.63-1.939H9a1.071,1.071,0,0,0,1.019-.739l1.627-5.006Z"
-                                        transform="translate(-2.663 -2.236)" fill="none" stroke="#abb4d4"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-                                </g>
-                            </svg>
-                        </a>
 
-                        <!-- 3 dots options -->
-                        <div class="dots-dropdown-container">
-                            <div class="dots">
-                                <a class="dot"></a>
-                                <a class="dot"></a>
-                                <a class="dot"></a>
-                            </div>
-                            <div class="dot-dropdown">
-                                <div class="dropdown-content">
 
-                                    <div id="delete-task" class="dropdown-item" onclick="deleteWorkspace()">
-                                        <img src="./svg/cards/trash-alt.svg" width="20" height="20">
-                                        <button>Delete</button>
-                                    </div>
+                <!-- -------------------------- Cards ------------------------->
 
-                                    <div class="dropdown-item" onclick="editPopUp()">
-                                        <img src="./svg/cards/edit.svg" width="20" height="20">
-                                        <button>Edit</button>
-                                    </div>
 
-                                    <div class="dropdown-item" onclick="addMemberPopUp()">
-                                        <img src="./svg/cards/plus-circle.svg" width="20" height="20">
-                                        <button>Add Member</button>
-                                    </div>
+                <!-------------------------- card 1---------------- -->
 
-                                </div>
-                            </div>
+                <div class="cards ">
+                    <a style="text-decoration: none;" onclick="createNewWorkspace()">
+                        <div class="card" id="card-1">
+                            <img id="card-1-img" src="./svg/cards/card-1.svg">
+                            <button id="card-1-btn" class="">Add new workspace</button>
+                            <p id="card-1-p">Still not enough? Click on a title to
+                                add a new workspace</p>
                         </div>
-                    </div>
+                    </a>
 
 
-
-                    <!--------------  3 dots popups ---------------- -->
-
-
-                    <!-- ----------- delete popup ---------- -->
-
-                    <div id="delete-popup">
-                        <div class="warn-modal-content">
-                            <div class="modal-warning ">
-                                <p>
-                                    Are you sure you want to delete this workspace?
-                                </p>
-                            </div>
-                            <div class="warn-pop-btn">
-                                <button class="close-btn sign-out">Delete</button>
-                                <button class="submit-btn close">Cancel</button>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <!--------------- Edit Popup ---------- -->
-                    <!-- The Modal -->
-                    <div id="edit-modal" class="modal">
+                    <!------------- add new workspace ------------->
+                    <div id="add-new-modal">
                         <div class="modal-content">
                             <div class="edit-modal-content">
-                                <h2 class="modal-title">Edit Workspace</h2>
+                                <h2 class="modal-title">Add new workspace</h2>
                                 <div class="modal-content-inputs">
-                                    <label id="wc-name">Workspace Name</label>
-                                    <input id="wc-name-input" type="text" placeholder="Enter" name="Workspace Name"
+                                    <label class="wc-name">Workspace Name</label>
+                                    <input class="wc-name-input" type="text" placeholder="Enter" name="Workspace Name"
                                         required minlength="4" maxlength="25">
-                                    <label id="wc-desc">Workspace Description</label>
-                                    <input id="wc-desc-input" type="text" name="Workspace Description" required
+                                    <label class="wc-desc">Workspace Description</label>
+                                    <input class="wc-desc-input" type="text" name="Workspace Description" required
                                         minlength="10" maxlength="40" placeholder="Workspacer Description">
                                 </div>
                             </div>
                             <div class="pop-btn">
                                 <button class="close-btn close">Close</button>
-                                <button type="submit" class="submit-btn save">Update</button>
+                                <button type="submit" class="submit-btn">Create</button>
 
                             </div>
                         </div>
 
                     </div>
 
+                    <!-------------------------- card 2 --------------------->
 
-                    <!-- ----------- add member popup ----------- -->
-                    <div id="add-member-modal">
-                        <div class="modal-content" style="padding-top: 30px;">
-                            <div class="modal-content-inputs">
-                                <label id="wc-add">Add Member to Workspace</label>
-                                <input id="wc-add-input" type="search" name="search box" required minlength="4"
-                                    maxlength="25" placeholder=" " style="padding:0 10px">
+                    <div class="card">
+                        <!------------- card header --------------->
+                        <!-- circle photo -->
+                        <div class="cards-nav">
+                            <header>
+                                <text>C</text>
+                            </header>
+                            <!-- favorite star -->
+                            <a class="star" onclick="favorite()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="20.158"
+                                    viewBox="0 0 21.037 20.158">
+                                    <g id="Component_5_2" data-name="Component 5 – 2" transform="translate(0.519 0.5)">
+                                        <path class="fav-star" id="Path_6" data-name="Path 6"
+                                            d="M11.645,2.976a1.071,1.071,0,0,1,2.037,0l1.627,5.006a1.071,1.071,0,0,0,1.017.739H21.59a1.072,1.072,0,0,1,.63,1.939l-4.258,3.093a1.071,1.071,0,0,0-.389,1.2L19.2,19.956a1.07,1.07,0,0,1-1.647,1.2L13.293,18.06a1.071,1.071,0,0,0-1.26,0L7.775,21.153a1.07,1.07,0,0,1-1.647-1.2L7.754,14.95a1.071,1.071,0,0,0-.389-1.2L3.106,10.66a1.072,1.072,0,0,1,.63-1.939H9a1.071,1.071,0,0,0,1.019-.739l1.627-5.006Z"
+                                            transform="translate(-2.663 -2.236)" fill="none" stroke="#abb4d4"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                                    </g>
+                                </svg>
+                            </a>
 
-                            </div>
+                            <!-- 3 dots options -->
+                            <div class="dots-dropdown-container">
+                                <div class="dots">
+                                    <a class="dot"></a>
+                                    <a class="dot"></a>
+                                    <a class="dot"></a>
+                                </div>
+                                <div class="dot-dropdown">
+                                    <div class="dropdown-content">
 
-                            <div class="add-pop-btn">
-                                <button class="close-btn close">Close</button>
+                                        <div id="delete-task" class="dropdown-item" onclick="deleteWorkspace()">
+                                            <img src="./svg/cards/trash-alt.svg" width="20" height="20">
+                                            <button>Delete</button>
+                                        </div>
+
+                                        <div class="dropdown-item" onclick="editPopUp()">
+                                            <img src="./svg/cards/edit.svg" width="20" height="20">
+                                            <button>Edit</button>
+                                        </div>
+
+                                        <div class="dropdown-item" onclick="addMemberPopUp()">
+                                            <img src="./svg/cards/plus-circle.svg" width="20" height="20">
+                                            <button>Add Member</button>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
+
+                        <!--------------  3 dots popups ---------------- -->
+
+
+                        <!-- ----------- delete popup ---------- -->
+
+                        <div id="delete-popup">
+                            <div class="warn-modal-content">
+                                <div class="modal-warning ">
+                                    <p>
+                                        Are you sure you want to delete this workspace?
+                                    </p>
+                                </div>
+                                <div class="warn-pop-btn">
+                                    <button class="close-btn sign-out">Delete</button>
+                                    <button class="submit-btn close">Cancel</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <!--------------- Edit Popup ---------- -->
+                        <!-- The Modal -->
+                        <div id="edit-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="edit-modal-content">
+                                    <h2 class="modal-title">Edit Workspace</h2>
+                                    <div class="modal-content-inputs">
+                                        <label class="wc-name">Workspace Name</label>
+                                        <input class="wc-name-input" type="text" placeholder="Enter"
+                                            name="Workspace Name" required minlength="4" maxlength="25">
+                                        <label class="wc-desc">Workspace Description</label>
+                                        <input class="wc-desc-input" type="text" name="Workspace Description" required
+                                            minlength="10" maxlength="40" placeholder="Workspacer Description">
+                                    </div>
+                                </div>
+                                <div class="pop-btn">
+                                    <button class="close-btn close">Close</button>
+                                    <button type="submit" class="submit-btn save">Update</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- ----------- add member popup ----------- -->
+                        <div id="add-member-modal">
+                            <div class="modal-content" style="padding-top: 30px;">
+                                <div class="modal-content-inputs">
+                                    <label id="wc-add">Add Member to Workspace</label>
+                                    <input id="wc-add-input" type="search" name="search box" required minlength="4"
+                                        maxlength="25" placeholder=" " style="padding:0 10px">
+
+                                </div>
+
+                                <div class="add-pop-btn">
+                                    <button class="close-btn close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <!------------- card title --------------->
+                        <a href="./workspace-task.html" class="cards-btn">
+                            <div class="card-title">
+                                <h5>Workspace title</h5>
+                                <p class="">Description goes here, Description goes
+                                    here </p>
+                            </div>
+                        </a>
+
+                        <!------------- card bottom --------------->
+                        <div class="card-bottom">
+                            <div class="card-ui ">
+                                <img src="./svg/cards/bulding-ui.svg">
+                                <span>Building UI</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-date">
+                                    <img src="./svg/cards/date.svg">
+                                    <span>2021/02/22</span>
+
+                                </div>
+                            </div>
+                            <!-- circle bubbles -->
+                            <div class="card-bubbles">
+
+                                <div class="bubbles" style="z-index:1; ">
+
+                                    <img src="./img/thotho.jpeg">
+                                </div>
+
+                                <div class="bubbles" style="z-index:2; ">
+                                    <img src="./img/twm.jpeg">
+                                </div>
+
+                                <div class="bubbles" style="z-index:3;  ">
+                                    <img src="./img/tony.jpeg">
+                                </div>
+
+                                <div class="bubbles" style="z-index:4; ">
+                                    <img src="./img/ahmed.jpg">
+                                </div>
+                            </div>
+
+                        </div>
+
+
 
                     </div>
-
-
-
-
-
-
-
-
-
-
-                    <!------------- card title --------------->
-                    <a href="./workspace-task.html" class="cards-btn">
-                        <div class="card-title">
-                            <h5>Workspace title</h5>
-                            <p class="">Description goes here, Description goes
-                                here </p>
-                        </div>
-                    </a>
-
-                    <!------------- card bottom --------------->
-                    <div class="card-bottom">
-                        <div class="card-ui ">
-                            <img src="./svg/cards/bulding-ui.svg">
-                            <span>Building UI</span>
-                        </div>
-                        <div class="card-footer">
-                            <div class="card-date">
-                                <img src="./svg/cards/date.svg">
-                                <span>2021/02/22</span>
-
-                            </div>
-                        </div>
-                        <!-- circle bubbles -->
-                        <div class="card-bubbles">
-
-                            <div class="bubbles" style="z-index:1; ">
-
-                                <img src="./img/thotho.jpeg">
-                            </div>
-
-                            <div class="bubbles" style="z-index:2; ">
-                                <img src="./img/twm.jpeg">
-                            </div>
-
-                            <div class="bubbles" style="z-index:3;  ">
-                                <img src="./img/tony.jpeg">
-                            </div>
-
-                            <div class="bubbles" style="z-index:4; ">
-                                <img src="./img/ahmed.jpg">
-                            </div>
-                        </div>
-
-                    </div>
-
 
 
                 </div>
 
-
             </div>
 
         </div>
-
-
 
 
 
