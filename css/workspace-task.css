@@ -383,6 +383,7 @@ div.content {             /*   dont move this block of code    */
   border-radius:10px;
   width: 400px; 
   height:650px;
+  overflow-y: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -483,6 +484,7 @@ div.content {             /*   dont move this block of code    */
   border-radius:10px;
   width: 400px; /* Could be more or less, depending on screen size */
   height:650px;
+  overflow-y: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -563,6 +565,7 @@ div.content {             /*   dont move this block of code    */
   border-radius:10px;
   width: 400px; /* Could be more or less, depending on screen size */
   height:650px;
+  overflow-y: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -642,6 +645,7 @@ div.mobile-container{
   border-radius:10px;
   width: 400px; /* Could be more or less, depending on screen size */
   height:450px;
+  overflow-y: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -719,7 +723,7 @@ div.mobile-container{
   width: 350px; /* Could be more or less, depending on screen size */
   height:550px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  
+  overflow: scroll;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
@@ -763,6 +767,7 @@ div.content {
   border-radius:10px;
   width: 340px; /* Could be more or less, depending on screen size */
   height:500px;
+  overflow: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
