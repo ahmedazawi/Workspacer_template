@@ -150,3 +150,21 @@ myCont.addEventListener('click', function (event) {
 
 });
 
+
+
+
+
+
+
+
+// edit profile popup
+const changeProfile = () => document.querySelector('#edit-modal').style.display = "flex"
+const closeEditProfile = () => document.querySelector('#edit-modal').style.display = "none"
+
+// chnage password poup
+const changePassword = () => document.querySelector('#password-modal').style.display = "flex"
+const closeChangePassword = () => document.querySelector('#password-modal').style.display = "none"
+
+// chnage language poup
+const changeLanguage = () => document.querySelector('#language-modal').style.display = "flex"
+const closeChangeLanguage = () => document.querySelector('#language-modal').style.display = "none"

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css file -->
-    <link rel="stylesheet" href="css/setteings.css">
+    <link rel="stylesheet" href="css/profile.css">
     <!-- ------------ google fonts ------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +75,7 @@
                 </a>
 
 
-              
+
 
 
 
@@ -230,194 +230,58 @@
         <!-------------------- Page content -------------------->
 
         <div class="content">
-            <!-- <div class="settings-profile">
+            <div class="settings-profile">
                 <div class="profile-img">
                     <div>
                         <img src="./img/ahmed.jpg">
                         <div class="img-edit-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 576 512"><path fill="black"  d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"/></svg>
-                            <input type="file" name="upload" accept="image/png, image/gif, image/jpeg" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="black"
+                                    d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z" />
+                            </svg>
+                            <input type="file" name="upload" accept="image/png, image/gif, image/jpeg"
+                                style="display: none;">
                         </div>
                     </div>
                 </div>
                 <div class="profile-content">
-                    <div>Ahmed Husam</div>
+                    <div id="profile-name">Ahmed Husam</div>
                     <div class="profile-content-detials">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div>Test Test Test</div>
-
-                </div>
-            </div> -->
-
-
-
-
-
-
-
-
-            <div class="settings-card">
-                <div class="settings-list">
-                    <a href="profile.html" style="text-decoration: none; color: black;">
-                        <div class="settings-item">
-                        
-                            <img id="profile-img" src="./img/ahmed.jpg" alt="profile details">
-                            <div class="profile-details">
-                                <span>Ahmed Husam</span>
-                                <bold>Personal details</bold>
-                            </div>
-
+                        <div>
+                            <b>0</b>
+                            <span>Workspace</span>
                         </div>
-                    </a>
-                </div>
-
-                <h2>Profile</h2>
-                <div class="settings-list">
-
-                    <div class="settings-item" onclick="changeProfile()">
-                        <img src="./svg/settings/fi-rr-edit.svg" alt="edit profile">
-                        <span>Edit Profile</span>
+                        <div>
+                            <b>0</b>
+                            <span>Tasks</span>
+                        </div>
+                        <div>
+                            <b>0</b>
+                            <span>Notifications</span>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="settings-list">
-
-                    <div class="settings-item" onclick="changePassword()">
-                        <img src="./svg/settings/fi-rr-password.svg" alt="change Password">
-                        <span>Change Password</span>
-                    </div>
 
                 </div>
-
-                <h2>Notifications</h2>
-                <div class="settings-list">
-                    <div class="settings-items-container">
-                        <label for="switch-toggle-btn">
-                            <div class="settings-item">
-                                <img src="./svg/settings/bell-slash.svg" alt="Notification toggle turn off">
-                                <span>Notifications</span>
-                            </div>
-                        </label>
-                        <label class="switch">
-                            <input id="switch-toggle-btn" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                </div>
-
-                <h2>Regional</h2>
-                <div class="settings-list">
-                    <div class="settings-item" onclick="changeLanguage()">
-                        <img src="./svg/settings/fi-rr-globe.svg">
-                        <span>Language</span>
-                    </div>
-
-                </div>
-
-                <div class="settings-list">
-                    <div class="settings-item" onclick="signOut()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="red" width="25px">
-                            <path
-                                d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z" />
-                        </svg>
-                        <span>Sign Out</span>
-                    </div>
-                </div>
-
             </div>
 
-
-
-        <!--  ---------------------- popup  ------------------>
-            <!--------------- Edit Popup ---------- -->
-                        <!-- The Modal -->
-                        <div id="edit-modal" class="modal">
-                            <div class="modal-content">
-                                <div class="edit-modal-content">
-                                    <h2 class="modal-title">Edit Profile</h2>
-                                    <div class="modal-content-inputs">
-                                        <label class="wc-name">First Name</label>
-                                        <input class="wc-name-input" type="text" placeholder="First name"
-                                            name="First Name" required minlength="4" maxlength="25">
-                                        <label class="wc-desc"> Last Name</label>
-                                        <input class="wc-desc-input" type="text" name="Last Name" required
-                                            minlength="10" maxlength="40" placeholder="Last name">
-                                    </div>
-                                </div>
-                                <div class="pop-btn">
-                                    <button class="close-btn close" onclick="closeEditProfile()">Close</button>
-                                    <button type="submit" class="submit-btn save">Update</button>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-            <!-- -------------Change password---------- -->
-                        <div id="password-modal" class="modal">
-                            <div class="modal-content">
-                                <div class="edit-modal-content">
-                                    <h2 class="modal-title">Change Password</h2>
-                                    <div class="modal-content-inputs">
-                                        <label class="wc-name">Old Password</label>
-                                        <input class="wc-name-input" type="text" placeholder="Old Password"
-                                            name="Old Password" required minlength="8">
-                                        <label class="wc-desc"> New Password</label>
-                                        <input class="wc-desc-input" type="text" name="New Password" required
-                                            minlength="8"  placeholder="New Password">
-                                            <label class="wc-confirm"> Confirm Password</label>
-                                        <input class="wc-confirm-input" type="text" name="Confirm Password" required
-                                            minlength="8"  placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                                <div class="pop-btn">
-                                    <button class="close-btn close" onclick="closeChangePassword()">Close</button>
-                                    <button type="submit" class="submit-btn save">Update</button>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- -------------Change Language---------- -->
-                        <div id="language-modal" class="modal">
-                            <div class="modal-content">
-                                <div class="edit-modal-content">
-                                    <h2 class="modal-title">Change Language</h2>
-                                    <div class="modal-content-inputs">
-                                        <div class="switch-priority">
-                                            <input type="radio" id="english-btn" name="switch-priority" value="english"
-                                                checked />
-                                            <label for="english-btn">English</label>                                
-                                        </div>
-    
-                                    </div>
-                                </div>
-                                <div class="pop-btn">
-                                    <button class="close-btn close" onclick="closeChangeLanguage()">Close</button>
-                                    <button type="submit" class="submit-btn save">Select</button>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
+            <div class="content-list">
+                <div class="content-list-items">
+                    <div id="status-circle"></div>
+                    <b>Available</b>
+                </div>
+                <div class="content-list-items">
+                    <img src="./svg/envelope.svg" alt="email icon" width="30" height="30">
+                    <b>ahmedhusam7@gmail.com</b>
+                </div>
+                <div class="content-list-items">
+                    <img src="./svg/clock.svg" alt="date icon" width="30" height="30">
+                    <b>2020/08/11</b>
+                </div>
+            </div>
         </div>
-
     </div>
-    <script type="text/javascript" src="./js/setting-script.js"></script>
-    
-
+    <script type="text/javascript" src='./js/profile-script.js'></script>
 </body>
 
 </html>
